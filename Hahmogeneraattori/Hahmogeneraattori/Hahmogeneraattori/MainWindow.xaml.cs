@@ -23,6 +23,7 @@ namespace Hahmogeneraattori
         public MainWindow()
         {
             InitializeComponent();
+            //
         }
     }
 }
