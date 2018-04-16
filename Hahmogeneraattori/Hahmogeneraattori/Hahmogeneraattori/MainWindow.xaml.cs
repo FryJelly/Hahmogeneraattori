@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hahmogeneraattori.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,11 @@ namespace Hahmogeneraattori
         {
             InitializeComponent();
             //
+        }
+
+        private void CreateNewCharacter_Clicked(object sender, RoutedEventArgs e)
+        {
+            DataContext = new CharacterViewModel();
         }
     }
 }

@@ -4,9 +4,19 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hahmogeneraattori"
+        xmlns:viewmodels="clr-namespace:Hahmogeneraattori.ViewModels"
+        xmlns:views="clr-namespace:Hahmogeneraattori.Views"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <DataTemplate x:Name="CharacterViewTemplate" DataType="{x:Type viewmodels:CharacterViewModel}">
+            <views:CharacterView DataContext="{Binding}"/>
+        </DataTemplate>
+    </Window.Resources>
     <Grid>
-        
+        <ListBox HorizontalAlignment="Left" Height="170" Margin="51,89,0,0" VerticalAlignment="Top" Width="400">New character</ListBox>
+        <Button Content="Create new character" HorizontalAlignment="Left" Margin="200,275,0,0" VerticalAlignment="Top" Width="125" Click="CreateNewCharacter_Clicked"/>
+
+        <ContentControl Content="{Binding}"/>
     </Grid>
 </Window>
