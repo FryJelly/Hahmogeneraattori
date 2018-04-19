@@ -1,2 +1,0 @@
-# Hahmogeneraattori
-UI harkkatyö
