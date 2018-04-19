@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="Hahmogeneraattori.Views.CharCreation"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Hahmogeneraattori.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="614">
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="500" VerticalAlignment="Top" Width="614" Margin="0,0,0,-8">
+            <TabItem Header="Stats" Height="22" VerticalAlignment="Top">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Content="Race" Header="Race"/>
+            <TabItem Content="Class" Header="Class"/>
+            <TabItem Header="Feats">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="Skills"/>
+            <TabItem Header="Spells"/>
+            <TabItem Header="Equipment"/>
+        </TabControl>
+    </Grid>
+</UserControl>
