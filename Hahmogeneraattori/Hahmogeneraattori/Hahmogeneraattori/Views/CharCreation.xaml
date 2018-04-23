@@ -9,10 +9,19 @@
     <Grid>
         <TabControl HorizontalAlignment="Left" Height="500" VerticalAlignment="Top" Width="614" Margin="0,0,0,-8">
             <TabItem Header="Stats" Height="22" VerticalAlignment="Top">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="49*"/>
+                        <ColumnDefinition Width="559*"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid Name="dgStats" HorizontalAlignment="Left" Height="439" VerticalAlignment="Top" Width="608" Grid.ColumnSpan="2" Margin="0,31,0,0"/>
+                    <StackPanel HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="608" Grid.ColumnSpan="2">
+                        <Button x:Name="btnStats" Content="Roll stats" Margin="5" Click="btnStats_Click"/>
+                    </StackPanel>
+                </Grid>
             </TabItem>
-            <TabItem Content="Race" Header="Race"/>
-            <TabItem Content="Class" Header="Class"/>
+            <TabItem Header="Race"/>
+            <TabItem Header="Class"/>
             <TabItem Header="Feats">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>

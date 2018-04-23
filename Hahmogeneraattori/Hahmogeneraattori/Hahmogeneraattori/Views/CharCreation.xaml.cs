@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Hahmogeneraattori;
 
 namespace Hahmogeneraattori.Views
 {
@@ -20,9 +21,17 @@ namespace Hahmogeneraattori.Views
     /// </summary>
     public partial class CharCreation : UserControl
     {
+        List<Stats> stats = new List<Stats>();
         public CharCreation()
         {
             InitializeComponent();
         }
+
+        private void btnStats_Click(object sender, RoutedEventArgs e)
+        {
+            dgStats.ItemsSource = Stats.RollStats();
+        }
+
+
     }
 }

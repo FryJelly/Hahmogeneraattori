@@ -54,6 +54,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Stats.cs" />
     <Compile Include="ViewModels\CharCreationViewModel.cs" />
     <Compile Include="Views\CharCreation.xaml.cs">
       <DependentUpon>CharCreation.xaml</DependentUpon>
