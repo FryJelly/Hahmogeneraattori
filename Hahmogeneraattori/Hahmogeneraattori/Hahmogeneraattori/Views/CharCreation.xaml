@@ -20,14 +20,43 @@
                     </StackPanel>
                 </Grid>
             </TabItem>
-            <TabItem Header="Race"/>
-            <TabItem Header="Class"/>
+            <TabItem Header="Race">
+                <ListBox Name="RaceList" FontSize="24">
+                    <TextBlock> Choose a race: </TextBlock>
+                    <ListBoxItem Name="Dwarf" Selected="Dwarf_Selected">Dwarf</ListBoxItem>
+                    <ListBoxItem Name="Elf" Selected="Elf_Selected">Elf</ListBoxItem>
+                    <ListBoxItem Name="Gnome" Selected="Gnome_Selected">Gnome</ListBoxItem>
+                    <ListBoxItem Name="HalfElf" Selected="HalfElf_Selected">Half-Elf</ListBoxItem>
+                    <ListBoxItem Name="HalfOrc" Selected="HalfOrc_Selected">Half-Orc</ListBoxItem>
+                    <ListBoxItem Name="Halfling" Selected="Halfling_Selected">Halfling</ListBoxItem>
+                    <ListBoxItem Name="Human" Selected="Human_Selected">Human</ListBoxItem>
+                </ListBox>
+
+            </TabItem>
+            <TabItem Header="Class">
+                <ListBox Name="ClassList" FontSize="24">
+                    <TextBlock> Choose a class:</TextBlock>
+                    <ListBoxItem Name="Barbarian">Barbarian</ListBoxItem>
+                    <ListBoxItem Name="Bard">Bard</ListBoxItem>
+                    <ListBoxItem Name="Cleric">Cleric</ListBoxItem>
+                    <ListBoxItem Name="Druid">Druid</ListBoxItem>
+                    <ListBoxItem Name="Fighter">Fighter</ListBoxItem>
+                    <ListBoxItem Name="Monk">Monk</ListBoxItem>
+                    <ListBoxItem Name="Paladin">Paladin</ListBoxItem>
+                    <ListBoxItem Name="Ranger">Ranger</ListBoxItem>
+                    <ListBoxItem Name="Rouge">Rouge</ListBoxItem>
+                    <ListBoxItem Name="Sorcerer">Sorcerer</ListBoxItem>
+                    <ListBoxItem Name="Wizard">Wizard</ListBoxItem>
+                </ListBox>
+            </TabItem>
+
             <TabItem Header="Feats">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
             <TabItem Header="Skills"/>
             <TabItem Header="Spells"/>
             <TabItem Header="Equipment"/>
+            
         </TabControl>
     </Grid>
 </UserControl>
