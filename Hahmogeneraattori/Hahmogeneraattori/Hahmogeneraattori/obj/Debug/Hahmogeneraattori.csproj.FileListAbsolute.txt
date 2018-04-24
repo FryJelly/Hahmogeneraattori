@@ -77,3 +77,4 @@ C:\Users\skyri\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattor
 C:\Users\skyri\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\Hahmogeneraattori.csproj.CopyComplete
 C:\Users\skyri\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\Hahmogeneraattori.exe
 C:\Users\skyri\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\Hahmogeneraattori.pdb
+C:\Users\RyzenPC\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\Hahmogeneraattori.csprojResolveAssemblyReference.cache

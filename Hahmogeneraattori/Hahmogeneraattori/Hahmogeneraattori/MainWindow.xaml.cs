@@ -21,6 +21,7 @@ namespace Hahmogeneraattori
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Character> chars = new List<Character>();
         public MainWindow()
         {
             InitializeComponent();
@@ -34,7 +35,15 @@ namespace Hahmogeneraattori
 
         private void ListBoxItem_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-
+            try
+            {
+                chars = Hahmogeneraattori.DBCharacters.GetCharacterDataFromMysql();
+                CharacterList.ItemsSource = chars;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

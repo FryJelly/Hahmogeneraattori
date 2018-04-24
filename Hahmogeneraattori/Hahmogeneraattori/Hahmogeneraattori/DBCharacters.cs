@@ -10,7 +10,7 @@ namespace Hahmogeneraattori
 {
     static class DBCharacters
     {
-        public static DataTable GetAllAutosFromMysqlDt()
+        public static DataTable GetCharacterDataMysqlDt()
         {
             try
             {
@@ -30,7 +30,7 @@ namespace Hahmogeneraattori
                 throw;
             }
         }
-        public static List<Character> GetAllAutosFromMysql()
+        public static List<Character> GetCharacterDataFromMysql()
         {
             try
             {
