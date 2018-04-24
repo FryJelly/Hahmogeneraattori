@@ -7,7 +7,7 @@
         xmlns:viewmodels="clr-namespace:Hahmogeneraattori.ViewModels"
         xmlns:views="clr-namespace:Hahmogeneraattori.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="540" Width="630">
     <Window.Resources>
         <DataTemplate x:Name="CharacterViewTemplate" DataType="{x:Type viewmodels:CharCreationViewModel}">
             <views:CharCreation DataContext="{Binding}"/>

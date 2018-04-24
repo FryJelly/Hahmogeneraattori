@@ -21,7 +21,8 @@ namespace Hahmogeneraattori.Views
     /// </summary>
     public partial class CharCreation : UserControl
     {
-        List<Stats> stats = new List<Stats>();
+        Stats stats = new Stats();
+        Stats stats2 = new Stats();
         public CharCreation()
         {
             InitializeComponent();
@@ -29,7 +30,9 @@ namespace Hahmogeneraattori.Views
 
         private void btnStats_Click(object sender, RoutedEventArgs e)
         {
-            dgStats.ItemsSource = Stats.RollStats();
+            stats = Stats.RollStats();
+            ScoreList.DataContext = stats;
+            
         }
 
         private void ListBox_SelectionChanged()
@@ -39,36 +42,46 @@ namespace Hahmogeneraattori.Views
 
         private void Dwarf_Selected(object sender, RoutedEventArgs e)
         {
-            
+            stats2 = stats;
+            stats2.Con = stats.Con + 2;
+            stats2.Wis = stats.Wis + 2;
+            stats2.Cha = stats.Cha - 2;
+            ScoreList.DataContext = stats2;
         }
 
         private void Elf_Selected(object sender, RoutedEventArgs e)
         {
+            stats2 = stats;
 
         }
 
         private void Gnome_Selected(object sender, RoutedEventArgs e)
         {
+            stats2 = stats;
 
         }
 
         private void HalfElf_Selected(object sender, RoutedEventArgs e)
         {
+            stats2 = stats;
 
         }
 
         private void HalfOrc_Selected(object sender, RoutedEventArgs e)
         {
+            stats2 = stats;
 
         }
 
         private void Halfling_Selected(object sender, RoutedEventArgs e)
         {
+            stats2 = stats;
 
         }
 
         private void Human_Selected(object sender, RoutedEventArgs e)
         {
+            stats2 = stats;
 
         }
     }

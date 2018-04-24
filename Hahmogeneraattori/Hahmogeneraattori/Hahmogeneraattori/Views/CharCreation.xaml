@@ -10,13 +10,37 @@
         <TabControl HorizontalAlignment="Left" Height="500" VerticalAlignment="Top" Width="614" Margin="0,0,0,-8">
             <TabItem Header="Stats" Height="22" VerticalAlignment="Top">
                 <Grid Background="#FFE5E5E5">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="49*"/>
-                        <ColumnDefinition Width="559*"/>
-                    </Grid.ColumnDefinitions>
-                    <DataGrid Name="dgStats" HorizontalAlignment="Left" Height="439" VerticalAlignment="Top" Width="608" Grid.ColumnSpan="2" Margin="0,31,0,0"/>
-                    <StackPanel HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="608" Grid.ColumnSpan="2">
-                        <Button x:Name="btnStats" Content="Roll stats" Margin="5" Click="btnStats_Click"/>
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal">                        
+                            <StackPanel Name="AblilityName" Orientation="Horizontal">
+                                <ListBox FontSize="24">
+                                
+                                    <ListBoxItem>Strength</ListBoxItem>
+                                    <ListBoxItem>Dexterity</ListBoxItem>
+                                    <ListBoxItem>Constitution</ListBoxItem>
+                                    <ListBoxItem>Intelligence</ListBoxItem>
+                                    <ListBoxItem>Wisdom</ListBoxItem>
+                                    <ListBoxItem>Charisma</ListBoxItem>
+                            
+                                </ListBox>
+                            </StackPanel>
+                            <StackPanel x:Name="AbilityScore" Orientation="Horizontal">
+                                <ListBox FontSize="24" x:Name="ScoreList">
+                                    <TextBlock x:Name="StrScore" Text="{Binding }"/>
+                                    <ListBoxItem x:Name="DexScore"/>
+                                    <ListBoxItem x:Name="ConScore"/>
+                                    <ListBoxItem x:Name="IntScore" DataContext="{x:Null}" Content="{Binding}"/>
+                                    <ListBoxItem x:Name="WisScore"/>
+                                    <ListBoxItem x:Name="ChaScore"/>
+
+                                </ListBox>
+                            </StackPanel>
+                    
+                        
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Left" Height="31" VerticalAlignment="Bottom" Width="608" Grid.ColumnSpan="2">
+                            <Button x:Name="btnStats" Content="Roll stats" Margin="5" Click="btnStats_Click"/>
+                        </StackPanel>
                     </StackPanel>
                 </Grid>
             </TabItem>
@@ -51,7 +75,11 @@
             </TabItem>
 
             <TabItem Header="Feats">
-                <Grid Background="#FFE5E5E5"/>
+                <ListBox>
+                    <ListBoxItem></ListBoxItem>
+                    <ListBoxItem></ListBoxItem>
+                    <ListBoxItem></ListBoxItem>
+                </ListBox>
             </TabItem>
             <TabItem Header="Skills"/>
             <TabItem Header="Spells"/>
