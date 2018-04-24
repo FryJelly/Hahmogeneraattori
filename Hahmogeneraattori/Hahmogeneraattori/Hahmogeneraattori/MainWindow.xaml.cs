@@ -31,5 +31,10 @@ namespace Hahmogeneraattori
         {
             DataContext = new CharCreationViewModel();
         }
+
+        private void ListBoxItem_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }

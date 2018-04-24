@@ -23,6 +23,7 @@ namespace Hahmogeneraattori.Views
     {
         Stats stats = new Stats();
         Stats stats2 = new Stats();
+        int RaceStr, RaceDex, RaceCon, RaceInt, RaceWis, RaceCha;
         public CharCreation()
         {
             InitializeComponent();
@@ -32,7 +33,15 @@ namespace Hahmogeneraattori.Views
         {
             stats = Stats.RollStats();
             ScoreList.DataContext = stats;
-            
+            stats2 = stats;
+            StrScore.Text = stats.Str.ToString();
+            DexScore.Text = stats.Dex.ToString();
+            ConScore.Text = stats.Con.ToString();
+            IntScore.Text = stats.Int.ToString();
+            WisScore.Text = stats.Wis.ToString();
+            ChaScore.Text = stats.Cha.ToString();
+
+
         }
 
         private void ListBox_SelectionChanged()
@@ -42,22 +51,36 @@ namespace Hahmogeneraattori.Views
 
         private void Dwarf_Selected(object sender, RoutedEventArgs e)
         {
-            stats2 = stats;
-            stats2.Con = stats.Con + 2;
-            stats2.Wis = stats.Wis + 2;
-            stats2.Cha = stats.Cha - 2;
-            ScoreList.DataContext = stats2;
+            RaceCon = stats.Con + 2;
+            RaceWis = stats.Wis + 2;
+            RaceCha = stats.Cha - 2;
+
+            ConScore.Text = RaceCon.ToString();
+            WisScore.Text = RaceWis.ToString();
+            ChaScore.Text = RaceCha.ToString();
         }
 
         private void Elf_Selected(object sender, RoutedEventArgs e)
         {
-            stats2 = stats;
+            stats2.Dex = stats.Dex + 2;
+            stats2.Int = stats.Int + 2;
+            stats2.Con = stats.Con - 2;
+
+            DexScore.Text = RaceDex.ToString();
+            IntScore.Text = RaceInt.ToString();
+            ConScore.Text = RaceCon.ToString();
 
         }
 
         private void Gnome_Selected(object sender, RoutedEventArgs e)
         {
-            stats2 = stats;
+            stats2.Con = stats.Con + 2;
+            stats2.Cha = stats.Cha + 2;
+            stats2.Str = stats.Str - 2;
+
+            ConScore.Text = RaceCon.ToString();
+            ChaScore.Text = RaceCha.ToString();
+            StrScore.Text = RaceStr.ToString();
 
         }
 
@@ -75,7 +98,13 @@ namespace Hahmogeneraattori.Views
 
         private void Halfling_Selected(object sender, RoutedEventArgs e)
         {
-            stats2 = stats;
+            stats2.Dex = stats.Dex + 2;
+            stats2.Cha = stats.Cha + 2;
+            stats2.Str = stats.Str - 2;
+
+            DexScore.Text = RaceDex.ToString();
+            ChaScore.Text = RaceCha.ToString();
+            StrScore.Text = RaceStr.ToString();
 
         }
 
