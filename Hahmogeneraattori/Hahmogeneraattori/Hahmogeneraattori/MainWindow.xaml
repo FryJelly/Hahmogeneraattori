@@ -14,7 +14,9 @@
         </DataTemplate>
     </Window.Resources>
     <Grid>
-        <ListBox HorizontalAlignment="Left" Height="170" Margin="51,89,0,0" VerticalAlignment="Top" Width="400">New character</ListBox>
+        <ListBox HorizontalAlignment="Left" Height="170" Margin="51,89,0,0" VerticalAlignment="Top" Width="400">
+            <ListBoxItem MouseDoubleClick="ListBoxItem_MouseDoubleClick"></ListBoxItem>
+        </ListBox>
         <Button Content="Create new character" HorizontalAlignment="Left" Margin="200,275,0,0" VerticalAlignment="Top" Width="125" Click="CreateNewCharacter_Clicked"/>
 
         <ContentControl Content="{Binding}"/>

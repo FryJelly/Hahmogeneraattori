@@ -26,12 +26,12 @@
                             </StackPanel>
                             <StackPanel x:Name="AbilityScore" Orientation="Horizontal">
                                 <ListBox FontSize="24" x:Name="ScoreList">
-                                    <TextBlock x:Name="StrScore" Text="{Binding }"/>
-                                    <ListBoxItem x:Name="DexScore"/>
-                                    <ListBoxItem x:Name="ConScore"/>
-                                    <ListBoxItem x:Name="IntScore" DataContext="{x:Null}" Content="{Binding}"/>
-                                    <ListBoxItem x:Name="WisScore"/>
-                                    <ListBoxItem x:Name="ChaScore"/>
+                                    <TextBlock x:Name="StrScore"/>
+                                    <TextBlock x:Name="DexScore"/>
+                                    <TextBlock x:Name="ConScore"/>
+                                    <TextBlock x:Name="IntScore"/>
+                                    <TextBlock x:Name="WisScore"/>
+                                    <TextBlock x:Name="ChaScore"/>
 
                                 </ListBox>
                             </StackPanel>
