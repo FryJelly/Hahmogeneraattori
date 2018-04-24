@@ -34,9 +34,9 @@ namespace Hahmogeneraattori
         {
             try
             {
-                // metodi palauttaa listan auto-olioita joiden tiedot haettu Mysql:stä
+                // Method returns a list of character objects, data is pulled from a MySql database
                 List<Character> chars = new List<Character>();
-                //luodaan yhteys tietokantaan
+                //Creating a connection to the database
                 string connStr = GetConnectionString();
                 string sql = "SELECT CharacterID, CharName, CharRace, CharClass, CharStr, CharDex, CharCon, CharInt, CharWis, CharCha FROM Characters";
                 using (MySqlConnection conn = new MySqlConnection(connStr))
@@ -63,7 +63,7 @@ namespace Hahmogeneraattori
                         }
                     }
                 }
-                //palautus
+                //return
                 return chars;
             }
             catch
@@ -76,7 +76,7 @@ namespace Hahmogeneraattori
         }
         private static string GetConnectionString()
         {
-            // Tietokannan kirjautumistiedot
+            // Database login info
             string palvelin = "mysql.labranet.jamk.fi";
             string tietokanta = "K9105_3";
             string tunnus = "K9105";
