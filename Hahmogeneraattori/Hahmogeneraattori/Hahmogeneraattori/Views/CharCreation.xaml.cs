@@ -32,7 +32,6 @@ namespace Hahmogeneraattori.Views
         private void btnStats_Click(object sender, RoutedEventArgs e)
         {
             stats = Stats.RollStats();
-            ScoreList.DataContext = stats;
             stats2 = stats;
             StrScore.Text = stats.Str.ToString();
             DexScore.Text = stats.Dex.ToString();
@@ -51,6 +50,8 @@ namespace Hahmogeneraattori.Views
 
         private void Dwarf_Selected(object sender, RoutedEventArgs e)
         {
+            stats = stats2;
+
             RaceCon = stats.Con + 2;
             RaceWis = stats.Wis + 2;
             RaceCha = stats.Cha - 2;
@@ -62,6 +63,8 @@ namespace Hahmogeneraattori.Views
 
         private void Elf_Selected(object sender, RoutedEventArgs e)
         {
+            stats = stats2;
+
             RaceDex = stats.Dex + 2;
             RaceInt = stats.Int + 2;
             RaceCon = stats.Con - 2;
@@ -74,6 +77,8 @@ namespace Hahmogeneraattori.Views
 
         private void Gnome_Selected(object sender, RoutedEventArgs e)
         {
+            stats = stats2;
+
             RaceCon = stats.Con + 2;
             RaceCha = stats.Cha + 2;
             RaceStr = stats.Str - 2;
@@ -98,6 +103,8 @@ namespace Hahmogeneraattori.Views
 
         private void Halfling_Selected(object sender, RoutedEventArgs e)
         {
+            stats = stats2;
+
             RaceDex = stats.Dex + 2;
             RaceCha = stats.Cha + 2;
             RaceStr = stats.Str - 2;
