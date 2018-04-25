@@ -25,6 +25,7 @@ namespace Hahmogeneraattori.Views
         Stats stats2 = new Stats();
         int RaceStr, RaceDex, RaceCon, RaceInt, RaceWis, RaceCha;
         int StrModifier, DexModifier, ConModifier, IntModifier, WisModifier, ChaModifier;
+        int SkillRank;
         //Stats
         private void Strength_Selected(object sender, RoutedEventArgs e)
         {
