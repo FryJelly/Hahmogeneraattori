@@ -1136,6 +1136,23 @@ namespace Hahmogeneraattori.Views
             }
         }
 
+        private void BackToMenuButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Return to main menu button clicked -> show confirmation box
+            BacktoMenuBox.Visibility = System.Windows.Visibility.Visible;
+        }
+
+        private void BackToMenuYesButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Yes clicked open main window
+            
+        }
+
+        private void BackToMenuNoButton_Click(object sender, RoutedEventArgs e)
+        {
+            // No clicked, close confirmation box
+            BacktoMenuBox.Visibility = System.Windows.Visibility.Collapsed;
+        }
         public CharCreation()
         {
             InitializeComponent();
