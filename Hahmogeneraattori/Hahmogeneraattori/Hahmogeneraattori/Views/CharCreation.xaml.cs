@@ -24,8 +24,8 @@ namespace Hahmogeneraattori.Views
         Stats stats = new Stats();
         Stats stats2 = new Stats();
         int RaceStr, RaceDex, RaceCon, RaceInt, RaceWis, RaceCha;
-        int StrModifier, DexModifier, ConModifier, IntModifier, WisModifier, ChaModifier;
-        int SkillRank;
+        int StrModifier = 0, DexModifier = 0, ConModifier = 0, IntModifier = 0, WisModifier = 0, ChaModifier = 0;
+        int SkillRank = 0;
 
         //Adding stat bonuses to human, half-elf or half-orc
         private void Strength_Selected(object sender, RoutedEventArgs e)
