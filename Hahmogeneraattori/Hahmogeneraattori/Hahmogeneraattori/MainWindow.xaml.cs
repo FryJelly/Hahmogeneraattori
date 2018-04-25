@@ -33,9 +33,10 @@ namespace Hahmogeneraattori
             DataContext = new CharCreationViewModel();
         }
 
+        // Database functionality test
         private void ListBoxItem_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            try
+           /* try
             {
                 chars = Hahmogeneraattori.DBCharacters.GetCharacterDataFromMysql();
                 CharacterList.ItemsSource = chars;
@@ -43,7 +44,7 @@ namespace Hahmogeneraattori
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
+            } */
         }
     }
 }

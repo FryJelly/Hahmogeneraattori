@@ -77,7 +77,6 @@ C:\Users\skyri\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattor
 C:\Users\skyri\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\Hahmogeneraattori.csproj.CopyComplete
 C:\Users\skyri\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\Hahmogeneraattori.exe
 C:\Users\skyri\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\Hahmogeneraattori.pdb
-C:\Users\RyzenPC\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\Hahmogeneraattori.csprojResolveAssemblyReference.cache
 C:\Users\Marko\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\bin\Debug\Google.Protobuf.dll
 C:\Users\Marko\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\bin\Debug\MySql.Data.dll
 C:\Users\Marko\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\bin\Debug\Google.Protobuf.xml

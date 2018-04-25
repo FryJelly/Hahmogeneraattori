@@ -8,6 +8,6 @@ namespace Hahmogeneraattori.ViewModels
 {
     public class CharCreationViewModel
     {
-
+        
     }
 }

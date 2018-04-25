@@ -76,17 +76,17 @@
             <TabItem Header="Class">
                 <ListBox Name="ClassList" FontSize="24">
                     <TextBlock> Choose a class:</TextBlock>
-                    <ListBoxItem Name="Barbarian">Barbarian</ListBoxItem>
-                    <ListBoxItem Name="Bard">Bard</ListBoxItem>
-                    <ListBoxItem Name="Cleric">Cleric</ListBoxItem>
-                    <ListBoxItem Name="Druid">Druid</ListBoxItem>
-                    <ListBoxItem Name="Fighter">Fighter</ListBoxItem>
-                    <ListBoxItem Name="Monk">Monk</ListBoxItem>
-                    <ListBoxItem Name="Paladin">Paladin</ListBoxItem>
-                    <ListBoxItem Name="Ranger">Ranger</ListBoxItem>
-                    <ListBoxItem Name="Rouge">Rouge</ListBoxItem>
-                    <ListBoxItem Name="Sorcerer">Sorcerer</ListBoxItem>
-                    <ListBoxItem Name="Wizard">Wizard</ListBoxItem>
+                    <ListBoxItem Name="Barbarian" Selected="Barbarian_Selected">Barbarian</ListBoxItem>
+                    <ListBoxItem Name="Bard" Selected="Bard_Selected">Bard</ListBoxItem>
+                    <ListBoxItem Name="Cleric" Selected="Cleric_Selected">Cleric</ListBoxItem>
+                    <ListBoxItem Name="Druid" Selected="Druid_Selected">Druid</ListBoxItem>
+                    <ListBoxItem Name="Fighter" Selected="Fighter_Selected">Fighter</ListBoxItem>
+                    <ListBoxItem Name="Monk" Selected="Monk_Selected">Monk</ListBoxItem>
+                    <ListBoxItem Name="Paladin" Selected="Paladin_Selected">Paladin</ListBoxItem>
+                    <ListBoxItem Name="Ranger" Selected="Ranger_Selected">Ranger</ListBoxItem>
+                    <ListBoxItem Name="Rogue" Selected="Rogue_Selected">Rogue</ListBoxItem>
+                    <ListBoxItem Name="Sorcerer" Selected="Sorcerer_Selected">Sorcerer</ListBoxItem>
+                    <ListBoxItem Name="Wizard" Selected="Wizard_Selected">Wizard</ListBoxItem>
                 </ListBox>
             </TabItem>
 
@@ -139,7 +139,7 @@
                 </StackPanel>
             </TabItem>
             <TabItem Header="Spells"/>
-            <TabItem Header="Equipment"/>
+            <TabItem Header="Character"/>
             
         </TabControl>
     </Grid>

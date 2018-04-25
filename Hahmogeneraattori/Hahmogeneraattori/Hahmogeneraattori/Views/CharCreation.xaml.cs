@@ -25,7 +25,7 @@ namespace Hahmogeneraattori.Views
         Stats stats2 = new Stats();
         int RaceStr, RaceDex, RaceCon, RaceInt, RaceWis, RaceCha;
         int StrModifier, DexModifier, ConModifier, IntModifier, WisModifier, ChaModifier;
-
+        //Stats
         private void Strength_Selected(object sender, RoutedEventArgs e)
         {
             //Human_Selected
@@ -55,6 +55,61 @@ namespace Hahmogeneraattori.Views
         {
 
         }
+        // Classes
+        private void Barbarian_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Bard_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Cleric_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Druid_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Fighter_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Monk_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Paladin_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Ranger_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void Rogue_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Sorcerer_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Wizard_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
 
         public CharCreation()
         {
@@ -93,7 +148,7 @@ namespace Hahmogeneraattori.Views
         {
 
         }
-
+        // Races
         private void Dwarf_Selected(object sender, RoutedEventArgs e)
         {
             stats = stats2;
