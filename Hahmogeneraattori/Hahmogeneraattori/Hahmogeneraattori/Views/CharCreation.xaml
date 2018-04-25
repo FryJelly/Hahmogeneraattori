@@ -16,18 +16,18 @@
                             <TextBox>Score</TextBox>
                             <TextBox>Modifier</TextBox>
                         </TextBlock>
-                        <StackPanel Orientation="Horizontal">                        
+                        <StackPanel Orientation="Horizontal">
                             <StackPanel Name="AblilityName" Orientation="Horizontal">
-                                
+
                                 <ListBox FontSize="24">
-                                
+
                                     <ListBoxItem Name="Strength" Selected="Strength_Selected">Strength</ListBoxItem>
                                     <ListBoxItem Name="Dexterity" Selected="Dexterity_Selected">Dexterity</ListBoxItem>
                                     <ListBoxItem Name="Constitution" Selected="Constitution_Selected">Constitution</ListBoxItem>
                                     <ListBoxItem Name="Intelligence" Selected="Intelligence_Selected">Intelligence</ListBoxItem>
                                     <ListBoxItem Name="Wisdom" Selected="Wisdom_Selected">Wisdom</ListBoxItem>
                                     <ListBoxItem Name="Charisma" Selected="Charisma_Selected">Charisma</ListBoxItem>
-                            
+
                                 </ListBox>
                             </StackPanel>
                             <StackPanel x:Name="AbilityScore" Orientation="Horizontal">
@@ -52,7 +52,7 @@
 
                                 </ListBox>
                             </StackPanel>
-                        
+
                         </StackPanel>
                         <StackPanel HorizontalAlignment="Left" Height="31" VerticalAlignment="Bottom" Width="608" Grid.ColumnSpan="2">
                             <Button x:Name="btnStats" Content="Roll stats" Margin="5" Click="btnStats_Click"/>
@@ -62,7 +62,7 @@
             </TabItem>
             <TabItem Header="Race">
                 <ListBox Name="RaceList" FontSize="24">
-                    <TextBlock> Choose a race: </TextBlock>
+                    <TextBlock> Choose a race:</TextBlock>
                     <ListBoxItem Name="Dwarf" Selected="Dwarf_Selected">Dwarf</ListBoxItem>
                     <ListBoxItem Name="Elf" Selected="Elf_Selected">Elf</ListBoxItem>
                     <ListBoxItem Name="Gnome" Selected="Gnome_Selected">Gnome</ListBoxItem>
@@ -139,8 +139,47 @@
                 </StackPanel>
             </TabItem>
             <TabItem Header="Spells"/>
-            <TabItem Header="Character"/>
-            
+            <TabItem Header="Character">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" Height="122">
+                        <ListBox Height="115">
+                            <ListBoxItem Content="Character name: "/>
+                            <ListBoxItem Content="Race: "/>
+                            <ListBoxItem Content="Class: "/>
+                            <ListBoxItem Content="ListBoxItem"/>
+                            <ListBoxItem Content="ListBoxItem"/>
+                        </ListBox>
+                        <ListBox Height="115">
+                            <ListBoxItem Name="CharacterName" Content="ListBoxItem" Selected="CharacterName_Selected"/>
+                            <ListBoxItem Content=""/>
+                            <ListBoxItem Content=""/>
+                            <ListBoxItem Content=""/>
+                            <ListBoxItem Content=""/>
+                        </ListBox>
+                    </StackPanel>
+                    <Grid x:Name="NameInputBox" Visibility="Collapsed">
+                        <Border
+                            MinWidth="250"
+                            Background="Orange" 
+                            BorderBrush="Black" 
+                            BorderThickness="1" 
+                            HorizontalAlignment="Center" 
+                            VerticalAlignment="Center">
+                            <StackPanel>
+                                <TextBlock Margin="5" Text="Input Box:" />
+                                <TextBox Name="InputTextBox" MinWidth="150" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBox>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <Button Name="Yes" Margin="5" Content="Yes" Click="YesButton_Click"></Button>
+                                    <Button Name="No" Margin="5" Content="No" Click="NoButton_Click"></Button>
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+
+                </StackPanel>
+
+            </TabItem>
+
         </TabControl>
     </Grid>
 </UserControl>

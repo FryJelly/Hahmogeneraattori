@@ -109,6 +109,35 @@ namespace Hahmogeneraattori.Views
         {
 
         }
+        // Character Sheet
+
+        private void CharacterName_Selected(object sender, RoutedEventArgs e)
+        {
+            // Input box for char name
+            NameInputBox.Visibility = System.Windows.Visibility.Visible;
+        }
+
+        private void YesButton_Click(object sender, RoutedEventArgs e)
+        {
+            // YesButton Clicked! Let's hide our InputBox and handle the input text.
+            NameInputBox.Visibility = System.Windows.Visibility.Collapsed;
+
+            // Do something with the Input
+            string input = InputTextBox.Text;
+            CharacterName.Content = input;
+
+            // Clear InputBox.
+            InputTextBox.Text = String.Empty;
+        }
+
+        private void NoButton_Click(object sender, RoutedEventArgs e)
+        {
+            // NoButton Clicked! Let's hide our InputBox.
+            NameInputBox.Visibility = System.Windows.Visibility.Collapsed;
+
+            // Clear InputBox.
+            InputTextBox.Text = String.Empty;
+        }
 
 
         public CharCreation()
