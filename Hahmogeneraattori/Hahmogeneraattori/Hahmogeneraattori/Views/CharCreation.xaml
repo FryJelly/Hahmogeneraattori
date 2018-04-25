@@ -140,20 +140,57 @@
             </TabItem>
             <TabItem Header="Spells"/>
             <TabItem Header="Character">
-                <StackPanel>
-                    <StackPanel Orientation="Horizontal" Height="122">
-                        <ListBox Height="115">
-                            <ListBoxItem Content="Character name: "/>
-                            <ListBoxItem Content="Race: "/>
-                            <ListBoxItem Content="Class: "/>
-                        </ListBox>
-                        <ListBox Height="115">
-                            <ListBoxItem Name="CharacterName" Content="Enter name here" Selected="CharacterName_Selected"/>
-                            <ListBoxItem Name="CharacterRace" Content=""/>
-                            <ListBoxItem Name="CharacterClass" Content=""/>
-                        </ListBox>
+                <Grid>
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal" Height="122">
+                            <ListBox Margin="0,4,0,0">
+                                <ListBoxItem Content="Character name: "/>
+                                <ListBoxItem Content="Race: "/>
+                                <ListBoxItem Content="Class: "/>
+                            </ListBox>
+                            <ListBox Margin="0,4,0,0">
+                                <ListBoxItem Name="CharacterName" Content="Enter name here" Selected="CharacterName_Selected"/>
+                                <ListBoxItem Name="CharacterRace" Content=""/>
+                                <ListBoxItem Name="CharacterClass" Content=""/>
+                            </ListBox>
+                            <ListBox Width="335" Margin="0,4,0,0">
+                                <ListBoxItem Content="Character backstory"></ListBoxItem>
+                                <TextBox Height="69" Width="313" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"/>
+                                <ListBoxItem/>
+                            </ListBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <ListBox>
+                                <ListBoxItem Content="Stats"></ListBoxItem>
+                                <ListBoxItem Content="Strength: "></ListBoxItem>
+                                <ListBoxItem Content="Dexterity: "></ListBoxItem>
+                                <ListBoxItem Content="Constitution: "></ListBoxItem>
+                                <ListBoxItem Content="Intelligence: "></ListBoxItem>
+                                <ListBoxItem Content="Wisdom: "></ListBoxItem>
+                                <ListBoxItem Content="Charisma: "></ListBoxItem>
+                            </ListBox>
+                            <ListBox>
+                                <ListBoxItem Content="Ranks"></ListBoxItem>
+                                <ListBoxItem Name="CharacterStrength" Content=""></ListBoxItem>
+                                <ListBoxItem Name="CharacterDexterity" Content=""></ListBoxItem>
+                                <ListBoxItem Name="CharacterConstitution" Content=""></ListBoxItem>
+                                <ListBoxItem Name="CharacterIntelligence" Content=""></ListBoxItem>
+                                <ListBoxItem Name="CharacterWisdom" Content=""></ListBoxItem>
+                                <ListBoxItem Name="CharacterCharisma" Content=""></ListBoxItem>
+                            </ListBox>
+                            <ListBox>
+                                <ListBoxItem Content="Modifiers"></ListBoxItem>
+                                <ListBoxItem Name="CharStrMod" Content=""></ListBoxItem>
+                                <ListBoxItem Name="CharDexMod" Content=""></ListBoxItem>
+                                <ListBoxItem Name="CharConMod" Content=""></ListBoxItem>
+                                <ListBoxItem Name="CharIntMod" Content=""></ListBoxItem>
+                                <ListBoxItem Name="CharWisMod" Content=""></ListBoxItem>
+                                <ListBoxItem Name="CharChaMod" Content=""></ListBoxItem>
+                            </ListBox>
+                        </StackPanel>
                     </StackPanel>
-                    <Grid x:Name="NameInputBox" Visibility="Collapsed">
+                    <Grid x:Name="InputBox" Visibility="Collapsed">
+                        <Grid Background="Black" Opacity="0.5"></Grid>
                         <Border
                             MinWidth="250"
                             Background="Orange" 
@@ -163,7 +200,7 @@
                             VerticalAlignment="Center">
                             <StackPanel>
                                 <TextBlock Margin="5" Text="Input Box:" />
-                                <TextBox Name="InputTextBox" MinWidth="150" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBox>
+                                <TextBox Name="InputTextBox" MinWidth="200" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBox>
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                     <Button Name="Yes" Margin="5" Content="Yes" Click="YesButton_Click"></Button>
                                     <Button Name="No" Margin="5" Content="No" Click="NoButton_Click"></Button>
@@ -172,8 +209,8 @@
                         </Border>
                     </Grid>
 
-                </StackPanel>
 
+                </Grid>
             </TabItem>
 
         </TabControl>

@@ -629,13 +629,13 @@ namespace Hahmogeneraattori.Views
         private void CharacterName_Selected(object sender, RoutedEventArgs e)
         {
             // Input box for char name
-            NameInputBox.Visibility = System.Windows.Visibility.Visible;
+            InputBox.Visibility = System.Windows.Visibility.Visible;
         }
 
         private void YesButton_Click(object sender, RoutedEventArgs e)
         {
             // YesButton Clicked! Let's hide our InputBox and handle the input text.
-            NameInputBox.Visibility = System.Windows.Visibility.Collapsed;
+            InputBox.Visibility = System.Windows.Visibility.Collapsed;
 
             // Do something with the Input
             string input = InputTextBox.Text;
@@ -648,7 +648,7 @@ namespace Hahmogeneraattori.Views
         private void NoButton_Click(object sender, RoutedEventArgs e)
         {
             // NoButton Clicked! Let's hide our InputBox.
-            NameInputBox.Visibility = System.Windows.Visibility.Collapsed;
+            InputBox.Visibility = System.Windows.Visibility.Collapsed;
 
             // Clear InputBox.
             InputTextBox.Text = String.Empty;
@@ -686,6 +686,20 @@ namespace Hahmogeneraattori.Views
             WisMod.Text = WisModifier.ToString();
             ChaMod.Text = ChaModifier.ToString();
 
+            //update stats to char sheet
+            CharacterStrength.Content = stats.Str;
+            CharacterDexterity.Content = stats.Dex;
+            CharacterConstitution.Content = stats.Con;
+            CharacterIntelligence.Content = stats.Int;
+            CharacterWisdom.Content = stats.Wis;
+            CharacterCharisma.Content = stats.Cha;
+            // update char sheet modifiers
+            CharStrMod.Content = StrMod.Text;
+            CharDexMod.Content = DexMod.Text;
+            CharConMod.Content = ConMod.Text;
+            CharIntMod.Content = IntMod.Text;
+            CharWisMod.Content = WisMod.Text;
+            CharChaMod.Content = ChaMod.Text;
         }
 
         private void ListBox_SelectionChanged()
@@ -727,6 +741,21 @@ namespace Hahmogeneraattori.Views
 
             // Update character sheet race
             CharacterRace.Content = Dwarf.Name;
+
+            //update stats to char sheet
+            CharacterStrength.Content = RaceStr;
+            CharacterDexterity.Content = RaceDex;
+            CharacterConstitution.Content = RaceCon;
+            CharacterIntelligence.Content = RaceInt;
+            CharacterWisdom.Content = RaceWis;
+            CharacterCharisma.Content = RaceCha;
+            // update char sheet modifiers
+            CharStrMod.Content = StrMod.Text;
+            CharDexMod.Content = DexMod.Text;
+            CharConMod.Content = ConMod.Text;
+            CharIntMod.Content = IntMod.Text;
+            CharWisMod.Content = WisMod.Text;
+            CharChaMod.Content = ChaMod.Text;
         }
 
         private void Elf_Selected(object sender, RoutedEventArgs e)
@@ -763,6 +792,20 @@ namespace Hahmogeneraattori.Views
 
             // Update character sheet race
             CharacterRace.Content = Elf.Name;
+            //update stats to char sheet
+            CharacterStrength.Content = RaceStr;
+            CharacterDexterity.Content = RaceDex;
+            CharacterConstitution.Content = RaceCon;
+            CharacterIntelligence.Content = RaceInt;
+            CharacterWisdom.Content = RaceWis;
+            CharacterCharisma.Content = RaceCha;
+            // update char sheet modifiers
+            CharStrMod.Content = StrMod.Text;
+            CharDexMod.Content = DexMod.Text;
+            CharConMod.Content = ConMod.Text;
+            CharIntMod.Content = IntMod.Text;
+            CharWisMod.Content = WisMod.Text;
+            CharChaMod.Content = ChaMod.Text;
         }
 
         private void Gnome_Selected(object sender, RoutedEventArgs e)
@@ -799,6 +842,20 @@ namespace Hahmogeneraattori.Views
 
             // Update character sheet race
             CharacterRace.Content = Gnome.Name;
+            //update stats to char sheet
+            CharacterStrength.Content = RaceStr;
+            CharacterDexterity.Content = RaceDex;
+            CharacterConstitution.Content = RaceCon;
+            CharacterIntelligence.Content = RaceInt;
+            CharacterWisdom.Content = RaceWis;
+            CharacterCharisma.Content = RaceCha;
+            // update char sheet modifiers
+            CharStrMod.Content = StrMod.Text;
+            CharDexMod.Content = DexMod.Text;
+            CharConMod.Content = ConMod.Text;
+            CharIntMod.Content = IntMod.Text;
+            CharWisMod.Content = WisMod.Text;
+            CharChaMod.Content = ChaMod.Text;
         }
 
         private void HalfElf_Selected(object sender, RoutedEventArgs e)
@@ -807,6 +864,20 @@ namespace Hahmogeneraattori.Views
 
             // Update character sheet race
             CharacterRace.Content = HalfElf.Name;
+            //update stats to char sheet
+            CharacterStrength.Content = RaceStr;
+            CharacterDexterity.Content = RaceDex;
+            CharacterConstitution.Content = RaceCon;
+            CharacterIntelligence.Content = RaceInt;
+            CharacterWisdom.Content = RaceWis;
+            CharacterCharisma.Content = RaceCha;
+            // update char sheet modifiers
+            CharStrMod.Content = StrMod.Text;
+            CharDexMod.Content = DexMod.Text;
+            CharConMod.Content = ConMod.Text;
+            CharIntMod.Content = IntMod.Text;
+            CharWisMod.Content = WisMod.Text;
+            CharChaMod.Content = ChaMod.Text;
         }
 
         private void HalfOrc_Selected(object sender, RoutedEventArgs e)
@@ -815,6 +886,20 @@ namespace Hahmogeneraattori.Views
 
             // Update character sheet race
             CharacterRace.Content = HalfOrc.Name;
+            //update stats to char sheet
+            CharacterStrength.Content = RaceStr;
+            CharacterDexterity.Content = RaceDex;
+            CharacterConstitution.Content = RaceCon;
+            CharacterIntelligence.Content = RaceInt;
+            CharacterWisdom.Content = RaceWis;
+            CharacterCharisma.Content = RaceCha;
+            // update char sheet modifiers
+            CharStrMod.Content = StrMod.Text;
+            CharDexMod.Content = DexMod.Text;
+            CharConMod.Content = ConMod.Text;
+            CharIntMod.Content = IntMod.Text;
+            CharWisMod.Content = WisMod.Text;
+            CharChaMod.Content = ChaMod.Text;
         }
 
         private void Halfling_Selected(object sender, RoutedEventArgs e)
@@ -852,6 +937,20 @@ namespace Hahmogeneraattori.Views
 
             // Update character sheet race
             CharacterRace.Content = Halfling.Name;
+            //update stats to char sheet
+            CharacterStrength.Content = RaceStr;
+            CharacterDexterity.Content = RaceDex;
+            CharacterConstitution.Content = RaceCon;
+            CharacterIntelligence.Content = RaceInt;
+            CharacterWisdom.Content = RaceWis;
+            CharacterCharisma.Content = RaceCha;
+            // update char sheet modifiers
+            CharStrMod.Content = StrMod.Text;
+            CharDexMod.Content = DexMod.Text;
+            CharConMod.Content = ConMod.Text;
+            CharIntMod.Content = IntMod.Text;
+            CharWisMod.Content = WisMod.Text;
+            CharChaMod.Content = ChaMod.Text;
         }
 
         private void Human_Selected(object sender, RoutedEventArgs e)
@@ -860,6 +959,20 @@ namespace Hahmogeneraattori.Views
 
             // Update character sheet race
             CharacterRace.Content = Human.Name;
+            //update stats to char sheet
+            CharacterStrength.Content = RaceStr;
+            CharacterDexterity.Content = RaceDex;
+            CharacterConstitution.Content = RaceCon;
+            CharacterIntelligence.Content = RaceInt;
+            CharacterWisdom.Content = RaceWis;
+            CharacterCharisma.Content = RaceCha;
+            // update char sheet modifiers
+            CharStrMod.Content = StrMod.Text;
+            CharDexMod.Content = DexMod.Text;
+            CharConMod.Content = ConMod.Text;
+            CharIntMod.Content = IntMod.Text;
+            CharWisMod.Content = WisMod.Text;
+            CharChaMod.Content = ChaMod.Text;
         }
     }
 }
