@@ -104,7 +104,7 @@
                             <!--Here is all skills. checkboxes are disabled so users can't change them themselves. ListBoxItems are there to make text selectable. And Rank textBoxes are named for number changes-->
                             <TextBlock Name="Acrobatics">
                                 <CheckBox Name="AcrobaticsCheck" IsEnabled="False"/>
-                                <ListBoxItem Name="AcrobaticsBox" Selected="AcrobaticsBox_Selected" IsSelected="True">
+                                <ListBoxItem Name="AcrobaticsBox" Selected="AcrobaticsBox_Selected">
                                     Acrobatics (Dex)
                                 </ListBoxItem> 
                                 <TextBox Name="AcrobaticsRank" IsEnabled="False" Text="0"/>
