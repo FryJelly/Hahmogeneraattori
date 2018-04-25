@@ -61,7 +61,6 @@ C:\Users\skyri\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattor
 C:\Users\skyri\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\bin\Debug\MySql.Data.dll
 C:\Users\skyri\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\bin\Debug\Google.Protobuf.xml
 C:\Users\skyri\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\bin\Debug\MySql.Data.xml
-C:\Users\skyri\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\Hahmogeneraattori.csprojResolveAssemblyReference.cache
 C:\Users\skyri\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\MainWindow.g.cs
 C:\Users\skyri\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\Views\CharCreation.g.cs
 C:\Users\skyri\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\App.g.cs
