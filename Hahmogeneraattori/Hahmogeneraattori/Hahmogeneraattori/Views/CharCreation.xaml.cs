@@ -25,10 +25,12 @@ namespace Hahmogeneraattori.Views
         Stats stats2 = new Stats();
         int RaceStr, RaceDex, RaceCon, RaceInt, RaceWis, RaceCha;
         int StrModifier, DexModifier, ConModifier, IntModifier, WisModifier, ChaModifier;
-        //Stats
+        int SkillRank;
+
+        //Adding stat bonuses to human, half-elf or half-orc
         private void Strength_Selected(object sender, RoutedEventArgs e)
         {
-            //Human_Selected
+            
         }
 
         private void Dexterity_Selected(object sender, RoutedEventArgs e)
@@ -654,12 +656,492 @@ namespace Hahmogeneraattori.Views
             InputTextBox.Text = String.Empty;
         }
 
+        private void AcrobaticsBox_Selected(object sender, RoutedEventArgs e)
+        {
+            if(AcrobaticsCheck.IsChecked == true)
+            {
+                SkillRank = DexModifier + 4;
+                AcrobaticsRank.Text = SkillRank.ToString();
+            }
+
+            else
+            {
+                SkillRank = DexModifier + 1;
+                AcrobaticsRank.Text = SkillRank.ToString();
+            }
+        }
+
+        private void AppraiseBox_Selected(object sender, RoutedEventArgs e)
+        {
+            if (AppraiseCheck.IsChecked == true)
+            {
+                SkillRank = IntModifier + 4;
+                AppraiseRank.Text = SkillRank.ToString();
+            }
+
+            else
+            {
+                SkillRank = IntModifier + 1;
+                AppraiseRank.Text = SkillRank.ToString();
+            }
+        }
+
+        private void BluffBox_Selected(object sender, RoutedEventArgs e)
+        {
+            if (BluffCheck.IsChecked == true)
+            {
+                SkillRank = ChaModifier + 4;
+                BluffRank.Text = SkillRank.ToString();
+            }
+
+            else
+            {
+                SkillRank = ChaModifier + 1;
+                BluffRank.Text = SkillRank.ToString();
+            }
+        }
+
+        private void ClimbBox_Selected(object sender, RoutedEventArgs e)
+        {
+            if (ClimbCheck.IsChecked == true)
+            {
+                SkillRank = StrModifier + 4;
+                ClimbRank.Text = SkillRank.ToString();
+            }
+
+            else
+            {
+                SkillRank = StrModifier + 1;
+                ClimbRank.Text = SkillRank.ToString();
+            }
+        }
+
+        private void DiplomacyBox_Selected(object sender, RoutedEventArgs e)
+        {
+            if (DiplomacyCheck.IsChecked == true)
+            {
+                SkillRank = ChaModifier + 4;
+                DiplomacyRank.Text = SkillRank.ToString();
+            }
+
+            else
+            {
+                SkillRank = ChaModifier + 1;
+                DiplomacyRank.Text = SkillRank.ToString();
+            }
+        }
+
+        private void DisableDeviceBox_Selected(object sender, RoutedEventArgs e)
+        {
+            if (DisableDeviceCheck.IsChecked == true)
+            {
+                SkillRank = DexModifier + 4;
+                DisableDeviceRank.Text = SkillRank.ToString();
+            }
+
+            else
+            {
+                SkillRank = DexModifier + 1;
+                DisableDeviceRank.Text = SkillRank.ToString();
+            }
+        }
+
+        private void DisguiseBox_Selected(object sender, RoutedEventArgs e)
+        {
+            if (DisguiseCheck.IsChecked == true)
+            {
+                SkillRank = ChaModifier + 4;
+                DisguiseRank.Text = SkillRank.ToString();
+            }
+
+            else
+            {
+                SkillRank = ChaModifier + 1;
+                DisguiseRank.Text = SkillRank.ToString();
+            }
+        }
+
+        private void EscapeArtistBox_Selected(object sender, RoutedEventArgs e)
+        {
+            if (EscapeArtistCheck.IsChecked == true)
+            {
+                SkillRank = DexModifier + 4;
+                EscapeArtistRank.Text = SkillRank.ToString();
+            }
+
+            else
+            {
+                SkillRank = DexModifier + 1;
+                EscapeArtistRank.Text = SkillRank.ToString();
+            }
+        }
+
+        private void FlyBox_Selected(object sender, RoutedEventArgs e)
+        {
+            if (FlyCheck.IsChecked == true)
+            {
+                SkillRank = DexModifier + 4;
+                FlyRank.Text = SkillRank.ToString();
+            }
+
+            else
+            {
+                SkillRank = DexModifier + 1;
+                FlyRank.Text = SkillRank.ToString();
+            }
+        }
+
+        private void HandleAnimalBox_Selected(object sender, RoutedEventArgs e)
+        {
+            if (HandleAnimalCheck.IsChecked == true)
+            {
+                SkillRank = ChaModifier + 4;
+                HandleAnimalRank.Text = SkillRank.ToString();
+            }
+
+            else
+            {
+                SkillRank = ChaModifier + 1;
+                HandleAnimalRank.Text = SkillRank.ToString();
+            }
+        }
+
+        private void HealBox_Selected(object sender, RoutedEventArgs e)
+        {
+            if (HealCheck.IsChecked == true)
+            {
+                SkillRank = WisModifier + 4;
+                HealRank.Text = SkillRank.ToString();
+            }
+
+            else
+            {
+                SkillRank = WisModifier + 1;
+                HealRank.Text = SkillRank.ToString();
+            }
+        }
+
+        private void IntimidateBox_Selected(object sender, RoutedEventArgs e)
+        {
+            if (IntimidateCheck.IsChecked == true)
+            {
+                SkillRank = ChaModifier + 4;
+                IntimidateRank.Text = SkillRank.ToString();
+            }
+
+            else
+            {
+                SkillRank = ChaModifier + 1;
+                IntimidateRank.Text = SkillRank.ToString();
+            }
+        }
+
+        private void KnowArcanaBox_Selected(object sender, RoutedEventArgs e)
+        {
+            if (KnowArcanaCheck.IsChecked == true)
+            {
+                SkillRank = IntModifier + 4;
+                KnowArcanaRank.Text = SkillRank.ToString();
+            }
+
+            else
+            {
+                SkillRank = IntModifier + 1;
+                KnowArcanaRank.Text = SkillRank.ToString();
+            }
+        }
+
+        private void KnowDungeoneeringBox_Selected(object sender, RoutedEventArgs e)
+        {
+            if (KnowDungeoneeringCheck.IsChecked == true)
+            {
+                SkillRank = IntModifier + 4;
+                KnowDungeoneeringRank.Text = SkillRank.ToString();
+            }
+
+            else
+            {
+                SkillRank = IntModifier + 1;
+                KnowDungeoneeringRank.Text = SkillRank.ToString();
+            }
+        }
+
+        private void KnowEngineeringBox_Selected(object sender, RoutedEventArgs e)
+        {
+            if (KnowEngineeringCheck.IsChecked == true)
+            {
+                SkillRank = IntModifier + 4;
+                KnowEngineeringRank.Text = SkillRank.ToString();
+            }
+
+            else
+            {
+                SkillRank = IntModifier + 1;
+                KnowEngineeringRank.Text = SkillRank.ToString();
+            }
+        }
+
+        private void KnowGeographyBox_Selected(object sender, RoutedEventArgs e)
+        {
+            if (KnowGeographyCheck.IsChecked == true)
+            {
+                SkillRank = IntModifier + 4;
+                KnowGeographyRank.Text = SkillRank.ToString();
+            }
+
+            else
+            {
+                SkillRank = IntModifier + 1;
+                KnowGeographyRank.Text = SkillRank.ToString();
+            }
+        }
+
+        private void KnowHistoryBox_Selected(object sender, RoutedEventArgs e)
+        {
+            if (KnowHistoryCheck.IsChecked == true)
+            {
+                SkillRank = IntModifier + 4;
+                KnowHistoryRank.Text = SkillRank.ToString();
+            }
+
+            else
+            {
+                SkillRank = IntModifier + 1;
+                KnowHistoryRank.Text = SkillRank.ToString();
+            }
+        }
+
+        private void KnowLocalBox_Selected(object sender, RoutedEventArgs e)
+        {
+            if (KnowLocalCheck.IsChecked == true)
+            {
+                SkillRank = IntModifier + 4;
+                KnowLocalRank.Text = SkillRank.ToString();
+            }
+
+            else
+            {
+                SkillRank = IntModifier + 1;
+                KnowLocalRank.Text = SkillRank.ToString();
+            }
+        }
+
+        private void KnowNatureBox_Selected(object sender, RoutedEventArgs e)
+        {
+            if (KnowNatureCheck.IsChecked == true)
+            {
+                SkillRank = IntModifier + 4;
+                KnowNatureRank.Text = SkillRank.ToString();
+            }
+
+            else
+            {
+                SkillRank = IntModifier + 1;
+                KnowNatureRank.Text = SkillRank.ToString();
+            }
+        }
+
+        private void KnowNobilityBox_Selected(object sender, RoutedEventArgs e)
+        {
+            if (KnowNobilityCheck.IsChecked == true)
+            {
+                SkillRank = IntModifier + 4;
+                KnowNobilityRank.Text = SkillRank.ToString();
+            }
+
+            else
+            {
+                SkillRank = IntModifier + 1;
+                KnowNobilityRank.Text = SkillRank.ToString();
+            }
+        }
+
+        private void KnowPlanesBox_Selected(object sender, RoutedEventArgs e)
+        {
+            if (KnowPlanesCheck.IsChecked == true)
+            {
+                SkillRank = IntModifier + 4;
+                KnowPlanesRank.Text = SkillRank.ToString();
+            }
+
+            else
+            {
+                SkillRank = IntModifier + 1;
+                KnowPlanesRank.Text = SkillRank.ToString();
+            }
+        }
+
+        private void KnowReligionBox_Selected(object sender, RoutedEventArgs e)
+        {
+            if (KnowReligionCheck.IsChecked == true)
+            {
+                SkillRank = IntModifier + 4;
+                KnowReligionRank.Text = SkillRank.ToString();
+            }
+
+            else
+            {
+                SkillRank = IntModifier + 1;
+                KnowReligionRank.Text = SkillRank.ToString();
+            }
+        }
+
+        private void LinguisticsBox_Selected(object sender, RoutedEventArgs e)
+        {
+            if (LinguisticsCheck.IsChecked == true)
+            {
+                SkillRank = IntModifier + 4;
+                LinguisticsRank.Text = SkillRank.ToString();
+            }
+
+            else
+            {
+                SkillRank = IntModifier + 1;
+                LinguisticsRank.Text = SkillRank.ToString();
+            }
+        }
+
+        private void PerceptionBox_Selected(object sender, RoutedEventArgs e)
+        {
+            if (PerceptionCheck.IsChecked == true)
+            {
+                SkillRank = WisModifier + 4;
+                PerceptionRank.Text = SkillRank.ToString();
+            }
+
+            else
+            {
+                SkillRank = WisModifier + 1;
+                PerceptionRank.Text = SkillRank.ToString();
+            }
+        }
+
+        private void RideBox_Selected(object sender, RoutedEventArgs e)
+        {
+            if (RideCheck.IsChecked == true)
+            {
+                SkillRank = DexModifier + 4;
+                RideRank.Text = SkillRank.ToString();
+            }
+
+            else
+            {
+                SkillRank = DexModifier + 1;
+                RideRank.Text = SkillRank.ToString();
+            }
+        }
+
+        private void SenseMotiveBox_Selected(object sender, RoutedEventArgs e)
+        {
+            if (SenseMotiveCheck.IsChecked == true)
+            {
+                SkillRank = WisModifier + 4;
+                SenseMotiveRank.Text = SkillRank.ToString();
+            }
+
+            else
+            {
+                SkillRank = WisModifier + 1;
+                SenseMotiveRank.Text = SkillRank.ToString();
+            }
+        }
+
+        private void SleightOfHandBox_Selected(object sender, RoutedEventArgs e)
+        {
+            if (SleightOfHandCheck.IsChecked == true)
+            {
+                SkillRank = DexModifier + 4;
+                SleightOfHandRank.Text = SkillRank.ToString();
+            }
+
+            else
+            {
+                SkillRank = DexModifier + 1;
+                SleightOfHandRank.Text = SkillRank.ToString();
+            }
+        }
+
+        private void SpellcraftBox_Selected(object sender, RoutedEventArgs e)
+        {
+            if (SpellcraftCheck.IsChecked == true)
+            {
+                SkillRank = IntModifier + 4;
+                SpellcraftRank.Text = SkillRank.ToString();
+            }
+
+            else
+            {
+                SkillRank = IntModifier + 1;
+                SpellcraftRank.Text = SkillRank.ToString();
+            }
+        }
+
+        private void StealthBox_Selected(object sender, RoutedEventArgs e)
+        {
+            if (StealthCheck.IsChecked == true)
+            {
+                SkillRank = DexModifier + 4;
+                StealthRank.Text = SkillRank.ToString();
+            }
+
+            else
+            {
+                SkillRank = DexModifier + 1;
+                StealthRank.Text = SkillRank.ToString();
+            }
+        }
+
+        private void SurvivalBox_Selected(object sender, RoutedEventArgs e)
+        {
+            if (SurvivalCheck.IsChecked == true)
+            {
+                SkillRank = WisModifier + 4;
+                SurvivalRank.Text = SkillRank.ToString();
+            }
+
+            else
+            {
+                SkillRank = WisModifier + 1;
+                SurvivalRank.Text = SkillRank.ToString();
+            }
+        }
+
+        private void SwimBox_Selected(object sender, RoutedEventArgs e)
+        {
+            if (SwimCheck.IsChecked == true)
+            {
+                SkillRank = StrModifier + 4;
+                SwimRank.Text = SkillRank.ToString();
+            }
+
+            else
+            {
+                SkillRank = StrModifier + 1;
+                SwimRank.Text = SkillRank.ToString();
+            }
+        }
+
+        private void UseMagicDeviseBox_Selected(object sender, RoutedEventArgs e)
+        {
+            if (UseMagicDeviseCheck.IsChecked == true)
+            {
+                SkillRank = ChaModifier + 4;
+                UseMagicDeviseRank.Text = SkillRank.ToString();
+            }
+
+            else
+            {
+                SkillRank = ChaModifier + 1;
+                UseMagicDeviseRank.Text = SkillRank.ToString();
+            }
+        }
 
         public CharCreation()
         {
             InitializeComponent();
         }
 
+        //Rolls stats and modifiers
         private void btnStats_Click(object sender, RoutedEventArgs e)
         {
             stats = Stats.RollStats();
