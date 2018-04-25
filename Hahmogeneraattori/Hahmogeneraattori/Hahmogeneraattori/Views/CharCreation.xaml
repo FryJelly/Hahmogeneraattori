@@ -146,15 +146,11 @@
                             <ListBoxItem Content="Character name: "/>
                             <ListBoxItem Content="Race: "/>
                             <ListBoxItem Content="Class: "/>
-                            <ListBoxItem Content="ListBoxItem"/>
-                            <ListBoxItem Content="ListBoxItem"/>
                         </ListBox>
                         <ListBox Height="115">
-                            <ListBoxItem Name="CharacterName" Content="ListBoxItem" Selected="CharacterName_Selected"/>
-                            <ListBoxItem Content=""/>
-                            <ListBoxItem Content=""/>
-                            <ListBoxItem Content=""/>
-                            <ListBoxItem Content=""/>
+                            <ListBoxItem Name="CharacterName" Content="Enter name here" Selected="CharacterName_Selected"/>
+                            <ListBoxItem Name="CharacterRace" Content=""/>
+                            <ListBoxItem Name="CharacterClass" Content=""/>
                         </ListBox>
                     </StackPanel>
                     <Grid x:Name="NameInputBox" Visibility="Collapsed">
