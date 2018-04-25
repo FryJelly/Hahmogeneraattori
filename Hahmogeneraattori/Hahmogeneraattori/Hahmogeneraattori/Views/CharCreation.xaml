@@ -101,38 +101,39 @@
                 <StackPanel Orientation="Horizontal">
                     <StackPanel Name="SkillPanel" Width="420">
                         <ListBox Name="SkillList" FontSize="12" Height="470">
-                            <TextBlock Name="Acrobatics"><CheckBox Name="AcrobaticsCheck" IsEnabled="False"/>Acrobatics <ListBoxItem Name="AcrobaticsRank"/></TextBlock>
-                            <TextBlock Name="Appraise"><CheckBox Name="AppraiseCheck" IsEnabled="False"/>Appraise <ListBoxItem Name="AppraiseRank"/></TextBlock>
-                            <TextBlock Name="Bluff"><CheckBox Name="BluffCheck" IsEnabled="False"/>Bluff <ListBoxItem Name="BluffRank"/></TextBlock>
-                            <TextBlock Name="Climb"><CheckBox Name="ClimbCheck" IsEnabled="False"/>Climb <ListBoxItem Name="ClimbRank"/></TextBlock>
-                            <TextBlock Name="Diplomacy"><CheckBox Name="DiplomacyCheck" IsEnabled="False"/>Diplomacy <ListBoxItem Name="DiplomacyRank"/></TextBlock>
-                            <TextBlock Name="DisableDevice"><CheckBox Name="DisableDeviceCheck" IsEnabled="False"/>Disable Device <ListBoxItem Name="DisableDeviceRank"/></TextBlock>
-                            <TextBlock Name="Disguise"><CheckBox Name="DisguiseCheck" IsEnabled="False"/>Disguise <ListBoxItem Name="DisguiseRank"/></TextBlock>
-                            <TextBlock Name="EscapeArtist"><CheckBox Name="EscapeArtistCheck" IsEnabled="False"/>Escape Artist <ListBoxItem Name="EscapeArtistRank"/></TextBlock>
-                            <TextBlock Name="Fly"><CheckBox Name="FlyCheck" IsEnabled="False"/>Fly <ListBoxItem Name="FlyRank"/></TextBlock>
-                            <TextBlock Name="HandleAnimal"><CheckBox Name="HandleAnimalCheck" IsEnabled="False"/>Handle Animal <ListBoxItem Name="HandleAnimalRank"/></TextBlock>
-                            <TextBlock Name="Heal"><CheckBox Name="HealCheck" IsEnabled="False"/>Heal <ListBoxItem Name="HealRank"/></TextBlock>
-                            <TextBlock Name="Intimidate"><CheckBox Name="IntimidateCheck" IsEnabled="False"/>Intimidate <ListBoxItem Name="IntimidateRank"/></TextBlock>
-                            <TextBlock Name="KnowArcana"><CheckBox Name="KnowArcanaCheck" IsEnabled="False"/>Knowledge (Arcana) <ListBoxItem Name="KnowArcanaRank"/></TextBlock>
-                            <TextBlock Name="KnowDungeoneering"><CheckBox Name="KnowDungeoneeringCheck" IsEnabled="False"/>Knowledge (Dungeoneering) <ListBoxItem Name="KnowDungeoneeringRank"/></TextBlock>
-                            <TextBlock Name="KnowEngineering"><CheckBox Name="KnowEngineeringCheck" IsEnabled="False"/>Knowledge (Engineering) <ListBoxItem Name="KnowEngineeringRank"/></TextBlock>
-                            <TextBlock Name="KnowGeography"><CheckBox Name="KnowGeographyCheck" IsEnabled="False"/>Knowledge (Geography) <ListBoxItem Name="KnowGeographyRank"/></TextBlock>
-                            <TextBlock Name="KnowHistory"><CheckBox Name="KnowHistoryCheck" IsEnabled="False"/>Knowledge (History) <ListBoxItem Name="KnowHistoryRank"/></TextBlock>
-                            <TextBlock Name="KnowLocal"><CheckBox Name="KnowLocalCheck" IsEnabled="False"/>Knowledge (Local) <ListBoxItem Name="KnowLocalRank"/></TextBlock>
-                            <TextBlock Name="KnowNature"><CheckBox Name="KnowNatureCheck" IsEnabled="False"/>Knowledge (Nature) <ListBoxItem Name="KnowNatureRank"/></TextBlock>
-                            <TextBlock Name="KnowNobility"><CheckBox Name="KnowNobilityCheck" IsEnabled="False"/>Knowledge (Nobility) <ListBoxItem Name="KnowNobilityRank"/></TextBlock>
-                            <TextBlock Name="KnowPlanes"><CheckBox Name="KnowPlanesCheck" IsEnabled="False"/>Knowledge (Planes) <ListBoxItem Name="KnowPlanesRank"/></TextBlock>
-                            <TextBlock Name="KnowReligion"><CheckBox Name="KnowReligionCheck" IsEnabled="False"/>Knowledge (Religion) <ListBoxItem Name="KnowReligionRank"/></TextBlock>
-                            <TextBlock Name="Linguistics"><CheckBox Name="LinguisticsCheck" IsEnabled="False"/>Linguistics <ListBoxItem Name="LinguisticsRank"/></TextBlock>
-                            <TextBlock Name="Perception"><CheckBox Name="PerceptionCheck" IsEnabled="False"/>Perception <ListBoxItem Name="PerceptionRank"/></TextBlock>
-                            <TextBlock Name="Ride"><CheckBox Name="RideCheck" IsEnabled="False"/>Ride <ListBoxItem Name="RideRank"/></TextBlock>
-                            <TextBlock Name="SenseMotive"><CheckBox Name="SenseMotiveCheck" IsEnabled="False"/>Sense Motive <ListBoxItem Name="SenseMotiveRank"/></TextBlock>
-                            <TextBlock Name="SleightOfHand"><CheckBox Name="SleightOfHandCheck" IsEnabled="False"/>Sleight of Hand <ListBoxItem Name="SleightOfHandRank"/></TextBlock>
-                            <TextBlock Name="Spellcraft"><CheckBox Name="SpellcraftCheck" IsEnabled="False"/>Spellcraft <ListBoxItem Name="SpellcraftRank"/></TextBlock>
-                            <TextBlock Name="Stealth"><CheckBox Name="StealthCheck" IsEnabled="False"/>Stealth <ListBoxItem Name="StealthRank"/></TextBlock>
-                            <TextBlock Name="Survival"><CheckBox Name="SurvivalCheck" IsEnabled="False"/>Survival <ListBoxItem Name="SurvivalRank"/></TextBlock>
-                            <TextBlock Name="Swim"><CheckBox Name="SwimCheck" IsEnabled="False"/>Swim <ListBoxItem Name="SwimRank"/></TextBlock>
-                            <TextBlock Name="UseMagicDevise"><CheckBox Name="UseMagicDeviseCheck" IsEnabled="False"/>Use Magic Devise <ListBoxItem Name="UseMagicDeviseRank"/></TextBlock>
+                            <!--Here is all skills. checkboxes are disabled so users can't change them themselves. ListBoxItems are there to make text selectable. And Rank textBoxes are named for number changes-->
+                            <TextBlock Name="Acrobatics"><CheckBox Name="AcrobaticsCheck" IsEnabled="False"/><ListBoxItem Name="AcrobaticsBox" Selected="AcrobaticsBox_Selected">Acrobatics (Dex)</ListBoxItem> <TextBox Name="AcrobaticsRank"/></TextBlock>
+                            <TextBlock Name="Appraise"><CheckBox Name="AppraiseCheck" IsEnabled="False"/><ListBoxItem Name="AppraiseBox"> Appraise (Int)</ListBoxItem><TextBox Name="AppraiseRank"/></TextBlock>
+                            <TextBlock Name="Bluff"><CheckBox Name="BluffCheck" IsEnabled="False"/><ListBoxItem Name="BluffBox"> Bluff (Cha)</ListBoxItem><TextBox Name="BluffRank"/></TextBlock>
+                            <TextBlock Name="Climb"><CheckBox Name="ClimbCheck" IsEnabled="False"/><ListBoxItem Name="ClimbBox">Climb (Str)</ListBoxItem><TextBox Name="ClimbRank"/></TextBlock>
+                            <TextBlock Name="Diplomacy"><CheckBox Name="DiplomacyCheck" IsEnabled="False"/><ListBoxItem Name="DiplomacyBox">Diplomacy (Cha)</ListBoxItem><TextBox Name="DiplomacyRank"/></TextBlock>
+                            <TextBlock Name="DisableDevice"><CheckBox Name="DisableDeviceCheck" IsEnabled="False"/><ListBoxItem Name="DisableDeviceBox">Disable Device* (Dex)</ListBoxItem><TextBox Name="DisableDeviceRank"/></TextBlock>
+                            <TextBlock Name="Disguise"><CheckBox Name="DisguiseCheck" IsEnabled="False"/><ListBoxItem Name="DisguiseBox">Disguise (Cha)</ListBoxItem><TextBox Name="DisguiseRank"/></TextBlock>
+                            <TextBlock Name="EscapeArtist"><CheckBox Name="EscapeArtistCheck" IsEnabled="False"/><ListBoxItem Name="EscapeArtistBox">Escape Artist (Dex)</ListBoxItem><TextBox Name="EscapeArtistRank"/></TextBlock>
+                            <TextBlock Name="Fly"><CheckBox Name="FlyCheck" IsEnabled="False"/><ListBoxItem Name="FlyBox">Fly (Dex)</ListBoxItem><TextBox Name="FlyRank"/></TextBlock>
+                            <TextBlock Name="HandleAnimal"><CheckBox Name="HandleAnimalCheck" IsEnabled="False"/><ListBoxItem Name="HandleAnimalBox">Handle Animal* (Cha)</ListBoxItem><TextBox Name="HandleAnimalRank"/></TextBlock>
+                            <TextBlock Name="Heal"><CheckBox Name="HealCheck" IsEnabled="False"/><ListBoxItem Name="HealBox">Heal (Wis)</ListBoxItem><TextBox Name="HealRank"/></TextBlock>
+                            <TextBlock Name="Intimidate"><CheckBox Name="IntimidateCheck" IsEnabled="False"/><ListBoxItem Name="IntimidateBox">Intimidate (Cha)</ListBoxItem><TextBox Name="IntimidateRank"/></TextBlock>
+                            <TextBlock Name="KnowArcana"><CheckBox Name="KnowArcanaCheck" IsEnabled="False"/><ListBoxItem Name="KnowArcanaBox">Knowledge* (Arcana) (Int)</ListBoxItem><TextBox Name="KnowArcanaRank"/></TextBlock>
+                            <TextBlock Name="KnowDungeoneering"><CheckBox Name="KnowDungeoneeringCheck" IsEnabled="False"/><ListBoxItem Name="KnowDungeoneeringBox">Knowledge* (Dungeoneering) (Int)</ListBoxItem><TextBox Name="KnowDungeoneeringRank"/></TextBlock>
+                            <TextBlock Name="KnowEngineering"><CheckBox Name="KnowEngineeringCheck" IsEnabled="False"/><ListBoxItem Name="KnowEngineeringBox">Knowledge* (Engineering) (Int)</ListBoxItem><TextBox Name="KnowEngineeringRank"/></TextBlock>
+                            <TextBlock Name="KnowGeography"><CheckBox Name="KnowGeographyCheck" IsEnabled="False"/><ListBoxItem Name="KnowGeographyBox">Knowledge* (Geography) (Int)</ListBoxItem><TextBox Name="KnowGeographyRank"/></TextBlock>
+                            <TextBlock Name="KnowHistory"><CheckBox Name="KnowHistoryCheck" IsEnabled="False"/><ListBoxItem Name="KnowHistoryBox">Knowledge* (History) (Int)</ListBoxItem><TextBox Name="KnowHistoryRank"/></TextBlock>
+                            <TextBlock Name="KnowLocal"><CheckBox Name="KnowLocalCheck" IsEnabled="False"/><ListBoxItem Name="KnowLocalBox">Knowledge* (Local) (Int)</ListBoxItem><TextBox Name="KnowLocalRank"/></TextBlock>
+                            <TextBlock Name="KnowNature"><CheckBox Name="KnowNatureCheck" IsEnabled="False"/><ListBoxItem Name="KnowNatureBox">Knowledge* (Nature) (Int)</ListBoxItem><TextBox Name="KnowNatureRank"/></TextBlock>
+                            <TextBlock Name="KnowNobility"><CheckBox Name="KnowNobilityCheck" IsEnabled="False"/><ListBoxItem Name="KnowNobilityBox">Knowledge* (Nobility) (Int)</ListBoxItem><TextBox Name="KnowNobilityRank"/></TextBlock>
+                            <TextBlock Name="KnowPlanes"><CheckBox Name="KnowPlanesCheck" IsEnabled="False"/><ListBoxItem Name="KnowPlanesBox">Knowledge* (Planes) (Int)</ListBoxItem><TextBox Name="KnowPlanesRank"/></TextBlock>
+                            <TextBlock Name="KnowReligion"><CheckBox Name="KnowReligionCheck" IsEnabled="False"/><ListBoxItem Name="KnowReligionBox">Knowledge* (Religion) (Int)</ListBoxItem><TextBox Name="KnowReligionRank"/></TextBlock>
+                            <TextBlock Name="Linguistics"><CheckBox Name="LinguisticsCheck" IsEnabled="False"/><ListBoxItem Name="LinguisticsBox">Linguistics* (Int)</ListBoxItem><TextBox Name="LinguisticsRank"/></TextBlock>
+                            <TextBlock Name="Perception"><CheckBox Name="PerceptionCheck" IsEnabled="False"/><ListBoxItem Name="PerceptionBox">Perception (Wis)</ListBoxItem><TextBox Name="PerceptionRank"/></TextBlock>
+                            <TextBlock Name="Ride"><CheckBox Name="RideCheck" IsEnabled="False"/><ListBoxItem Name="RideBox">Ride (Dex)</ListBoxItem><TextBox Name="RideRank"/></TextBlock>
+                            <TextBlock Name="SenseMotive"><CheckBox Name="SenseMotiveCheck" IsEnabled="False"/><ListBoxItem Name="SenseMotiveBox">Sense Motive (Wis)</ListBoxItem><TextBox Name="SenseMotiveRank"/></TextBlock>
+                            <TextBlock Name="SleightOfHand"><CheckBox Name="SleightOfHandCheck" IsEnabled="False"/><ListBoxItem Name="SleightOfHandBox">Sleight of Hand* (Dex)</ListBoxItem><TextBox Name="SleightOfHandRank"/></TextBlock>
+                            <TextBlock Name="Spellcraft"><CheckBox Name="SpellcraftCheck" IsEnabled="False"/><ListBoxItem Name="SpellcraftBox">Spellcraft* (Int)</ListBoxItem><TextBox Name="SpellcraftRank"/></TextBlock>
+                            <TextBlock Name="Stealth"><CheckBox Name="StealthCheck" IsEnabled="False"/><ListBoxItem Name="StealthBox">Stealth (Dex)</ListBoxItem><TextBox Name="StealthRank"/></TextBlock>
+                            <TextBlock Name="Survival"><CheckBox Name="SurvivalCheck" IsEnabled="False"/><ListBoxItem Name="SurvivalBox">Survival (Wis)</ListBoxItem><TextBox Name="SurvivalRank"/></TextBlock>
+                            <TextBlock Name="Swim"><CheckBox Name="SwimCheck" IsEnabled="False"/><ListBoxItem Name="SwimBox">Swim (Str)</ListBoxItem><TextBox Name="SwimRank"/></TextBlock>
+                            <TextBlock Name="UseMagicDevise"><CheckBox Name="UseMagicDeviseCheck" IsEnabled="False"/><ListBoxItem Name="UseMagicDeviseBox">Use Magic Devise* (Cha)</ListBoxItem><TextBox Name="UseMagicDeviseRank"/></TextBlock>
                         </ListBox>
                     </StackPanel>
 

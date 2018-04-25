@@ -26,10 +26,11 @@ namespace Hahmogeneraattori.Views
         int RaceStr, RaceDex, RaceCon, RaceInt, RaceWis, RaceCha;
         int StrModifier, DexModifier, ConModifier, IntModifier, WisModifier, ChaModifier;
         int SkillRank;
-        //Stats
+
+        //Adding stat bonuses to human, half-elf or half-orc
         private void Strength_Selected(object sender, RoutedEventArgs e)
         {
-            //Human_Selected
+            
         }
 
         private void Dexterity_Selected(object sender, RoutedEventArgs e)
@@ -655,12 +656,17 @@ namespace Hahmogeneraattori.Views
             InputTextBox.Text = String.Empty;
         }
 
+        private void AcrobaticsBox_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
 
         public CharCreation()
         {
             InitializeComponent();
         }
 
+        //Rolls stats and modifiers
         private void btnStats_Click(object sender, RoutedEventArgs e)
         {
             stats = Stats.RollStats();
