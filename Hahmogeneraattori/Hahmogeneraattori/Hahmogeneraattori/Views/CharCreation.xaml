@@ -11,16 +11,22 @@
             <TabItem Header="Stats" Height="22" VerticalAlignment="Top">
                 <Grid Background="#FFE5E5E5">
                     <StackPanel>
+                        <TextBlock>
+                            <TextBox FontSize="24">Ability Name</TextBox>
+                            <TextBox>Score</TextBox>
+                            <TextBox>Modifier</TextBox>
+                        </TextBlock>
                         <StackPanel Orientation="Horizontal">                        
                             <StackPanel Name="AblilityName" Orientation="Horizontal">
+                                
                                 <ListBox FontSize="24">
                                 
-                                    <ListBoxItem>Strength</ListBoxItem>
-                                    <ListBoxItem>Dexterity</ListBoxItem>
-                                    <ListBoxItem>Constitution</ListBoxItem>
-                                    <ListBoxItem>Intelligence</ListBoxItem>
-                                    <ListBoxItem>Wisdom</ListBoxItem>
-                                    <ListBoxItem>Charisma</ListBoxItem>
+                                    <ListBoxItem Name="Strength" Selected="Strength_Selected">Strength</ListBoxItem>
+                                    <ListBoxItem Name="Dexterity" Selected="Dexterity_Selected">Dexterity</ListBoxItem>
+                                    <ListBoxItem Name="Constitution" Selected="Constitution_Selected">Constitution</ListBoxItem>
+                                    <ListBoxItem Name="Intelligence" Selected="Intelligence_Selected">Intelligence</ListBoxItem>
+                                    <ListBoxItem Name="Wisdom" Selected="Wisdom_Selected">Wisdom</ListBoxItem>
+                                    <ListBoxItem Name="Charisma" Selected="Charisma_Selected">Charisma</ListBoxItem>
                             
                                 </ListBox>
                             </StackPanel>
@@ -35,7 +41,17 @@
 
                                 </ListBox>
                             </StackPanel>
-                    
+                            <StackPanel x:Name="AbilityMod" Orientation="Horizontal">
+                                <ListBox FontSize="24" x:Name="ModList">
+                                    <TextBlock x:Name="StrMod"/>
+                                    <TextBlock x:Name="DexMod"/>
+                                    <TextBlock x:Name="ConMod"/>
+                                    <TextBlock x:Name="IntMod"/>
+                                    <TextBlock x:Name="WisMod"/>
+                                    <TextBlock x:Name="ChaMod"/>
+
+                                </ListBox>
+                            </StackPanel>
                         
                         </StackPanel>
                         <StackPanel HorizontalAlignment="Left" Height="31" VerticalAlignment="Bottom" Width="608" Grid.ColumnSpan="2">
@@ -81,7 +97,47 @@
                     <ListBoxItem></ListBoxItem>
                 </ListBox>
             </TabItem>
-            <TabItem Header="Skills"/>
+            <TabItem Header="Skills">
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Name="SkillPanel" Width="420">
+                        <ListBox Name="SkillList" FontSize="12" Height="470">
+                            <TextBlock Name="Acrobatics"><CheckBox/>Acrobatics <ListBoxItem Name="AcrobaticsRank"/></TextBlock>
+                            <TextBlock Name="Appraise"><CheckBox/>Appraise <ListBoxItem Name="AppraiseRank"/></TextBlock>
+                            <TextBlock Name="Bluff"><CheckBox/>Bluff <ListBoxItem Name="BluffRank"/></TextBlock>
+                            <TextBlock Name="Climb"><CheckBox/>Climb <ListBoxItem Name="ClimbRank"/></TextBlock>
+                            <TextBlock Name="Diplomacy"><CheckBox/>Diplomacy <ListBoxItem Name="DiplomacyRank"/></TextBlock>
+                            <TextBlock Name="DisableDevice"><CheckBox/>Disable Device <ListBoxItem Name="DisableDeviceRank"/></TextBlock>
+                            <TextBlock Name="Disguise"><CheckBox/>Disguise <ListBoxItem Name="DisguiseRank"/></TextBlock>
+                            <TextBlock Name="EscapeArtist"><CheckBox/>Escape Artist <ListBoxItem Name="EscapeArtistRank"/></TextBlock>
+                            <TextBlock Name="Fly"><CheckBox/>Fly <ListBoxItem Name="FlyRank"/></TextBlock>
+                            <TextBlock Name="HandleAnimal"><CheckBox/>Handle Animal <ListBoxItem Name="HandleAnimalRank"/></TextBlock>
+                            <TextBlock Name="Heal"><CheckBox/>Heal <ListBoxItem Name="HealRank"/></TextBlock>
+                            <TextBlock Name="Intimidate"><CheckBox/>Intimidate <ListBoxItem Name="IntimidateRank"/></TextBlock>
+                            <TextBlock Name="KnowArcana"><CheckBox/>Knowledge (Arcana) <ListBoxItem Name="KnowArcanaRank"/></TextBlock>
+                            <TextBlock Name="KnowDungeoneering"><CheckBox/>Knowledge (Dungeoneering) <ListBoxItem Name="KnowDungeoneeringRank"/></TextBlock>
+                            <TextBlock Name="KnowEngineering"><CheckBox/>Knowledge (Engineering) <ListBoxItem Name="KnowEngineeringRank"/></TextBlock>
+                            <TextBlock Name="KnowGeography"><CheckBox/>Knowledge (Geography) <ListBoxItem Name="KnowGeographyRank"/></TextBlock>
+                            <TextBlock Name="KnowHistory"><CheckBox/>Knowledge (History) <ListBoxItem Name="KnowHistoryRank"/></TextBlock>
+                            <TextBlock Name="KnowLocal"><CheckBox/>Knowledge (Local) <ListBoxItem Name="KnowLocalRank"/></TextBlock>
+                            <TextBlock Name="KnowNature"><CheckBox/>Knowledge (Nature) <ListBoxItem Name="KnowNatureRank"/></TextBlock>
+                            <TextBlock Name="KnowNobility"><CheckBox/>Knowledge (Nobility) <ListBoxItem Name="KnowNobilityRank"/></TextBlock>
+                            <TextBlock Name="KnowPlanes"><CheckBox/>Knowledge (Planes) <ListBoxItem Name="KnowPlanesRank"/></TextBlock>
+                            <TextBlock Name="KnowReligion"><CheckBox/>Knowledge (Religion) <ListBoxItem Name="KnowReligionRank"/></TextBlock>
+                            <TextBlock Name="Linguistics"><CheckBox/>Linguistics <ListBoxItem Name="LinguisticsRank"/></TextBlock>
+                            <TextBlock Name="Perception"><CheckBox/>Perception <ListBoxItem Name="PerceptionRank"/></TextBlock>
+                            <TextBlock Name="Ride"><CheckBox/>Ride <ListBoxItem Name="RideRank"/></TextBlock>
+                            <TextBlock Name="SenseMotive"><CheckBox/>Sense Motive <ListBoxItem Name="SenseMotiveRank"/></TextBlock>
+                            <TextBlock Name="SleightOfHand"><CheckBox/>Sleight of Hand <ListBoxItem Name="SleightOfHandRank"/></TextBlock>
+                            <TextBlock Name="Spellcraft"><CheckBox/>Spellcraft <ListBoxItem Name="SpellcraftRank"/></TextBlock>
+                            <TextBlock Name="Stealth"><CheckBox/>Stealth <ListBoxItem Name="StealthRank"/></TextBlock>
+                            <TextBlock Name="Survival"><CheckBox/>Survival <ListBoxItem Name="SurvivalRank"/></TextBlock>
+                            <TextBlock Name="Swim"><CheckBox/>Swim <ListBoxItem Name="SwimRank"/></TextBlock>
+                            <TextBlock Name="UseMagicDevise"><CheckBox/>Use Magic Devise <ListBoxItem Name="UseMagicDeviseRank"/></TextBlock>
+                        </ListBox>
+                    </StackPanel>
+
+                </StackPanel>
+            </TabItem>
             <TabItem Header="Spells"/>
             <TabItem Header="Equipment"/>
             

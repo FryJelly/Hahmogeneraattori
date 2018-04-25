@@ -24,6 +24,38 @@ namespace Hahmogeneraattori.Views
         Stats stats = new Stats();
         Stats stats2 = new Stats();
         int RaceStr, RaceDex, RaceCon, RaceInt, RaceWis, RaceCha;
+        int StrModifier, DexModifier, ConModifier, IntModifier, WisModifier, ChaModifier;
+
+        private void Strength_Selected(object sender, RoutedEventArgs e)
+        {
+            //Human_Selected
+        }
+
+        private void Dexterity_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Constitution_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Intelligence_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Wisdom_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Charisma_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         public CharCreation()
         {
             InitializeComponent();
@@ -33,6 +65,7 @@ namespace Hahmogeneraattori.Views
         {
             stats = Stats.RollStats();
             stats2 = stats;
+
             StrScore.Text = stats.Str.ToString();
             DexScore.Text = stats.Dex.ToString();
             ConScore.Text = stats.Con.ToString();
@@ -40,6 +73,19 @@ namespace Hahmogeneraattori.Views
             WisScore.Text = stats.Wis.ToString();
             ChaScore.Text = stats.Cha.ToString();
 
+            StrModifier = stats.Str / 2 - 5;
+            DexModifier = stats.Dex / 2 - 5;
+            ConModifier = stats.Con / 2 - 5;
+            IntModifier = stats.Int / 2 - 5;
+            WisModifier = stats.Wis / 2 - 5;
+            ChaModifier = stats.Cha / 2 - 5;
+
+            StrMod.Text = StrModifier.ToString();
+            DexMod.Text = DexModifier.ToString();
+            ConMod.Text = ConModifier.ToString();
+            IntMod.Text = IntModifier.ToString();
+            WisMod.Text = WisModifier.ToString();
+            ChaMod.Text = ChaModifier.ToString();
 
         }
 
@@ -52,41 +98,99 @@ namespace Hahmogeneraattori.Views
         {
             stats = stats2;
 
+            RaceStr = stats.Str;
+            RaceDex = stats.Dex;
             RaceCon = stats.Con + 2;
+            RaceInt = stats.Int;
             RaceWis = stats.Wis + 2;
             RaceCha = stats.Cha - 2;
 
+            StrScore.Text = RaceStr.ToString();
+            DexScore.Text = RaceDex.ToString();
             ConScore.Text = RaceCon.ToString();
+            IntScore.Text = RaceInt.ToString();
             WisScore.Text = RaceWis.ToString();
             ChaScore.Text = RaceCha.ToString();
+
+            StrModifier = RaceStr / 2 - 5;
+            DexModifier = RaceDex / 2 - 5;
+            ConModifier = RaceCon / 2 - 5;
+            IntModifier = RaceInt / 2 - 5;
+            WisModifier = RaceWis / 2 - 5;
+            ChaModifier = RaceCha / 2 - 5;
+
+            StrMod.Text = StrModifier.ToString();
+            DexMod.Text = DexModifier.ToString();
+            ConMod.Text = ConModifier.ToString();
+            IntMod.Text = IntModifier.ToString();
+            WisMod.Text = WisModifier.ToString();
+            ChaMod.Text = ChaModifier.ToString();
         }
 
         private void Elf_Selected(object sender, RoutedEventArgs e)
         {
             stats = stats2;
 
+            RaceStr = stats.Str;
             RaceDex = stats.Dex + 2;
-            RaceInt = stats.Int + 2;
             RaceCon = stats.Con - 2;
-
+            RaceInt = stats.Int + 2;
+            RaceWis = stats.Wis;
+            RaceCha = stats.Cha;
+            
+            StrScore.Text = RaceStr.ToString();
             DexScore.Text = RaceDex.ToString();
-            IntScore.Text = RaceInt.ToString();
             ConScore.Text = RaceCon.ToString();
+            IntScore.Text = RaceInt.ToString();
+            WisScore.Text = RaceWis.ToString();
+            ChaScore.Text = RaceCha.ToString();
 
+            StrModifier = RaceStr / 2 - 5;
+            DexModifier = RaceDex / 2 - 5;
+            ConModifier = RaceCon / 2 - 5;
+            IntModifier = RaceInt / 2 - 5;
+            WisModifier = RaceWis / 2 - 5;
+            ChaModifier = RaceCha / 2 - 5;
+
+            StrMod.Text = StrModifier.ToString();
+            DexMod.Text = DexModifier.ToString();
+            ConMod.Text = ConModifier.ToString();
+            IntMod.Text = IntModifier.ToString();
+            WisMod.Text = WisModifier.ToString();
+            ChaMod.Text = ChaModifier.ToString();
         }
 
         private void Gnome_Selected(object sender, RoutedEventArgs e)
         {
             stats = stats2;
 
-            RaceCon = stats.Con + 2;
-            RaceCha = stats.Cha + 2;
             RaceStr = stats.Str - 2;
-
-            ConScore.Text = RaceCon.ToString();
-            ChaScore.Text = RaceCha.ToString();
+            RaceDex = stats.Dex;
+            RaceCon = stats.Con + 2;
+            RaceInt = stats.Int;
+            RaceWis = stats.Wis;
+            RaceCha = stats.Cha + 2;
+            
             StrScore.Text = RaceStr.ToString();
+            DexScore.Text = RaceDex.ToString();
+            ConScore.Text = RaceCon.ToString();
+            IntScore.Text = RaceInt.ToString();
+            WisScore.Text = RaceWis.ToString();
+            ChaScore.Text = RaceCha.ToString();
 
+            StrModifier = RaceStr / 2 - 5;
+            DexModifier = RaceDex / 2 - 5;
+            ConModifier = RaceCon / 2 - 5;
+            IntModifier = RaceInt / 2 - 5;
+            WisModifier = RaceWis / 2 - 5;
+            ChaModifier = RaceCha / 2 - 5;
+
+            StrMod.Text = StrModifier.ToString();
+            DexMod.Text = DexModifier.ToString();
+            ConMod.Text = ConModifier.ToString();
+            IntMod.Text = IntModifier.ToString();
+            WisMod.Text = WisModifier.ToString();
+            ChaMod.Text = ChaModifier.ToString();
         }
 
         private void HalfElf_Selected(object sender, RoutedEventArgs e)
@@ -105,14 +209,34 @@ namespace Hahmogeneraattori.Views
         {
             stats = stats2;
 
-            RaceDex = stats.Dex + 2;
-            RaceCha = stats.Cha + 2;
             RaceStr = stats.Str - 2;
-
-            DexScore.Text = RaceDex.ToString();
-            ChaScore.Text = RaceCha.ToString();
+            RaceDex = stats.Dex + 2;
+            RaceCon = stats.Con;
+            RaceInt = stats.Int;
+            RaceWis = stats.Wis;
+            RaceCha = stats.Cha + 2;
+            
             StrScore.Text = RaceStr.ToString();
+            DexScore.Text = RaceDex.ToString();
+            ConScore.Text = RaceCon.ToString();
+            IntScore.Text = RaceInt.ToString();
+            WisScore.Text = RaceWis.ToString();
+            ChaScore.Text = RaceCha.ToString();
 
+            StrModifier = RaceStr / 2 - 5;
+            DexModifier = RaceDex / 2 - 5;
+            ConModifier = RaceCon / 2 - 5;
+            IntModifier = RaceInt / 2 - 5;
+            WisModifier = RaceWis / 2 - 5;
+            ChaModifier = RaceCha / 2 - 5;
+            
+
+            StrMod.Text = StrModifier.ToString();
+            DexMod.Text = DexModifier.ToString();
+            ConMod.Text = ConModifier.ToString();
+            IntMod.Text = IntModifier.ToString();
+            WisMod.Text = WisModifier.ToString();
+            ChaMod.Text = ChaModifier.ToString();
         }
 
         private void Human_Selected(object sender, RoutedEventArgs e)
