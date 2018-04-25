@@ -101,6 +101,9 @@ namespace Hahmogeneraattori.Views
             RideCheck.IsChecked = true;
             SurvivalCheck.IsChecked = true;
             SwimCheck.IsChecked = true;
+
+            // Update character sheet class
+            CharacterClass.Content = Barbarian.Name;
         }
 
         private void Bard_Selected(object sender, RoutedEventArgs e)
@@ -163,6 +166,8 @@ namespace Hahmogeneraattori.Views
             SpellcraftCheck.IsChecked = true;
             StealthCheck.IsChecked = true;
             UseMagicDeviseCheck.IsChecked = true;
+            // Update character sheet class
+            CharacterClass.Content = Bard.Name;
         }
 
         private void Cleric_Selected(object sender, RoutedEventArgs e)
@@ -211,7 +216,9 @@ namespace Hahmogeneraattori.Views
             LinguisticsCheck.IsChecked = true;
             SenseMotiveCheck.IsChecked = true;
             SpellcraftCheck.IsChecked = true;
-            
+
+            // Update character sheet class
+            CharacterClass.Content = Cleric.Name;
         }
 
         private void Druid_Selected(object sender, RoutedEventArgs e)
@@ -260,7 +267,9 @@ namespace Hahmogeneraattori.Views
             SpellcraftCheck.IsChecked = true;
             SurvivalCheck.IsChecked = true;
             SwimCheck.IsChecked = true;
-            
+
+            // Update character sheet class
+            CharacterClass.Content = Druid.Name;
         }
 
         private void Fighter_Selected(object sender, RoutedEventArgs e)
@@ -306,7 +315,8 @@ namespace Hahmogeneraattori.Views
             RideCheck.IsChecked = true;
             SurvivalCheck.IsChecked = true;
             SwimCheck.IsChecked = true;
-            
+            // Update character sheet class
+            CharacterClass.Content = Fighter.Name;
         }
 
         private void Monk_Selected(object sender, RoutedEventArgs e)
@@ -355,7 +365,9 @@ namespace Hahmogeneraattori.Views
             SenseMotiveCheck.IsChecked = true;
             StealthCheck.IsChecked = true;
             SwimCheck.IsChecked = true;
-            
+
+            // Update character sheet class
+            CharacterClass.Content = Monk.Name;
         }
 
         private void Paladin_Selected(object sender, RoutedEventArgs e)
@@ -401,7 +413,9 @@ namespace Hahmogeneraattori.Views
             RideCheck.IsChecked = true;
             SenseMotiveCheck.IsChecked = true;
             SpellcraftCheck.IsChecked = true;
-            
+
+            // Update character sheet class
+            CharacterClass.Content = Paladin.Name;
         }
 
         private void Ranger_Selected(object sender, RoutedEventArgs e)
@@ -452,7 +466,9 @@ namespace Hahmogeneraattori.Views
             StealthCheck.IsChecked = true;
             SurvivalCheck.IsChecked = true;
             SwimCheck.IsChecked = true;
-            
+            // Update character sheet class
+            CharacterClass.Content = Rogue.Name;
+
         }
         private void Rogue_Selected(object sender, RoutedEventArgs e)
         {
@@ -507,7 +523,8 @@ namespace Hahmogeneraattori.Views
             StealthCheck.IsChecked = true;
             SwimCheck.IsChecked = true;
             UseMagicDeviseCheck.IsChecked = true;
-
+            // Update character sheet class
+            CharacterClass.Content = Rogue.Name;
         }
 
         private void Sorcerer_Selected(object sender, RoutedEventArgs e)
@@ -552,6 +569,8 @@ namespace Hahmogeneraattori.Views
             KnowArcanaCheck.IsChecked = true;
             SpellcraftCheck.IsChecked = true;
             UseMagicDeviseCheck.IsChecked = true;
+            // Update character sheet class
+            CharacterClass.Content = Sorcerer.Name;
         }
 
         private void Wizard_Selected(object sender, RoutedEventArgs e)
@@ -603,7 +622,8 @@ namespace Hahmogeneraattori.Views
             KnowReligionCheck.IsChecked = true;
             LinguisticsCheck.IsChecked = true;
             SpellcraftCheck.IsChecked = true;
-            
+            // Update character sheet class
+            CharacterClass.Content = Wizard.Name;
         }
         // Character Sheet
 
@@ -705,6 +725,9 @@ namespace Hahmogeneraattori.Views
             IntMod.Text = IntModifier.ToString();
             WisMod.Text = WisModifier.ToString();
             ChaMod.Text = ChaModifier.ToString();
+
+            // Update character sheet race
+            CharacterRace.Content = Dwarf.Name;
         }
 
         private void Elf_Selected(object sender, RoutedEventArgs e)
@@ -738,6 +761,9 @@ namespace Hahmogeneraattori.Views
             IntMod.Text = IntModifier.ToString();
             WisMod.Text = WisModifier.ToString();
             ChaMod.Text = ChaModifier.ToString();
+
+            // Update character sheet race
+            CharacterRace.Content = Elf.Name;
         }
 
         private void Gnome_Selected(object sender, RoutedEventArgs e)
@@ -771,18 +797,25 @@ namespace Hahmogeneraattori.Views
             IntMod.Text = IntModifier.ToString();
             WisMod.Text = WisModifier.ToString();
             ChaMod.Text = ChaModifier.ToString();
+
+            // Update character sheet race
+            CharacterRace.Content = Gnome.Name;
         }
 
         private void HalfElf_Selected(object sender, RoutedEventArgs e)
         {
             stats2 = stats;
 
+            // Update character sheet race
+            CharacterRace.Content = HalfElf.Name;
         }
 
         private void HalfOrc_Selected(object sender, RoutedEventArgs e)
         {
             stats2 = stats;
 
+            // Update character sheet race
+            CharacterRace.Content = HalfOrc.Name;
         }
 
         private void Halfling_Selected(object sender, RoutedEventArgs e)
@@ -817,12 +850,17 @@ namespace Hahmogeneraattori.Views
             IntMod.Text = IntModifier.ToString();
             WisMod.Text = WisModifier.ToString();
             ChaMod.Text = ChaModifier.ToString();
+
+            // Update character sheet race
+            CharacterRace.Content = Halfling.Name;
         }
 
         private void Human_Selected(object sender, RoutedEventArgs e)
         {
             stats2 = stats;
 
+            // Update character sheet race
+            CharacterRace.Content = Human.Name;
         }
     }
 }
