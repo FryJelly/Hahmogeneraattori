@@ -105,7 +105,7 @@
                             <TextBlock Name="Appraise"><CheckBox Name="AppraiseCheck" IsEnabled="False"/>Appraise <ListBoxItem Name="AppraiseRank"/></TextBlock>
                             <TextBlock Name="Bluff"><CheckBox Name="BluffCheck" IsEnabled="False"/>Bluff <ListBoxItem Name="BluffRank"/></TextBlock>
                             <TextBlock Name="Climb"><CheckBox Name="ClimbCheck" IsEnabled="False"/>Climb <ListBoxItem Name="ClimbRank"/></TextBlock>
-                            <TextBlock Name="Diplomacy"><CheckBox Name="DiplomasyCheck" IsEnabled="False"/>Diplomacy <ListBoxItem Name="DiplomacyRank"/></TextBlock>
+                            <TextBlock Name="Diplomacy"><CheckBox Name="DiplomacyCheck" IsEnabled="False"/>Diplomacy <ListBoxItem Name="DiplomacyRank"/></TextBlock>
                             <TextBlock Name="DisableDevice"><CheckBox Name="DisableDeviceCheck" IsEnabled="False"/>Disable Device <ListBoxItem Name="DisableDeviceRank"/></TextBlock>
                             <TextBlock Name="Disguise"><CheckBox Name="DisguiseCheck" IsEnabled="False"/>Disguise <ListBoxItem Name="DisguiseRank"/></TextBlock>
                             <TextBlock Name="EscapeArtist"><CheckBox Name="EscapeArtistCheck" IsEnabled="False"/>Escape Artist <ListBoxItem Name="EscapeArtistRank"/></TextBlock>

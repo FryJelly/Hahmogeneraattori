@@ -58,56 +58,551 @@ namespace Hahmogeneraattori.Views
         // Classes
         private void Barbarian_Selected(object sender, RoutedEventArgs e)
         {
+            AcrobaticsCheck.IsChecked = false;
+            AppraiseCheck.IsChecked = false;
+            BluffCheck.IsChecked = false;
+            ClimbCheck.IsChecked = false;
+            DiplomacyCheck.IsChecked = false;
+            DisableDeviceCheck.IsChecked = false;
+            DisguiseCheck.IsChecked = false;
+            EscapeArtistCheck.IsChecked = false;
+            FlyCheck.IsChecked = false;
+            HandleAnimalCheck.IsChecked = false;
+            HealCheck.IsChecked = false;
+            IntimidateCheck.IsChecked = false;
+            KnowArcanaCheck.IsChecked = false;
+            KnowDungeoneeringCheck.IsChecked = false;
+            KnowEngineeringCheck.IsChecked = false;
+            KnowGeographyCheck.IsChecked = false;
+            KnowHistoryCheck.IsChecked = false;
+            KnowLocalCheck.IsChecked = false;
+            KnowNatureCheck.IsChecked = false;
+            KnowNobilityCheck.IsChecked = false;
+            KnowPlanesCheck.IsChecked = false;
+            KnowReligionCheck.IsChecked = false;
+            LinguisticsCheck.IsChecked = false;
+            PerceptionCheck.IsChecked = false;
+            RideCheck.IsChecked = false;
+            SenseMotiveCheck.IsChecked = false;
+            SleightOfHandCheck.IsChecked = false;
+            SpellcraftCheck.IsChecked = false;
+            StealthCheck.IsChecked = false;
+            SurvivalCheck.IsChecked = false;
+            SwimCheck.IsChecked = false;
+            UseMagicDeviseCheck.IsChecked = false;
 
+            AcrobaticsCheck.IsChecked = true;
+            ClimbCheck.IsChecked = true;
+            HandleAnimalCheck.IsChecked = true;
+            IntimidateCheck.IsChecked = true;
+            KnowNatureCheck.IsChecked = true;
+            PerceptionCheck.IsChecked = true;
+            RideCheck.IsChecked = true;
+            SurvivalCheck.IsChecked = true;
+            SwimCheck.IsChecked = true;
         }
 
         private void Bard_Selected(object sender, RoutedEventArgs e)
         {
+            AcrobaticsCheck.IsChecked = false;
+            AppraiseCheck.IsChecked = false;
+            BluffCheck.IsChecked = false;
+            ClimbCheck.IsChecked = false;
+            DiplomacyCheck.IsChecked = false;
+            DisableDeviceCheck.IsChecked = false;
+            DisguiseCheck.IsChecked = false;
+            EscapeArtistCheck.IsChecked = false;
+            FlyCheck.IsChecked = false;
+            HandleAnimalCheck.IsChecked = false;
+            HealCheck.IsChecked = false;
+            IntimidateCheck.IsChecked = false;
+            KnowArcanaCheck.IsChecked = false;
+            KnowDungeoneeringCheck.IsChecked = false;
+            KnowEngineeringCheck.IsChecked = false;
+            KnowGeographyCheck.IsChecked = false;
+            KnowHistoryCheck.IsChecked = false;
+            KnowLocalCheck.IsChecked = false;
+            KnowNatureCheck.IsChecked = false;
+            KnowNobilityCheck.IsChecked = false;
+            KnowPlanesCheck.IsChecked = false;
+            KnowReligionCheck.IsChecked = false;
+            LinguisticsCheck.IsChecked = false;
+            PerceptionCheck.IsChecked = false;
+            RideCheck.IsChecked = false;
+            SenseMotiveCheck.IsChecked = false;
+            SleightOfHandCheck.IsChecked = false;
+            SpellcraftCheck.IsChecked = false;
+            StealthCheck.IsChecked = false;
+            SurvivalCheck.IsChecked = false;
+            SwimCheck.IsChecked = false;
+            UseMagicDeviseCheck.IsChecked = false;
 
+            AcrobaticsCheck.IsChecked = true;
+            AppraiseCheck.IsChecked = true;
+            BluffCheck.IsChecked = true;
+            ClimbCheck.IsChecked = true;
+            DiplomacyCheck.IsChecked = true;
+            DisguiseCheck.IsChecked = true;
+            EscapeArtistCheck.IsChecked = true;
+            IntimidateCheck.IsChecked = true;
+            KnowArcanaCheck.IsChecked = true;
+            KnowDungeoneeringCheck.IsChecked = true;
+            KnowEngineeringCheck.IsChecked = true;
+            KnowGeographyCheck.IsChecked = true;
+            KnowHistoryCheck.IsChecked = true;
+            KnowLocalCheck.IsChecked = true;
+            KnowNatureCheck.IsChecked = true;
+            KnowNobilityCheck.IsChecked = true;
+            KnowPlanesCheck.IsChecked = true;
+            KnowReligionCheck.IsChecked = true;
+            LinguisticsCheck.IsChecked = true;
+            PerceptionCheck.IsChecked = true;
+            SenseMotiveCheck.IsChecked = true;
+            SleightOfHandCheck.IsChecked = true;
+            SpellcraftCheck.IsChecked = true;
+            StealthCheck.IsChecked = true;
+            UseMagicDeviseCheck.IsChecked = true;
         }
 
         private void Cleric_Selected(object sender, RoutedEventArgs e)
         {
+            AcrobaticsCheck.IsChecked = false;
+            AppraiseCheck.IsChecked = false;
+            BluffCheck.IsChecked = false;
+            ClimbCheck.IsChecked = false;
+            DiplomacyCheck.IsChecked = false;
+            DisableDeviceCheck.IsChecked = false;
+            DisguiseCheck.IsChecked = false;
+            EscapeArtistCheck.IsChecked = false;
+            FlyCheck.IsChecked = false;
+            HandleAnimalCheck.IsChecked = false;
+            HealCheck.IsChecked = false;
+            IntimidateCheck.IsChecked = false;
+            KnowArcanaCheck.IsChecked = false;
+            KnowDungeoneeringCheck.IsChecked = false;
+            KnowEngineeringCheck.IsChecked = false;
+            KnowGeographyCheck.IsChecked = false;
+            KnowHistoryCheck.IsChecked = false;
+            KnowLocalCheck.IsChecked = false;
+            KnowNatureCheck.IsChecked = false;
+            KnowNobilityCheck.IsChecked = false;
+            KnowPlanesCheck.IsChecked = false;
+            KnowReligionCheck.IsChecked = false;
+            LinguisticsCheck.IsChecked = false;
+            PerceptionCheck.IsChecked = false;
+            RideCheck.IsChecked = false;
+            SenseMotiveCheck.IsChecked = false;
+            SleightOfHandCheck.IsChecked = false;
+            SpellcraftCheck.IsChecked = false;
+            StealthCheck.IsChecked = false;
+            SurvivalCheck.IsChecked = false;
+            SwimCheck.IsChecked = false;
+            UseMagicDeviseCheck.IsChecked = false;
 
+            AppraiseCheck.IsChecked = true;
+            DiplomacyCheck.IsChecked = true;
+            HealCheck.IsChecked = true;
+            KnowArcanaCheck.IsChecked = true;
+            KnowHistoryCheck.IsChecked = true;
+            KnowNobilityCheck.IsChecked = true;
+            KnowPlanesCheck.IsChecked = true;
+            KnowReligionCheck.IsChecked = true;
+            LinguisticsCheck.IsChecked = true;
+            SenseMotiveCheck.IsChecked = true;
+            SpellcraftCheck.IsChecked = true;
+            
         }
 
         private void Druid_Selected(object sender, RoutedEventArgs e)
         {
+            AcrobaticsCheck.IsChecked = false;
+            AppraiseCheck.IsChecked = false;
+            BluffCheck.IsChecked = false;
+            ClimbCheck.IsChecked = false;
+            DiplomacyCheck.IsChecked = false;
+            DisableDeviceCheck.IsChecked = false;
+            DisguiseCheck.IsChecked = false;
+            EscapeArtistCheck.IsChecked = false;
+            FlyCheck.IsChecked = false;
+            HandleAnimalCheck.IsChecked = false;
+            HealCheck.IsChecked = false;
+            IntimidateCheck.IsChecked = false;
+            KnowArcanaCheck.IsChecked = false;
+            KnowDungeoneeringCheck.IsChecked = false;
+            KnowEngineeringCheck.IsChecked = false;
+            KnowGeographyCheck.IsChecked = false;
+            KnowHistoryCheck.IsChecked = false;
+            KnowLocalCheck.IsChecked = false;
+            KnowNatureCheck.IsChecked = false;
+            KnowNobilityCheck.IsChecked = false;
+            KnowPlanesCheck.IsChecked = false;
+            KnowReligionCheck.IsChecked = false;
+            LinguisticsCheck.IsChecked = false;
+            PerceptionCheck.IsChecked = false;
+            RideCheck.IsChecked = false;
+            SenseMotiveCheck.IsChecked = false;
+            SleightOfHandCheck.IsChecked = false;
+            SpellcraftCheck.IsChecked = false;
+            StealthCheck.IsChecked = false;
+            SurvivalCheck.IsChecked = false;
+            SwimCheck.IsChecked = false;
+            UseMagicDeviseCheck.IsChecked = false;
 
+            ClimbCheck.IsChecked = true;
+            FlyCheck.IsChecked = true;
+            HandleAnimalCheck.IsChecked = true;
+            HealCheck.IsChecked = true;
+            KnowGeographyCheck.IsChecked = true;
+            KnowNatureCheck.IsChecked = true;
+            PerceptionCheck.IsChecked = true;
+            RideCheck.IsChecked = true;
+            SpellcraftCheck.IsChecked = true;
+            SurvivalCheck.IsChecked = true;
+            SwimCheck.IsChecked = true;
+            
         }
 
         private void Fighter_Selected(object sender, RoutedEventArgs e)
         {
+            AcrobaticsCheck.IsChecked = false;
+            AppraiseCheck.IsChecked = false;
+            BluffCheck.IsChecked = false;
+            ClimbCheck.IsChecked = false;
+            DiplomacyCheck.IsChecked = false;
+            DisableDeviceCheck.IsChecked = false;
+            DisguiseCheck.IsChecked = false;
+            EscapeArtistCheck.IsChecked = false;
+            FlyCheck.IsChecked = false;
+            HandleAnimalCheck.IsChecked = false;
+            HealCheck.IsChecked = false;
+            IntimidateCheck.IsChecked = false;
+            KnowArcanaCheck.IsChecked = false;
+            KnowDungeoneeringCheck.IsChecked = false;
+            KnowEngineeringCheck.IsChecked = false;
+            KnowGeographyCheck.IsChecked = false;
+            KnowHistoryCheck.IsChecked = false;
+            KnowLocalCheck.IsChecked = false;
+            KnowNatureCheck.IsChecked = false;
+            KnowNobilityCheck.IsChecked = false;
+            KnowPlanesCheck.IsChecked = false;
+            KnowReligionCheck.IsChecked = false;
+            LinguisticsCheck.IsChecked = false;
+            PerceptionCheck.IsChecked = false;
+            RideCheck.IsChecked = false;
+            SenseMotiveCheck.IsChecked = false;
+            SleightOfHandCheck.IsChecked = false;
+            SpellcraftCheck.IsChecked = false;
+            StealthCheck.IsChecked = false;
+            SurvivalCheck.IsChecked = false;
+            SwimCheck.IsChecked = false;
+            UseMagicDeviseCheck.IsChecked = false;
 
+            ClimbCheck.IsChecked = true;
+            HandleAnimalCheck.IsChecked = true;
+            IntimidateCheck.IsChecked = true;
+            KnowDungeoneeringCheck.IsChecked = true;
+            KnowEngineeringCheck.IsChecked = true;
+            RideCheck.IsChecked = true;
+            SurvivalCheck.IsChecked = true;
+            SwimCheck.IsChecked = true;
+            
         }
 
         private void Monk_Selected(object sender, RoutedEventArgs e)
         {
+            AcrobaticsCheck.IsChecked = false;
+            AppraiseCheck.IsChecked = false;
+            BluffCheck.IsChecked = false;
+            ClimbCheck.IsChecked = false;
+            DiplomacyCheck.IsChecked = false;
+            DisableDeviceCheck.IsChecked = false;
+            DisguiseCheck.IsChecked = false;
+            EscapeArtistCheck.IsChecked = false;
+            FlyCheck.IsChecked = false;
+            HandleAnimalCheck.IsChecked = false;
+            HealCheck.IsChecked = false;
+            IntimidateCheck.IsChecked = false;
+            KnowArcanaCheck.IsChecked = false;
+            KnowDungeoneeringCheck.IsChecked = false;
+            KnowEngineeringCheck.IsChecked = false;
+            KnowGeographyCheck.IsChecked = false;
+            KnowHistoryCheck.IsChecked = false;
+            KnowLocalCheck.IsChecked = false;
+            KnowNatureCheck.IsChecked = false;
+            KnowNobilityCheck.IsChecked = false;
+            KnowPlanesCheck.IsChecked = false;
+            KnowReligionCheck.IsChecked = false;
+            LinguisticsCheck.IsChecked = false;
+            PerceptionCheck.IsChecked = false;
+            RideCheck.IsChecked = false;
+            SenseMotiveCheck.IsChecked = false;
+            SleightOfHandCheck.IsChecked = false;
+            SpellcraftCheck.IsChecked = false;
+            StealthCheck.IsChecked = false;
+            SurvivalCheck.IsChecked = false;
+            SwimCheck.IsChecked = false;
+            UseMagicDeviseCheck.IsChecked = false;
 
+            AcrobaticsCheck.IsChecked = true;
+            ClimbCheck.IsChecked = true;
+            EscapeArtistCheck.IsChecked = true;
+            IntimidateCheck.IsChecked = true;
+            KnowHistoryCheck.IsChecked = true;
+            KnowReligionCheck.IsChecked = true;
+            PerceptionCheck.IsChecked = true;
+            RideCheck.IsChecked = true;
+            SenseMotiveCheck.IsChecked = true;
+            StealthCheck.IsChecked = true;
+            SwimCheck.IsChecked = true;
+            
         }
 
         private void Paladin_Selected(object sender, RoutedEventArgs e)
         {
+            AcrobaticsCheck.IsChecked = false;
+            AppraiseCheck.IsChecked = false;
+            BluffCheck.IsChecked = false;
+            ClimbCheck.IsChecked = false;
+            DiplomacyCheck.IsChecked = false;
+            DisableDeviceCheck.IsChecked = false;
+            DisguiseCheck.IsChecked = false;
+            EscapeArtistCheck.IsChecked = false;
+            FlyCheck.IsChecked = false;
+            HandleAnimalCheck.IsChecked = false;
+            HealCheck.IsChecked = false;
+            IntimidateCheck.IsChecked = false;
+            KnowArcanaCheck.IsChecked = false;
+            KnowDungeoneeringCheck.IsChecked = false;
+            KnowEngineeringCheck.IsChecked = false;
+            KnowGeographyCheck.IsChecked = false;
+            KnowHistoryCheck.IsChecked = false;
+            KnowLocalCheck.IsChecked = false;
+            KnowNatureCheck.IsChecked = false;
+            KnowNobilityCheck.IsChecked = false;
+            KnowPlanesCheck.IsChecked = false;
+            KnowReligionCheck.IsChecked = false;
+            LinguisticsCheck.IsChecked = false;
+            PerceptionCheck.IsChecked = false;
+            RideCheck.IsChecked = false;
+            SenseMotiveCheck.IsChecked = false;
+            SleightOfHandCheck.IsChecked = false;
+            SpellcraftCheck.IsChecked = false;
+            StealthCheck.IsChecked = false;
+            SurvivalCheck.IsChecked = false;
+            SwimCheck.IsChecked = false;
+            UseMagicDeviseCheck.IsChecked = false;
 
+            DiplomacyCheck.IsChecked = true;
+            HandleAnimalCheck.IsChecked = true;
+            HealCheck.IsChecked = true;
+            KnowNobilityCheck.IsChecked = true;
+            KnowReligionCheck.IsChecked = true;
+            RideCheck.IsChecked = true;
+            SenseMotiveCheck.IsChecked = true;
+            SpellcraftCheck.IsChecked = true;
+            
         }
 
         private void Ranger_Selected(object sender, RoutedEventArgs e)
         {
+            AcrobaticsCheck.IsChecked = false;
+            AppraiseCheck.IsChecked = false;
+            BluffCheck.IsChecked = false;
+            ClimbCheck.IsChecked = false;
+            DiplomacyCheck.IsChecked = false;
+            DisableDeviceCheck.IsChecked = false;
+            DisguiseCheck.IsChecked = false;
+            EscapeArtistCheck.IsChecked = false;
+            FlyCheck.IsChecked = false;
+            HandleAnimalCheck.IsChecked = false;
+            HealCheck.IsChecked = false;
+            IntimidateCheck.IsChecked = false;
+            KnowArcanaCheck.IsChecked = false;
+            KnowDungeoneeringCheck.IsChecked = false;
+            KnowEngineeringCheck.IsChecked = false;
+            KnowGeographyCheck.IsChecked = false;
+            KnowHistoryCheck.IsChecked = false;
+            KnowLocalCheck.IsChecked = false;
+            KnowNatureCheck.IsChecked = false;
+            KnowNobilityCheck.IsChecked = false;
+            KnowPlanesCheck.IsChecked = false;
+            KnowReligionCheck.IsChecked = false;
+            LinguisticsCheck.IsChecked = false;
+            PerceptionCheck.IsChecked = false;
+            RideCheck.IsChecked = false;
+            SenseMotiveCheck.IsChecked = false;
+            SleightOfHandCheck.IsChecked = false;
+            SpellcraftCheck.IsChecked = false;
+            StealthCheck.IsChecked = false;
+            SurvivalCheck.IsChecked = false;
+            SwimCheck.IsChecked = false;
+            UseMagicDeviseCheck.IsChecked = false;
 
+            ClimbCheck.IsChecked = true;
+            HandleAnimalCheck.IsChecked = true;
+            HealCheck.IsChecked = true;
+            IntimidateCheck.IsChecked = true;
+            KnowDungeoneeringCheck.IsChecked = true;
+            KnowGeographyCheck.IsChecked = true;
+            KnowNatureCheck.IsChecked = true;
+            PerceptionCheck.IsChecked = true;
+            RideCheck.IsChecked = true;
+            SpellcraftCheck.IsChecked = true;
+            StealthCheck.IsChecked = true;
+            SurvivalCheck.IsChecked = true;
+            SwimCheck.IsChecked = true;
+            
         }
         private void Rogue_Selected(object sender, RoutedEventArgs e)
         {
+            AcrobaticsCheck.IsChecked = false;
+            AppraiseCheck.IsChecked = false;
+            BluffCheck.IsChecked = false;
+            ClimbCheck.IsChecked = false;
+            DiplomacyCheck.IsChecked = false;
+            DisableDeviceCheck.IsChecked = false;
+            DisguiseCheck.IsChecked = false;
+            EscapeArtistCheck.IsChecked = false;
+            FlyCheck.IsChecked = false;
+            HandleAnimalCheck.IsChecked = false;
+            HealCheck.IsChecked = false;
+            IntimidateCheck.IsChecked = false;
+            KnowArcanaCheck.IsChecked = false;
+            KnowDungeoneeringCheck.IsChecked = false;
+            KnowEngineeringCheck.IsChecked = false;
+            KnowGeographyCheck.IsChecked = false;
+            KnowHistoryCheck.IsChecked = false;
+            KnowLocalCheck.IsChecked = false;
+            KnowNatureCheck.IsChecked = false;
+            KnowNobilityCheck.IsChecked = false;
+            KnowPlanesCheck.IsChecked = false;
+            KnowReligionCheck.IsChecked = false;
+            LinguisticsCheck.IsChecked = false;
+            PerceptionCheck.IsChecked = false;
+            RideCheck.IsChecked = false;
+            SenseMotiveCheck.IsChecked = false;
+            SleightOfHandCheck.IsChecked = false;
+            SpellcraftCheck.IsChecked = false;
+            StealthCheck.IsChecked = false;
+            SurvivalCheck.IsChecked = false;
+            SwimCheck.IsChecked = false;
+            UseMagicDeviseCheck.IsChecked = false;
+
+            AcrobaticsCheck.IsChecked = true;
+            AppraiseCheck.IsChecked = true;
+            BluffCheck.IsChecked = true;
+            ClimbCheck.IsChecked = true;
+            DiplomacyCheck.IsChecked = true;
+            DisableDeviceCheck.IsChecked = true;
+            DisguiseCheck.IsChecked = true;
+            EscapeArtistCheck.IsChecked = true;
+            IntimidateCheck.IsChecked = true;
+            KnowDungeoneeringCheck.IsChecked = true;
+            KnowLocalCheck.IsChecked = true;
+            LinguisticsCheck.IsChecked = true;
+            PerceptionCheck.IsChecked = true;
+            SenseMotiveCheck.IsChecked = true;
+            SleightOfHandCheck.IsChecked = true;
+            StealthCheck.IsChecked = true;
+            SwimCheck.IsChecked = true;
+            UseMagicDeviseCheck.IsChecked = true;
 
         }
 
         private void Sorcerer_Selected(object sender, RoutedEventArgs e)
         {
+            AcrobaticsCheck.IsChecked = false;
+            AppraiseCheck.IsChecked = false;
+            BluffCheck.IsChecked = false;
+            ClimbCheck.IsChecked = false;
+            DiplomacyCheck.IsChecked = false;
+            DisableDeviceCheck.IsChecked = false;
+            DisguiseCheck.IsChecked = false;
+            EscapeArtistCheck.IsChecked = false;
+            FlyCheck.IsChecked = false;
+            HandleAnimalCheck.IsChecked = false;
+            HealCheck.IsChecked = false;
+            IntimidateCheck.IsChecked = false;
+            KnowArcanaCheck.IsChecked = false;
+            KnowDungeoneeringCheck.IsChecked = false;
+            KnowEngineeringCheck.IsChecked = false;
+            KnowGeographyCheck.IsChecked = false;
+            KnowHistoryCheck.IsChecked = false;
+            KnowLocalCheck.IsChecked = false;
+            KnowNatureCheck.IsChecked = false;
+            KnowNobilityCheck.IsChecked = false;
+            KnowPlanesCheck.IsChecked = false;
+            KnowReligionCheck.IsChecked = false;
+            LinguisticsCheck.IsChecked = false;
+            PerceptionCheck.IsChecked = false;
+            RideCheck.IsChecked = false;
+            SenseMotiveCheck.IsChecked = false;
+            SleightOfHandCheck.IsChecked = false;
+            SpellcraftCheck.IsChecked = false;
+            StealthCheck.IsChecked = false;
+            SurvivalCheck.IsChecked = false;
+            SwimCheck.IsChecked = false;
+            UseMagicDeviseCheck.IsChecked = false;
 
+            AppraiseCheck.IsChecked = true;
+            BluffCheck.IsChecked = true;
+            FlyCheck.IsChecked = true;
+            IntimidateCheck.IsChecked = true;
+            KnowArcanaCheck.IsChecked = true;
+            SpellcraftCheck.IsChecked = true;
+            UseMagicDeviseCheck.IsChecked = true;
         }
 
         private void Wizard_Selected(object sender, RoutedEventArgs e)
         {
+            AcrobaticsCheck.IsChecked = false;
+            AppraiseCheck.IsChecked = false;
+            BluffCheck.IsChecked = false;
+            ClimbCheck.IsChecked = false;
+            DiplomacyCheck.IsChecked = false;
+            DisableDeviceCheck.IsChecked = false;
+            DisguiseCheck.IsChecked = false;
+            EscapeArtistCheck.IsChecked = false;
+            FlyCheck.IsChecked = false;
+            HandleAnimalCheck.IsChecked = false;
+            HealCheck.IsChecked = false;
+            IntimidateCheck.IsChecked = false;
+            KnowArcanaCheck.IsChecked = false;
+            KnowDungeoneeringCheck.IsChecked = false;
+            KnowEngineeringCheck.IsChecked = false;
+            KnowGeographyCheck.IsChecked = false;
+            KnowHistoryCheck.IsChecked = false;
+            KnowLocalCheck.IsChecked = false;
+            KnowNatureCheck.IsChecked = false;
+            KnowNobilityCheck.IsChecked = false;
+            KnowPlanesCheck.IsChecked = false;
+            KnowReligionCheck.IsChecked = false;
+            LinguisticsCheck.IsChecked = false;
+            PerceptionCheck.IsChecked = false;
+            RideCheck.IsChecked = false;
+            SenseMotiveCheck.IsChecked = false;
+            SleightOfHandCheck.IsChecked = false;
+            SpellcraftCheck.IsChecked = false;
+            StealthCheck.IsChecked = false;
+            SurvivalCheck.IsChecked = false;
+            SwimCheck.IsChecked = false;
+            UseMagicDeviseCheck.IsChecked = false;
 
+            AppraiseCheck.IsChecked = true;
+            FlyCheck.IsChecked = true;
+            KnowArcanaCheck.IsChecked = true;
+            KnowDungeoneeringCheck.IsChecked = true;
+            KnowEngineeringCheck.IsChecked = true;
+            KnowGeographyCheck.IsChecked = true;
+            KnowHistoryCheck.IsChecked = true;
+            KnowLocalCheck.IsChecked = true;
+            KnowNatureCheck.IsChecked = true;
+            KnowNobilityCheck.IsChecked = true;
+            KnowPlanesCheck.IsChecked = true;
+            KnowReligionCheck.IsChecked = true;
+            LinguisticsCheck.IsChecked = true;
+            SpellcraftCheck.IsChecked = true;
+            
         }
         // Character Sheet
 
