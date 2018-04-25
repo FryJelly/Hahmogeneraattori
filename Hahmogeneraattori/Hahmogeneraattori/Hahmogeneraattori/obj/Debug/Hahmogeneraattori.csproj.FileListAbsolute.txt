@@ -81,5 +81,4 @@ C:\Users\Marko\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattor
 C:\Users\Marko\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\bin\Debug\Google.Protobuf.xml
 C:\Users\Marko\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\bin\Debug\MySql.Data.xml
 C:\Users\Marko\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\Hahmogeneraattori.csproj.CopyComplete
-C:\Users\RyzenPC\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\Hahmogeneraattori.csprojResolveAssemblyReference.cache
 C:\Users\skyri\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\Hahmogeneraattori.csprojResolveAssemblyReference.cache
