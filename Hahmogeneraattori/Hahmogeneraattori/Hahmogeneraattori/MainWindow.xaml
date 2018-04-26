@@ -12,6 +12,9 @@
         <DataTemplate x:Name="CharacterViewTemplate" DataType="{x:Type viewmodels:CharCreationViewModel}">
             <views:CharCreation DataContext="{Binding}"/>
         </DataTemplate>
+        <DataTemplate x:Name="CharacterView2Template" DataType="{x:Type viewmodels:CharCreationViewModel2}">
+            <views:CharCreation2 DataContext="{Binding}"/>
+        </DataTemplate>
     </Window.Resources>
     <Grid>
         <Grid.Background>

@@ -70,7 +70,7 @@ namespace Hahmogeneraattori
 
         private void SaveToFile_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            DataContext = new CharCreationViewModel();
+            DataContext = new CharCreationViewModel2();
         }
     }
 }

@@ -1,0 +1,563 @@
+﻿<UserControl x:Class="Hahmogeneraattori.Views.CharCreation2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Hahmogeneraattori.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="614">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="parchmentbackground.jpg"></ImageBrush>
+        </Grid.Background>
+        <TabControl HorizontalAlignment="Left" Height="500" VerticalAlignment="Top" Width="614" Margin="0,0,0,-8">
+            <TabItem Header="Stats" Height="22" VerticalAlignment="Top">
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="parchmentbackground.jpg"></ImageBrush>
+                    </Grid.Background>
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel Name="AblilityName" Orientation="Horizontal">
+
+                                <ListBox FontSize="24">
+                                    <ListBox.Background>
+                                        <SolidColorBrush/>
+                                    </ListBox.Background>
+                                    <ListBoxItem Content="Ability Name"/>
+                                    <ListBoxItem Name="Strength" Selected="Strength_Selected">Strength</ListBoxItem>
+                                    <ListBoxItem Name="Dexterity" Selected="Dexterity_Selected">Dexterity</ListBoxItem>
+                                    <ListBoxItem Name="Constitution" Selected="Constitution_Selected">Constitution</ListBoxItem>
+                                    <ListBoxItem Name="Intelligence" Selected="Intelligence_Selected">Intelligence</ListBoxItem>
+                                    <ListBoxItem Name="Wisdom" Selected="Wisdom_Selected">Wisdom</ListBoxItem>
+                                    <ListBoxItem Name="Charisma" Selected="Charisma_Selected">Charisma</ListBoxItem>
+
+                                </ListBox>
+                            </StackPanel>
+                            <StackPanel x:Name="AbilityScore" Orientation="Horizontal">
+                                <ListBox FontSize="24" x:Name="ScoreList" HorizontalContentAlignment="Center" >
+                                    <ListBox.Background>
+                                        <SolidColorBrush/>
+                                    </ListBox.Background>
+                                    <ListBoxItem Content="Score"/>
+                                    <TextBlock x:Name="StrScore"/>
+                                    <TextBlock x:Name="DexScore"/>
+                                    <TextBlock x:Name="ConScore"/>
+                                    <TextBlock x:Name="IntScore"/>
+                                    <TextBlock x:Name="WisScore"/>
+                                    <TextBlock x:Name="ChaScore"/>
+
+                                </ListBox>
+                            </StackPanel>
+                            <StackPanel x:Name="AbilityMod" Orientation="Horizontal">
+                                <ListBox FontSize="24" x:Name="ModList" HorizontalContentAlignment="Center">
+                                    <ListBox.Background>
+                                        <SolidColorBrush/>
+                                    </ListBox.Background>
+                                    <ListBoxItem Content="Modifier"/>
+                                    <TextBlock x:Name="StrMod"/>
+                                    <TextBlock x:Name="DexMod"/>
+                                    <TextBlock x:Name="ConMod"/>
+                                    <TextBlock x:Name="IntMod"/>
+                                    <TextBlock x:Name="WisMod"/>
+                                    <TextBlock x:Name="ChaMod"/>
+
+                                </ListBox>
+                            </StackPanel>
+
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Left" Height="31" VerticalAlignment="Bottom" Width="608" Grid.ColumnSpan="2">
+                            <Button x:Name="btnStats" Content="Roll stats" Margin="5" Height="30" Click="btnStats_Click"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Race">
+
+                <ListBox Name="RaceList" FontSize="24">
+                    <ListBox.Background>
+                        <ImageBrush ImageSource="parchmentbackground.jpg"></ImageBrush>
+                    </ListBox.Background>
+                    <TextBlock> Choose a race:</TextBlock>
+                    <ListBoxItem Name="Dwarf" Selected="Dwarf_Selected">Dwarf</ListBoxItem>
+                    <ListBoxItem Name="Elf" Selected="Elf_Selected">Elf</ListBoxItem>
+                    <ListBoxItem Name="Gnome" Selected="Gnome_Selected">Gnome</ListBoxItem>
+                    <ListBoxItem Name="HalfElf" Selected="HalfElf_Selected">Half-Elf</ListBoxItem>
+                    <ListBoxItem Name="HalfOrc" Selected="HalfOrc_Selected">Half-Orc</ListBoxItem>
+                    <ListBoxItem Name="Halfling" Selected="Halfling_Selected">Halfling</ListBoxItem>
+                    <ListBoxItem Name="Human" Selected="Human_Selected">Human</ListBoxItem>
+                </ListBox>
+            </TabItem>
+            <TabItem Header="Class">
+                <ListBox Name="ClassList" FontSize="24">
+                    <ListBox.Background>
+                        <ImageBrush ImageSource="parchmentbackground.jpg"></ImageBrush>
+                    </ListBox.Background>
+                    <TextBlock> Choose a class:</TextBlock>
+                    <ListBoxItem Name="Barbarian" Selected="Barbarian_Selected">Barbarian</ListBoxItem>
+                    <ListBoxItem Name="Bard" Selected="Bard_Selected">Bard</ListBoxItem>
+                    <ListBoxItem Name="Cleric" Selected="Cleric_Selected">Cleric</ListBoxItem>
+                    <ListBoxItem Name="Druid" Selected="Druid_Selected">Druid</ListBoxItem>
+                    <ListBoxItem Name="Fighter" Selected="Fighter_Selected">Fighter</ListBoxItem>
+                    <ListBoxItem Name="Monk" Selected="Monk_Selected">Monk</ListBoxItem>
+                    <ListBoxItem Name="Paladin" Selected="Paladin_Selected">Paladin</ListBoxItem>
+                    <ListBoxItem Name="Ranger" Selected="Ranger_Selected">Ranger</ListBoxItem>
+                    <ListBoxItem Name="Rogue" Selected="Rogue_Selected">Rogue</ListBoxItem>
+                    <ListBoxItem Name="Sorcerer" Selected="Sorcerer_Selected">Sorcerer</ListBoxItem>
+                    <ListBoxItem Name="Wizard" Selected="Wizard_Selected">Wizard</ListBoxItem>
+                </ListBox>
+            </TabItem>
+
+            <TabItem Header="Skills">
+                <StackPanel Orientation="Horizontal" Margin="0,0,-4,0">
+                    <StackPanel Name="SkillPanel" Width="612" >
+                        <ListBox Name="SkillList" FontSize="12" Height="470">
+                            <ListBox.Background>
+                                <ImageBrush ImageSource="parchmentbackground.jpg"></ImageBrush>
+                            </ListBox.Background>
+                            <!--Here is all skills. checkboxes are disabled so users can't change them themselves. ListBoxItems are there to make text selectable. And Rank textBoxes are named for number changes-->
+                            <TextBlock Name="Acrobatics">
+                                <CheckBox Name="AcrobaticsCheck" IsEnabled="False"/>
+                                <ListBoxItem Name="AcrobaticsBox">
+                                    Acrobatics (Dex)
+                                </ListBoxItem> 
+                                <Button Content="-" Name="AcrobaticsMinus"></Button>
+                                <TextBox Name="AcrobaticsRank" IsEnabled="False"/>
+                                <Button Content="+" Name="AcrobaticsPlus"></Button>
+                            </TextBlock>
+
+                            <TextBlock Name="Appraise">
+                                <CheckBox Name="AppraiseCheck" IsEnabled="False"/>
+                                <ListBoxItem Name="AppraiseBox"> 
+                                    Appraise (Int)
+                                </ListBoxItem>
+                                <Button Content="-" Name="AppraiseMinus"></Button>
+                                <TextBox Name="AppraiseRank" IsEnabled="False"/>
+                                <Button Content="+" Name="AppraisePlus"></Button>
+                            </TextBlock>
+
+                            <TextBlock Name="Bluff">
+                                <CheckBox Name="BluffCheck" IsEnabled="False"/>
+                                <ListBoxItem Name="BluffBox"> 
+                                    Bluff (Cha)
+                                </ListBoxItem>
+                                <Button Content="-" Name="BluffMinus"></Button>
+                                <TextBox Name="BluffRank" IsEnabled="False"/>
+                                <Button Content="+" Name="BluffPlus"></Button>
+                            </TextBlock>
+
+                            <TextBlock Name="Climb">
+                                <CheckBox Name="ClimbCheck" IsEnabled="False"/>
+                                <ListBoxItem Name="ClimbBox">
+                                    Climb (Str)
+                                </ListBoxItem>
+                                <Button Content="-" Name="ClimbMinus"></Button>
+                                <TextBox Name="ClimbRank" IsEnabled="False"/>
+                                <Button Content="+" Name="ClimbPlus"></Button>
+                            </TextBlock>
+
+                            <TextBlock Name="Diplomacy">
+                                <CheckBox Name="DiplomacyCheck" IsEnabled="False"/>
+                                <ListBoxItem Name="DiplomacyBox">
+                                    Diplomacy (Cha)
+                                </ListBoxItem>
+                                <Button Content="-" Name="DiplomacyMinus"></Button>
+                                <TextBox Name="DiplomacyRank" IsEnabled="False"/>
+                                <Button Content="+" Name="DiplomacyPlus"></Button>
+                            </TextBlock>
+
+                            <TextBlock Name="DisableDevice">
+                                <CheckBox Name="DisableDeviceCheck" IsEnabled="False"/>
+                                <ListBoxItem Name="DisableDeviceBox">
+                                    Disable Device* (Dex)
+                                </ListBoxItem>
+                                <Button Content="-" Name="DisableDeviceMinus"></Button>
+                                <TextBox Name="DisableDeviceRank" IsEnabled="False"/>
+                                <Button Content="+" Name="DisableDevicePlus"></Button>
+                            </TextBlock>
+
+                            <TextBlock Name="Disguise">
+                                <CheckBox Name="DisguiseCheck" IsEnabled="False"/>
+                                <ListBoxItem Name="DisguiseBox">
+                                    Disguise (Cha)
+                                </ListBoxItem>
+                                <Button Content="-" Name="DisguiseMinus"></Button>
+                                <TextBox Name="DisguiseRank" IsEnabled="False"/>
+                                <Button Content="+" Name="DisguisePlus"></Button>
+                            </TextBlock>
+
+                            <TextBlock Name="EscapeArtist">
+                                <CheckBox Name="EscapeArtistCheck" IsEnabled="False"/>
+                                <ListBoxItem Name="EscapeArtistBox">
+                                    Escape Artist (Dex)
+                                </ListBoxItem>
+                                <Button Content="-" Name="EscapeArtistMinus"></Button>
+                                <TextBox Name="EscapeArtistRank" IsEnabled="False"/>
+                                <Button Content="+" Name="EscapeArtistPlus"></Button>
+                            </TextBlock>
+
+                            <TextBlock Name="Fly">
+                                <CheckBox Name="FlyCheck" IsEnabled="False"/>
+                                <ListBoxItem Name="FlyBox">
+                                    Fly (Dex)
+                                </ListBoxItem>
+                                <Button Content="-" Name="FlyMinus"></Button>
+                                <TextBox Name="FlyRank" IsEnabled="False"/>
+                                <Button Content="+" Name="FlyPlus"></Button>
+                            </TextBlock>
+
+                            <TextBlock Name="HandleAnimal">
+                                <CheckBox Name="HandleAnimalCheck" IsEnabled="False"/>
+                                <ListBoxItem Name="HandleAnimalBox">
+                                    Handle Animal* (Cha)
+                                </ListBoxItem>
+                                <Button Content="-" Name="HandleAnimalMinus"></Button>
+                                <TextBox Name="HandleAnimalRank" IsEnabled="False"/>
+                                <Button Content="+" Name="HandleAnimalPlus"></Button>
+                            </TextBlock>
+
+                            <TextBlock Name="Heal">
+                                <CheckBox Name="HealCheck" IsEnabled="False"/>
+                                <ListBoxItem Name="HealBox">
+                                    Heal (Wis)
+                                </ListBoxItem>
+                                <Button Content="-" Name="HealMinus"></Button>
+                                <TextBox Name="HealRank" IsEnabled="False"/>
+                                <Button Content="+" Name="HealPlus"></Button>
+                            </TextBlock>
+
+                            <TextBlock Name="Intimidate">
+                                <CheckBox Name="IntimidateCheck" IsEnabled="False"/>
+                                <ListBoxItem Name="IntimidateBox">
+                                    Intimidate (Cha)
+                                </ListBoxItem>
+                                <Button Content="-" Name="IntimidateMinus"></Button>
+                                <TextBox Name="IntimidateRank" IsEnabled="False"/>
+                                <Button Content="+" Name="IntimidatePlus"></Button>
+                            </TextBlock>
+
+                            <TextBlock Name="KnowArcana">
+                                <CheckBox Name="KnowArcanaCheck" IsEnabled="False"/>
+                                <ListBoxItem Name="KnowArcanaBox">
+                                    Knowledge* (Arcana) (Int)
+                                </ListBoxItem>
+                                <Button Content="-" Name="KnowArcanaMinus"></Button>
+                                <TextBox Name="KnowArcanaRank" IsEnabled="False"/>
+                                <Button Content="+" Name="KnowArcanaPlus"></Button>
+                            </TextBlock>
+
+                            <TextBlock Name="KnowDungeoneering">
+                                <CheckBox Name="KnowDungeoneeringCheck" IsEnabled="False"/>
+                                <ListBoxItem Name="KnowDungeoneeringBox">
+                                    Knowledge* (Dungeoneering) (Int)
+                                </ListBoxItem>
+                                <Button Content="-" Name="KnowDungeoneeringMinus"></Button>
+                                <TextBox Name="KnowDungeoneeringRank" IsEnabled="False"/>
+                                <Button Content="+" Name="KnowDungeoneeringPlus"></Button>
+                            </TextBlock>
+
+                            <TextBlock Name="KnowEngineering">
+                                <CheckBox Name="KnowEngineeringCheck" IsEnabled="False"/>
+                                <ListBoxItem Name="KnowEngineeringBox">
+                                    Knowledge* (Engineering) (Int)
+                                </ListBoxItem>
+                                <Button Content="-" Name="KnowEngineeringMinus"></Button>
+                                <TextBox Name="KnowEngineeringRank" IsEnabled="False"/>
+                                <Button Content="+" Name="KnowEngineeringPlus"></Button>
+                            </TextBlock>
+
+                            <TextBlock Name="KnowGeography">
+                                <CheckBox Name="KnowGeographyCheck" IsEnabled="False"/>
+                                <ListBoxItem Name="KnowGeographyBox">
+                                    Knowledge* (Geography) (Int)
+                                </ListBoxItem>
+                                <Button Content="-" Name="KnowGeographyMinus"></Button>
+                                <TextBox Name="KnowGeographyRank" IsEnabled="False"/>
+                                <Button Content="+" Name="KnowGeographyPlus"></Button>
+                            </TextBlock>
+
+                            <TextBlock Name="KnowHistory">
+                                <CheckBox Name="KnowHistoryCheck" IsEnabled="False"/>
+                                <ListBoxItem Name="KnowHistoryBox">
+                                    Knowledge* (History) (Int)
+                                </ListBoxItem>
+                                <Button Content="-" Name="KnowHistoryMinus"></Button>
+                                <TextBox Name="KnowHistoryRank" IsEnabled="False"/>
+                                <Button Content="+" Name="KnowHistoryPlus"></Button>
+                            </TextBlock>
+
+                            <TextBlock Name="KnowLocal">
+                                <CheckBox Name="KnowLocalCheck" IsEnabled="False"/>
+                                <ListBoxItem Name="KnowLocalBox">
+                                    Knowledge* (Local) (Int)
+                                </ListBoxItem>
+                                <Button Content="-" Name="KnowLocalMinus"></Button>
+                                <TextBox Name="KnowLocalRank" IsEnabled="False"/>
+                                <Button Content="+" Name="KnowLocalPlus"></Button>
+                            </TextBlock>
+
+                            <TextBlock Name="KnowNature">
+                                <CheckBox Name="KnowNatureCheck" IsEnabled="False"/>
+                                <ListBoxItem Name="KnowNatureBox">
+                                    Knowledge* (Nature) (Int)
+                                </ListBoxItem>
+                                <Button Content="-" Name="KnowNatureMinus"></Button>
+                                <TextBox Name="KnowNatureRank" IsEnabled="False"/>
+                                <Button Content="+" Name="KnowNaturePlus"></Button>
+                            </TextBlock>
+
+                            <TextBlock Name="KnowNobility">
+                                <CheckBox Name="KnowNobilityCheck" IsEnabled="False"/>
+                                <ListBoxItem Name="KnowNobilityBox">
+                                    Knowledge* (Nobility) (Int)
+                                </ListBoxItem>
+                                <Button Content="-" Name="KnowNobilityMinus"></Button>
+                                <TextBox Name="KnowNobilityRank" IsEnabled="False"/>
+                                <Button Content="+" Name="KnowNobilityPlus"></Button>
+                            </TextBlock>
+
+                            <TextBlock Name="KnowPlanes">
+                                <CheckBox Name="KnowPlanesCheck" IsEnabled="False"/>
+                                <ListBoxItem Name="KnowPlanesBox">
+                                    Knowledge* (Planes) (Int)
+                                </ListBoxItem>
+                                <Button Content="-" Name="KnowPlanesMinus"></Button>
+                                <TextBox Name="KnowPlanesRank" IsEnabled="False"/>
+                                <Button Content="+" Name="KnowPlanesPlus"></Button>
+                            </TextBlock>
+
+                            <TextBlock Name="KnowReligion">
+                                <CheckBox Name="KnowReligionCheck" IsEnabled="False"/>
+                                <ListBoxItem Name="KnowReligionBox">
+                                    Knowledge* (Religion) (Int)
+                                </ListBoxItem>
+                                <Button Content="-" Name="KnowReligionMinus"></Button>
+                                <TextBox Name="KnowReligionRank" IsEnabled="False"/>
+                                <Button Content="+" Name="KnowReligionPlus"></Button>
+                            </TextBlock>
+
+                            <TextBlock Name="Linguistics">
+                                <CheckBox Name="LinguisticsCheck" IsEnabled="False"/>
+                                <ListBoxItem Name="LinguisticsBox">
+                                    Linguistics* (Int)
+                                </ListBoxItem>
+                                <Button Content="-" Name="LinguisticsMinus"></Button>
+                                <TextBox Name="LinguisticsRank" IsEnabled="False"/>
+                                <Button Content="+" Name="LinguisticsPlus"></Button>
+                            </TextBlock>
+
+                            <TextBlock Name="Perception">
+                                <CheckBox Name="PerceptionCheck" IsEnabled="False"/>
+                                <ListBoxItem Name="PerceptionBox">
+                                    Perception (Wis)
+                                </ListBoxItem>
+                                <Button Content="-" Name="PerceptionMinus"></Button>
+                                <TextBox Name="PerceptionRank" IsEnabled="False"/>
+                                <Button Content="+" Name="PerceptionPlus"></Button>
+                            </TextBlock>
+
+                            <TextBlock Name="Ride">
+                                <CheckBox Name="RideCheck" IsEnabled="False"/>
+                                <ListBoxItem Name="RideBox">
+                                    Ride (Dex)
+                                </ListBoxItem>
+                                <Button Content="-" Name="RideMinus"></Button>
+                                <TextBox Name="RideRank" IsEnabled="False"/>
+                                <Button Content="+" Name="RidePlus"></Button>
+                            </TextBlock>
+
+                            <TextBlock Name="SenseMotive">
+                                <CheckBox Name="SenseMotiveCheck" IsEnabled="False"/>
+                                <ListBoxItem Name="SenseMotiveBox">
+                                    Sense Motive (Wis)
+                                </ListBoxItem>
+                                <Button Content="-" Name="SenseMotiveMinus"></Button>
+                                <TextBox Name="SenseMotiveRank" IsEnabled="False"/>
+                                <Button Content="+" Name="SenseMotivePlus"></Button>
+                            </TextBlock>
+
+                            <TextBlock Name="SleightOfHand">
+                                <CheckBox Name="SleightOfHandCheck" IsEnabled="False"/>
+                                <ListBoxItem Name="SleightOfHandBox">
+                                    Sleight of Hand* (Dex)
+                                </ListBoxItem>
+                                <Button Content="-" Name="SleightOfHandMinus"></Button>
+                                <TextBox Name="SleightOfHandRank" IsEnabled="False"/>
+                                <Button Content="+" Name="SleightOfHandPlus"></Button>
+                            </TextBlock>
+
+                            <TextBlock Name="Spellcraft">
+                                <CheckBox Name="SpellcraftCheck" IsEnabled="False"/>
+                                <ListBoxItem Name="SpellcraftBox">
+                                    Spellcraft* (Int)
+                                </ListBoxItem>
+                                <Button Content="-" Name="SpellcraftMinus"></Button>
+                                <TextBox Name="SpellcraftRank" IsEnabled="False"/>
+                                <Button Content="+" Name="SpellcraftPlus"></Button>
+                            </TextBlock>
+
+                            <TextBlock Name="Stealth">
+                                <CheckBox Name="StealthCheck" IsEnabled="False"/>
+                                <ListBoxItem Name="StealthBox">
+                                    Stealth (Dex)
+                                </ListBoxItem>
+                                <Button Content="-" Name="StealthMinus"></Button>
+                                <TextBox Name="StealthRank" IsEnabled="False"/>
+                                <Button Content="+" Name="StealthPlus"></Button>
+                            </TextBlock>
+
+                            <TextBlock Name="Survival">
+                                <CheckBox Name="SurvivalCheck" IsEnabled="False"/>
+                                <ListBoxItem Name="SurvivalBox">
+                                    Survival (Wis)
+                                </ListBoxItem>
+                                <Button Content="-" Name="SurvivalMinus"></Button>
+                                <TextBox Name="SurvivalRank" IsEnabled="False"/>
+                                <Button Content="+" Name="SurvivalPlus"></Button>
+                            </TextBlock>
+
+                            <TextBlock Name="Swim">
+                                <CheckBox Name="SwimCheck" IsEnabled="False"/>
+                                <ListBoxItem Name="SwimBox">
+                                    Swim (Str)
+                                </ListBoxItem>
+                                <Button Content="-" Name="SwimMinus"></Button>
+                                <TextBox Name="SwimRank" IsEnabled="False"/>
+                                <Button Content="+" Name="SwimPlus"></Button>
+                            </TextBlock>
+
+                            <TextBlock Name="UseMagicDevise">
+                                <CheckBox Name="UseMagicDeviseCheck" IsEnabled="False"/>
+                                <ListBoxItem Name="UseMagicDeviseBox">
+                                    Use Magic Devise* (Cha)
+                                </ListBoxItem>
+                                <Button Content="-" Name="UseMagicDeviseMinus"></Button>
+                                <TextBox Name="UseMagicDeviseRank" IsEnabled="False"/>
+                                <Button Content="+" Name="UseMagicDevisePlus"></Button>
+                            </TextBlock>
+                        </ListBox>
+                    </StackPanel>
+
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Character">
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="parchmentbackground.jpg"></ImageBrush>
+                    </Grid.Background>
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal" Height="122">
+                            <ListBox Margin="0,4,0,0">
+                                <ListBox.Background>
+                                    <SolidColorBrush/>
+                                </ListBox.Background>
+                                <ListBoxItem Content="Character name: "/>
+                                <ListBoxItem Content="Race: "/>
+                                <ListBoxItem Content="Class: "/>
+                            </ListBox>
+                            <ListBox Margin="0,4,0,0">
+                                <ListBox.Background>
+                                    <SolidColorBrush/>
+                                </ListBox.Background>
+                                <ListBoxItem Name="CharacterName" Content="Enter name here" Selected="CharacterName_Selected"/>
+                                <ListBoxItem Name="CharacterRace" Content=""/>
+                                <ListBoxItem Name="CharacterClass" Content=""/>
+                            </ListBox>
+                            <ListBox Width="335" Margin="0,4,0,0">
+                                <ListBox.Background>
+                                    <SolidColorBrush/>
+                                </ListBox.Background>
+                                <ListBoxItem Content="Character backstory"></ListBoxItem>
+                                <TextBox Height="69" Width="313" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"/>
+                                <ListBoxItem/>
+                            </ListBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <ListBox>
+                                <ListBox.Background>
+                                    <SolidColorBrush/>
+                                </ListBox.Background>
+                                <ListBoxItem Content="Stats"></ListBoxItem>
+                                <ListBoxItem Content="Strength: "></ListBoxItem>
+                                <ListBoxItem Content="Dexterity: "></ListBoxItem>
+                                <ListBoxItem Content="Constitution: "></ListBoxItem>
+                                <ListBoxItem Content="Intelligence: "></ListBoxItem>
+                                <ListBoxItem Content="Wisdom: "></ListBoxItem>
+                                <ListBoxItem Content="Charisma: "></ListBoxItem>
+                            </ListBox>
+                            <ListBox>
+                                <ListBox.Background>
+                                    <SolidColorBrush/>
+                                </ListBox.Background>
+                                <ListBoxItem Content="Ranks"></ListBoxItem>
+                                <ListBoxItem Name="CharacterStrength" Content=""></ListBoxItem>
+                                <ListBoxItem Name="CharacterDexterity" Content=""></ListBoxItem>
+                                <ListBoxItem Name="CharacterConstitution" Content=""></ListBoxItem>
+                                <ListBoxItem Name="CharacterIntelligence" Content=""></ListBoxItem>
+                                <ListBoxItem Name="CharacterWisdom" Content=""></ListBoxItem>
+                                <ListBoxItem Name="CharacterCharisma" Content=""></ListBoxItem>
+                            </ListBox>
+                            <ListBox>
+                                <ListBox.Background>
+                                    <SolidColorBrush/>
+                                </ListBox.Background>
+                                <ListBoxItem Content="Modifiers"></ListBoxItem>
+                                <ListBoxItem Name="CharStrMod" Content=""></ListBoxItem>
+                                <ListBoxItem Name="CharDexMod" Content=""></ListBoxItem>
+                                <ListBoxItem Name="CharConMod" Content=""></ListBoxItem>
+                                <ListBoxItem Name="CharIntMod" Content=""></ListBoxItem>
+                                <ListBoxItem Name="CharWisMod" Content=""></ListBoxItem>
+                                <ListBoxItem Name="CharChaMod" Content=""></ListBoxItem>
+                            </ListBox>
+                        </StackPanel>
+                        <Button Name="SaveToDatabaseButton" Height="25" Content="Save character"></Button>
+                        <Button Name="SaveToFileButton" Content="Save to File" Height="25" Click="SaveToFileButton_Click"></Button>
+                        <Button Name="CloseApplicationButton" Height="25" Content="Close Application" Click="CloseApplicationButton_Click"></Button>
+                    </StackPanel>
+                    <Grid x:Name="InputBox" Visibility="Collapsed">
+                        <Grid Background="Black" Opacity="0.5"></Grid>
+                        <Border
+                            MinWidth="250"
+                            Background="Orange" 
+                            BorderBrush="Black" 
+                            BorderThickness="1" 
+                            HorizontalAlignment="Center" 
+                            VerticalAlignment="Center">
+                            <StackPanel>
+                                <TextBlock Margin="5" Text="Input Box:" />
+                                <TextBox Name="InputTextBox" MinWidth="200" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBox>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <Button Name="Yes" Margin="5" Content="Yes" Click="YesButton_Click"></Button>
+                                    <Button Name="No" Margin="5" Content="No" Click="NoButton_Click"></Button>
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+
+                    </Grid>
+                    <Grid x:Name="CloseApplicationBox" Visibility="Collapsed">
+                        <Grid Background="Black" Opacity="0.5"></Grid>
+                        <Border
+                            MinWidth="250"
+                            Background="White" 
+                            BorderBrush="Black" 
+                            BorderThickness="1" 
+                            HorizontalAlignment="Center" 
+                            VerticalAlignment="Center">
+                            <StackPanel>
+                                <TextBlock Margin="5" Text="Are you sure? Any unsaved changes will be lost." />
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <Button Name="CloseApplicationYesButton" Margin="5" Content="Yes" Click="CloseApplicationYesButton_Click"></Button>
+                                    <Button Name="CloseApplicationNoButton" Margin="5" Content="No" Click="CloseApplicationNoButton_Click"></Button>
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+
+
+                </Grid>
+            </TabItem>
+
+        </TabControl>
+    </Grid>
+</UserControl>
+

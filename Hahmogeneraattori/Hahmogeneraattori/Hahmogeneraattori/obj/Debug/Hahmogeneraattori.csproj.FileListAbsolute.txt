@@ -110,7 +110,6 @@ C:\K9105\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogenera
 C:\K9105\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\bin\Debug\MySql.Data.dll
 C:\K9105\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\bin\Debug\Google.Protobuf.xml
 C:\K9105\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\bin\Debug\MySql.Data.xml
-C:\K9105\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\Hahmogeneraattori.csprojResolveAssemblyReference.cache
 C:\K9105\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\MainWindow.g.cs
 C:\K9105\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\Views\CharCreation.g.cs
 C:\K9105\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\App.g.cs
@@ -124,3 +123,5 @@ C:\K9105\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogenera
 C:\K9105\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\Hahmogeneraattori.csproj.GenerateResource.Cache
 C:\K9105\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\Hahmogeneraattori.exe
 C:\K9105\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\Hahmogeneraattori.pdb
+C:\K9105\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\Views\CharCreation2.g.cs
+C:\K9105\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\Views\CharCreation2.baml
