@@ -191,32 +191,98 @@ namespace Hahmogeneraattori.Views
         //Adding stat bonuses to human, half-elf or half-orc
         private void Strength_Selected(object sender, RoutedEventArgs e)
         {
+            RaceStr = stats.Str + 2;
+            RaceDex = stats.Dex;
+            RaceCon = stats.Con;
+            RaceInt = stats.Int;
+            RaceWis = stats.Wis;
+            RaceCha = stats.Cha;
 
+            AssignStats();
+
+            AssignModifiers();
+
+            UpdateCharSheet();
         }
 
         private void Dexterity_Selected(object sender, RoutedEventArgs e)
         {
+            RaceStr = stats.Str;
+            RaceDex = stats.Dex + 2;
+            RaceCon = stats.Con;
+            RaceInt = stats.Int;
+            RaceWis = stats.Wis;
+            RaceCha = stats.Cha;
 
+            AssignStats();
+
+            AssignModifiers();
+
+            UpdateCharSheet();
         }
 
         private void Constitution_Selected(object sender, RoutedEventArgs e)
         {
+            RaceStr = stats.Str;
+            RaceDex = stats.Dex;
+            RaceCon = stats.Con + 2;
+            RaceInt = stats.Int;
+            RaceWis = stats.Wis;
+            RaceCha = stats.Cha;
 
+            AssignStats();
+
+            AssignModifiers();
+
+            UpdateCharSheet();
         }
 
         private void Intelligence_Selected(object sender, RoutedEventArgs e)
         {
+            RaceStr = stats.Str;
+            RaceDex = stats.Dex;
+            RaceCon = stats.Con;
+            RaceInt = stats.Int + 2;
+            RaceWis = stats.Wis;
+            RaceCha = stats.Cha;
 
+            AssignStats();
+
+            AssignModifiers();
+
+            UpdateCharSheet();
         }
 
         private void Wisdom_Selected(object sender, RoutedEventArgs e)
         {
+            RaceStr = stats.Str;
+            RaceDex = stats.Dex;
+            RaceCon = stats.Con;
+            RaceInt = stats.Int;
+            RaceWis = stats.Wis + 2;
+            RaceCha = stats.Cha;
 
+            AssignStats();
+
+            AssignModifiers();
+
+            UpdateCharSheet();
         }
 
         private void Charisma_Selected(object sender, RoutedEventArgs e)
         {
+            RaceStr = stats.Str;
+            RaceDex = stats.Dex;
+            RaceCon = stats.Con;
+            RaceInt = stats.Int;
+            RaceWis = stats.Wis;
+            RaceCha = stats.Cha + 2;
 
+            AssignStats();
+
+            AssignModifiers();
+
+            UpdateCharSheet();
         }
         // Classes
         private void Barbarian_Selected(object sender, RoutedEventArgs e)
