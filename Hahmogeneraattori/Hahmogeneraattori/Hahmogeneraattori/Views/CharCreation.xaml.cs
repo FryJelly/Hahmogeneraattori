@@ -29,10 +29,169 @@ namespace Hahmogeneraattori.Views
         int SkillRank = 0;
         bool taken;
 
+        //Rolls stats and modifiers
+        private void btnStats_Click(object sender, RoutedEventArgs e)
+        {
+            stats = Stats.RollStats();
+            stats2 = stats;
+
+            StrScore.Text = stats.Str.ToString();
+            DexScore.Text = stats.Dex.ToString();
+            ConScore.Text = stats.Con.ToString();
+            IntScore.Text = stats.Int.ToString();
+            WisScore.Text = stats.Wis.ToString();
+            ChaScore.Text = stats.Cha.ToString();
+
+            StrModifier = stats.Str / 2 - 5;
+            DexModifier = stats.Dex / 2 - 5;
+            ConModifier = stats.Con / 2 - 5;
+            IntModifier = stats.Int / 2 - 5;
+            WisModifier = stats.Wis / 2 - 5;
+            ChaModifier = stats.Cha / 2 - 5;
+
+            StrMod.Text = StrModifier.ToString();
+            DexMod.Text = DexModifier.ToString();
+            ConMod.Text = ConModifier.ToString();
+            IntMod.Text = IntModifier.ToString();
+            WisMod.Text = WisModifier.ToString();
+            ChaMod.Text = ChaModifier.ToString();
+
+            //update stats to char sheet
+            CharacterStrength.Content = stats.Str;
+            CharacterDexterity.Content = stats.Dex;
+            CharacterConstitution.Content = stats.Con;
+            CharacterIntelligence.Content = stats.Int;
+            CharacterWisdom.Content = stats.Wis;
+            CharacterCharisma.Content = stats.Cha;
+            // update char sheet modifiers
+            CharStrMod.Content = StrMod.Text;
+            CharDexMod.Content = DexMod.Text;
+            CharConMod.Content = ConMod.Text;
+            CharIntMod.Content = IntMod.Text;
+            CharWisMod.Content = WisMod.Text;
+            CharChaMod.Content = ChaMod.Text;
+        }
+
+        // Races
+        private void Dwarf_Selected(object sender, RoutedEventArgs e)
+        {
+            stats = stats2;
+
+            RaceStr = stats.Str;
+            RaceDex = stats.Dex;
+            RaceCon = stats.Con + 2;
+            RaceInt = stats.Int;
+            RaceWis = stats.Wis + 2;
+            RaceCha = stats.Cha - 2;
+
+            AssignStats();
+
+            AssignModifiers();
+
+            // Update character sheet race
+            CharacterRace.Content = Dwarf.Name;
+
+            UpdateCharSheet();
+        }
+
+        
+        private void Elf_Selected(object sender, RoutedEventArgs e)
+        {
+            stats = stats2;
+
+            RaceStr = stats.Str;
+            RaceDex = stats.Dex + 2;
+            RaceCon = stats.Con - 2;
+            RaceInt = stats.Int + 2;
+            RaceWis = stats.Wis;
+            RaceCha = stats.Cha;
+
+            AssignStats();
+
+            AssignModifiers();
+
+            // Update character sheet race
+            CharacterRace.Content = Elf.Name;
+
+            UpdateCharSheet();
+        }
+
+        private void Gnome_Selected(object sender, RoutedEventArgs e)
+        {
+            stats = stats2;
+
+            RaceStr = stats.Str - 2;
+            RaceDex = stats.Dex;
+            RaceCon = stats.Con + 2;
+            RaceInt = stats.Int;
+            RaceWis = stats.Wis;
+            RaceCha = stats.Cha + 2;
+
+            AssignStats();
+
+            AssignModifiers();
+
+            // Update character sheet race
+            CharacterRace.Content = Gnome.Name;
+
+            UpdateCharSheet();
+        }
+
+        private void HalfElf_Selected(object sender, RoutedEventArgs e)
+        {
+            stats2 = stats;
+
+            // Update character sheet race
+            CharacterRace.Content = HalfElf.Name;
+
+            UpdateCharSheet();
+        }
+
+        private void HalfOrc_Selected(object sender, RoutedEventArgs e)
+        {
+            stats2 = stats;
+
+            // Update character sheet race
+            CharacterRace.Content = HalfOrc.Name;
+
+            UpdateCharSheet();
+        }
+
+        private void Halfling_Selected(object sender, RoutedEventArgs e)
+        {
+            stats = stats2;
+
+            RaceStr = stats.Str - 2;
+            RaceDex = stats.Dex + 2;
+            RaceCon = stats.Con;
+            RaceInt = stats.Int;
+            RaceWis = stats.Wis;
+            RaceCha = stats.Cha + 2;
+
+            AssignStats();
+
+            AssignModifiers();
+
+            // Update character sheet race
+            CharacterRace.Content = Halfling.Name;
+
+            UpdateCharSheet();
+        }
+
+        private void Human_Selected(object sender, RoutedEventArgs e)
+        {
+            stats2 = stats;
+
+            // Update character sheet race
+            CharacterRace.Content = Human.Name;
+
+            UpdateCharSheet();
+        }
+
         //Adding stat bonuses to human, half-elf or half-orc
         private void Strength_Selected(object sender, RoutedEventArgs e)
         {
-            
+
         }
 
         private void Dexterity_Selected(object sender, RoutedEventArgs e)
@@ -189,14 +348,14 @@ namespace Hahmogeneraattori.Views
             KnowReligionRank.Text = SkillRank.ToString();
             LinguisticsRank.Text = SkillRank.ToString();
             SpellcraftRank.Text = SkillRank.ToString();
-            
+
             SkillRank = WisModifier + 3;
             HealRank.Text = SkillRank.ToString();
             SenseMotiveRank.Text = SkillRank.ToString();
 
             SkillRank = ChaModifier + 3;
             DiplomacyRank.Text = SkillRank.ToString();
-            
+
 
             // Update character sheet class
             CharacterClass.Content = Cleric.Name;
@@ -262,14 +421,14 @@ namespace Hahmogeneraattori.Views
 
             SkillRank = DexModifier + 3;
             RideRank.Text = SkillRank.ToString();
-            
+
             SkillRank = IntModifier + 3;
             KnowDungeoneeringRank.Text = SkillRank.ToString();
             KnowEngineeringRank.Text = SkillRank.ToString();
 
             SkillRank = WisModifier + 3;
             SurvivalRank.Text = SkillRank.ToString();
-            
+
             SkillRank = ChaModifier + 3;
             HandleAnimalRank.Text = SkillRank.ToString();
             IntimidateRank.Text = SkillRank.ToString();
@@ -334,7 +493,7 @@ namespace Hahmogeneraattori.Views
 
             SkillRank = DexModifier + 3;
             RideRank.Text = SkillRank.ToString();
-            
+
             SkillRank = IntModifier + 3;
             KnowNobilityRank.Text = SkillRank.ToString();
             KnowReligionRank.Text = SkillRank.ToString();
@@ -549,9 +708,171 @@ namespace Hahmogeneraattori.Views
             InputTextBox.Text = String.Empty;
         }
 
-        private void AcrobaticsBox_Selected(object sender, RoutedEventArgs e)
+
+
+        private void CloseApplicationButton_Click(object sender, RoutedEventArgs e)
         {
-            if(AcrobaticsCheck.IsChecked == true)
+            // Close Application button clicked -> show confirmation box
+            CloseApplicationBox.Visibility = System.Windows.Visibility.Visible;
+        }
+
+        private void CloseApplicationYesButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Yes clicked - close application
+            System.Windows.Application.Current.Shutdown();
+        }
+
+        private void CloseApplicationNoButton_Click(object sender, RoutedEventArgs e)
+        {
+            // No clicked, close confirmation box
+            CloseApplicationBox.Visibility = System.Windows.Visibility.Collapsed;
+        }
+        public CharCreation()
+        {
+            InitializeComponent();
+        }
+
+
+
+        private void ListBox_SelectionChanged()
+        {
+
+        }
+
+        public void ClearSkills()
+        {
+            AcrobaticsCheck.IsChecked = false;
+            AppraiseCheck.IsChecked = false;
+            BluffCheck.IsChecked = false;
+            ClimbCheck.IsChecked = false;
+            DiplomacyCheck.IsChecked = false;
+            DisableDeviceCheck.IsChecked = false;
+            DisguiseCheck.IsChecked = false;
+            EscapeArtistCheck.IsChecked = false;
+            FlyCheck.IsChecked = false;
+            HandleAnimalCheck.IsChecked = false;
+            HealCheck.IsChecked = false;
+            IntimidateCheck.IsChecked = false;
+            KnowArcanaCheck.IsChecked = false;
+            KnowDungeoneeringCheck.IsChecked = false;
+            KnowEngineeringCheck.IsChecked = false;
+            KnowGeographyCheck.IsChecked = false;
+            KnowHistoryCheck.IsChecked = false;
+            KnowLocalCheck.IsChecked = false;
+            KnowNatureCheck.IsChecked = false;
+            KnowNobilityCheck.IsChecked = false;
+            KnowPlanesCheck.IsChecked = false;
+            KnowReligionCheck.IsChecked = false;
+            LinguisticsCheck.IsChecked = false;
+            PerceptionCheck.IsChecked = false;
+            RideCheck.IsChecked = false;
+            SenseMotiveCheck.IsChecked = false;
+            SleightOfHandCheck.IsChecked = false;
+            SpellcraftCheck.IsChecked = false;
+            StealthCheck.IsChecked = false;
+            SurvivalCheck.IsChecked = false;
+            SwimCheck.IsChecked = false;
+            UseMagicDeviseCheck.IsChecked = false;
+
+            AcrobaticsRank.Text = "0";
+            AppraiseRank.Text = "0";
+            BluffRank.Text = "0";
+            ClimbRank.Text = "0";
+            DiplomacyRank.Text = "0";
+            DisableDeviceRank.Text = "0";
+            DisguiseRank.Text = "0";
+            EscapeArtistRank.Text = "0";
+            FlyRank.Text = "0";
+            HandleAnimalRank.Text = "0";
+            HealRank.Text = "0";
+            IntimidateRank.Text = "0";
+            KnowArcanaRank.Text = "0";
+            KnowDungeoneeringRank.Text = "0";
+            KnowEngineeringRank.Text = "0";
+            KnowGeographyRank.Text = "0";
+            KnowHistoryRank.Text = "0";
+            KnowLocalRank.Text = "0";
+            KnowNatureRank.Text = "0";
+            KnowNobilityRank.Text = "0";
+            KnowPlanesRank.Text = "0";
+            KnowReligionRank.Text = "0";
+            LinguisticsRank.Text = "0";
+            PerceptionRank.Text = "0";
+            RideRank.Text = "0";
+            SenseMotiveRank.Text = "0";
+            SleightOfHandRank.Text = "0";
+            SpellcraftRank.Text = "0";
+            StealthRank.Text = "0";
+            SurvivalRank.Text = "0";
+            SwimRank.Text = "0";
+            UseMagicDeviseRank.Text = "0";
+        }
+
+        public void AssignModifiers()
+        {
+            StrModifier = RaceStr / 2 - 5;
+            DexModifier = RaceDex / 2 - 5;
+            ConModifier = RaceCon / 2 - 5;
+            IntModifier = RaceInt / 2 - 5;
+            WisModifier = RaceWis / 2 - 5;
+            ChaModifier = RaceCha / 2 - 5;
+
+
+            StrMod.Text = StrModifier.ToString();
+            DexMod.Text = DexModifier.ToString();
+            ConMod.Text = ConModifier.ToString();
+            IntMod.Text = IntModifier.ToString();
+            WisMod.Text = WisModifier.ToString();
+            ChaMod.Text = ChaModifier.ToString();
+        }
+
+        public void AssignStats()
+        {
+            StrScore.Text = RaceStr.ToString();
+            DexScore.Text = RaceDex.ToString();
+            ConScore.Text = RaceCon.ToString();
+            IntScore.Text = RaceInt.ToString();
+            WisScore.Text = RaceWis.ToString();
+            ChaScore.Text = RaceCha.ToString();
+        }
+
+        public void UpdateCharSheet()
+        {
+            //update stats to char sheet
+            CharacterStrength.Content = RaceStr;
+            CharacterDexterity.Content = RaceDex;
+            CharacterConstitution.Content = RaceCon;
+            CharacterIntelligence.Content = RaceInt;
+            CharacterWisdom.Content = RaceWis;
+            CharacterCharisma.Content = RaceCha;
+            // update char sheet modifiers
+            CharStrMod.Content = StrMod.Text;
+            CharDexMod.Content = DexMod.Text;
+            CharConMod.Content = ConMod.Text;
+            CharIntMod.Content = IntMod.Text;
+            CharWisMod.Content = WisMod.Text;
+            CharChaMod.Content = ChaMod.Text;
+        }
+
+        private void SaveToFileButton_Click(object sender, RoutedEventArgs e)
+        {
+            SaveToFile();
+        }
+
+        public void SaveToFile()
+        {
+            string path = @"char.txt";
+            string filetext = CharacterName.Content.ToString() + "," + CharacterRace.Content.ToString()  + "," + CharacterClass.Content.ToString()
+                + "," + CharacterStrength.Content.ToString() + "," + CharacterDexterity.Content.ToString() + "," + CharacterConstitution.Content.ToString() + "," + CharacterIntelligence.Content.ToString()
+                 + "," + CharacterWisdom.Content.ToString() + "," + CharacterCharisma.Content.ToString();
+            File.WriteAllText(path, filetext);
+            string showtext = "Character has been saved!";
+            MessageBox.Show(showtext);
+        }
+
+        /*private void AcrobaticsBox_Selected(object sender, RoutedEventArgs e)
+        {
+            if (AcrobaticsCheck.IsChecked == true)
             {
                 SkillRank = DexModifier + 4;
                 AcrobaticsRank.Text = SkillRank.ToString();
@@ -1027,330 +1348,6 @@ namespace Hahmogeneraattori.Views
                 SkillRank = ChaModifier + 1;
                 UseMagicDeviseRank.Text = SkillRank.ToString();
             }
-        }
-
-        private void CloseApplicationButton_Click(object sender, RoutedEventArgs e)
-        {
-            // Close Application button clicked -> show confirmation box
-            CloseApplicationBox.Visibility = System.Windows.Visibility.Visible;
-        }
-
-        private void CloseApplicationYesButton_Click(object sender, RoutedEventArgs e)
-        {
-            // Yes clicked - close application
-            System.Windows.Application.Current.Shutdown();
-        }
-
-        private void CloseApplicationNoButton_Click(object sender, RoutedEventArgs e)
-        {
-            // No clicked, close confirmation box
-            CloseApplicationBox.Visibility = System.Windows.Visibility.Collapsed;
-        }
-        public CharCreation()
-        {
-            InitializeComponent();
-        }
-
-        //Rolls stats and modifiers
-        private void btnStats_Click(object sender, RoutedEventArgs e)
-        {
-            stats = Stats.RollStats();
-            stats2 = stats;
-
-            StrScore.Text = stats.Str.ToString();
-            DexScore.Text = stats.Dex.ToString();
-            ConScore.Text = stats.Con.ToString();
-            IntScore.Text = stats.Int.ToString();
-            WisScore.Text = stats.Wis.ToString();
-            ChaScore.Text = stats.Cha.ToString();
-
-            StrModifier = stats.Str / 2 - 5;
-            DexModifier = stats.Dex / 2 - 5;
-            ConModifier = stats.Con / 2 - 5;
-            IntModifier = stats.Int / 2 - 5;
-            WisModifier = stats.Wis / 2 - 5;
-            ChaModifier = stats.Cha / 2 - 5;
-
-            StrMod.Text = StrModifier.ToString();
-            DexMod.Text = DexModifier.ToString();
-            ConMod.Text = ConModifier.ToString();
-            IntMod.Text = IntModifier.ToString();
-            WisMod.Text = WisModifier.ToString();
-            ChaMod.Text = ChaModifier.ToString();
-
-            //update stats to char sheet
-            CharacterStrength.Content = stats.Str;
-            CharacterDexterity.Content = stats.Dex;
-            CharacterConstitution.Content = stats.Con;
-            CharacterIntelligence.Content = stats.Int;
-            CharacterWisdom.Content = stats.Wis;
-            CharacterCharisma.Content = stats.Cha;
-            // update char sheet modifiers
-            CharStrMod.Content = StrMod.Text;
-            CharDexMod.Content = DexMod.Text;
-            CharConMod.Content = ConMod.Text;
-            CharIntMod.Content = IntMod.Text;
-            CharWisMod.Content = WisMod.Text;
-            CharChaMod.Content = ChaMod.Text;
-        }
-
-        private void ListBox_SelectionChanged()
-        {
-
-        }
-        // Races
-        private void Dwarf_Selected(object sender, RoutedEventArgs e)
-        {
-            stats = stats2;
-
-            RaceStr = stats.Str;
-            RaceDex = stats.Dex;
-            RaceCon = stats.Con + 2;
-            RaceInt = stats.Int;
-            RaceWis = stats.Wis + 2;
-            RaceCha = stats.Cha - 2;
-
-            StrScore.Text = RaceStr.ToString();
-            DexScore.Text = RaceDex.ToString();
-            ConScore.Text = RaceCon.ToString();
-            IntScore.Text = RaceInt.ToString();
-            WisScore.Text = RaceWis.ToString();
-            ChaScore.Text = RaceCha.ToString();
-
-            AssignModifiers();
-
-            // Update character sheet race
-            CharacterRace.Content = Dwarf.Name;
-
-            UpdateCharSheet();
-        }
-
-        private void SaveToFileButton_Click(object sender, RoutedEventArgs e)
-        {
-            SaveToFile();
-        }
-
-        private void Elf_Selected(object sender, RoutedEventArgs e)
-        {
-            stats = stats2;
-
-            RaceStr = stats.Str;
-            RaceDex = stats.Dex + 2;
-            RaceCon = stats.Con - 2;
-            RaceInt = stats.Int + 2;
-            RaceWis = stats.Wis;
-            RaceCha = stats.Cha;
-            
-            StrScore.Text = RaceStr.ToString();
-            DexScore.Text = RaceDex.ToString();
-            ConScore.Text = RaceCon.ToString();
-            IntScore.Text = RaceInt.ToString();
-            WisScore.Text = RaceWis.ToString();
-            ChaScore.Text = RaceCha.ToString();
-
-            AssignModifiers();
-
-            // Update character sheet race
-            CharacterRace.Content = Elf.Name;
-
-            UpdateCharSheet();
-        }
-
-        private void Gnome_Selected(object sender, RoutedEventArgs e)
-        {
-            stats = stats2;
-
-            RaceStr = stats.Str - 2;
-            RaceDex = stats.Dex;
-            RaceCon = stats.Con + 2;
-            RaceInt = stats.Int;
-            RaceWis = stats.Wis;
-            RaceCha = stats.Cha + 2;
-            
-            StrScore.Text = RaceStr.ToString();
-            DexScore.Text = RaceDex.ToString();
-            ConScore.Text = RaceCon.ToString();
-            IntScore.Text = RaceInt.ToString();
-            WisScore.Text = RaceWis.ToString();
-            ChaScore.Text = RaceCha.ToString();
-
-            AssignModifiers();
-
-            // Update character sheet race
-            CharacterRace.Content = Gnome.Name;
-
-            UpdateCharSheet();
-        }
-
-        private void HalfElf_Selected(object sender, RoutedEventArgs e)
-        {
-            stats2 = stats;
-
-            // Update character sheet race
-            CharacterRace.Content = HalfElf.Name;
-
-            UpdateCharSheet();
-        }
-
-        private void HalfOrc_Selected(object sender, RoutedEventArgs e)
-        {
-            stats2 = stats;
-
-            // Update character sheet race
-            CharacterRace.Content = HalfOrc.Name;
-
-            UpdateCharSheet();
-        }
-
-        private void Halfling_Selected(object sender, RoutedEventArgs e)
-        {
-            stats = stats2;
-
-            RaceStr = stats.Str - 2;
-            RaceDex = stats.Dex + 2;
-            RaceCon = stats.Con;
-            RaceInt = stats.Int;
-            RaceWis = stats.Wis;
-            RaceCha = stats.Cha + 2;
-            
-            StrScore.Text = RaceStr.ToString();
-            DexScore.Text = RaceDex.ToString();
-            ConScore.Text = RaceCon.ToString();
-            IntScore.Text = RaceInt.ToString();
-            WisScore.Text = RaceWis.ToString();
-            ChaScore.Text = RaceCha.ToString();
-
-            AssignModifiers();
-
-            // Update character sheet race
-            CharacterRace.Content = Halfling.Name;
-
-            UpdateCharSheet();
-        }
-
-        private void Human_Selected(object sender, RoutedEventArgs e)
-        {
-            stats2 = stats;
-
-            // Update character sheet race
-            CharacterRace.Content = Human.Name;
-
-            UpdateCharSheet();
-        }
-        public void ClearSkills ()
-        {
-            AcrobaticsCheck.IsChecked = false;
-            AppraiseCheck.IsChecked = false;
-            BluffCheck.IsChecked = false;
-            ClimbCheck.IsChecked = false;
-            DiplomacyCheck.IsChecked = false;
-            DisableDeviceCheck.IsChecked = false;
-            DisguiseCheck.IsChecked = false;
-            EscapeArtistCheck.IsChecked = false;
-            FlyCheck.IsChecked = false;
-            HandleAnimalCheck.IsChecked = false;
-            HealCheck.IsChecked = false;
-            IntimidateCheck.IsChecked = false;
-            KnowArcanaCheck.IsChecked = false;
-            KnowDungeoneeringCheck.IsChecked = false;
-            KnowEngineeringCheck.IsChecked = false;
-            KnowGeographyCheck.IsChecked = false;
-            KnowHistoryCheck.IsChecked = false;
-            KnowLocalCheck.IsChecked = false;
-            KnowNatureCheck.IsChecked = false;
-            KnowNobilityCheck.IsChecked = false;
-            KnowPlanesCheck.IsChecked = false;
-            KnowReligionCheck.IsChecked = false;
-            LinguisticsCheck.IsChecked = false;
-            PerceptionCheck.IsChecked = false;
-            RideCheck.IsChecked = false;
-            SenseMotiveCheck.IsChecked = false;
-            SleightOfHandCheck.IsChecked = false;
-            SpellcraftCheck.IsChecked = false;
-            StealthCheck.IsChecked = false;
-            SurvivalCheck.IsChecked = false;
-            SwimCheck.IsChecked = false;
-            UseMagicDeviseCheck.IsChecked = false;
-
-            AcrobaticsRank.Text = "0";
-            AppraiseRank.Text = "0";
-            BluffRank.Text = "0";
-            ClimbRank.Text = "0";
-            DiplomacyRank.Text = "0";
-            DisableDeviceRank.Text = "0";
-            DisguiseRank.Text = "0";
-            EscapeArtistRank.Text = "0";
-            FlyRank.Text = "0";
-            HandleAnimalRank.Text = "0";
-            HealRank.Text = "0";
-            IntimidateRank.Text = "0";
-            KnowArcanaRank.Text = "0";
-            KnowDungeoneeringRank.Text = "0";
-            KnowEngineeringRank.Text = "0";
-            KnowGeographyRank.Text = "0";
-            KnowHistoryRank.Text = "0";
-            KnowLocalRank.Text = "0";
-            KnowNatureRank.Text = "0";
-            KnowNobilityRank.Text = "0";
-            KnowPlanesRank.Text = "0";
-            KnowReligionRank.Text = "0";
-            LinguisticsRank.Text = "0";
-            PerceptionRank.Text = "0";
-            RideRank.Text = "0";
-            SenseMotiveRank.Text = "0";
-            SleightOfHandRank.Text = "0";
-            SpellcraftRank.Text = "0";
-            StealthRank.Text = "0";
-            SurvivalRank.Text = "0";
-            SwimRank.Text = "0";
-            UseMagicDeviseRank.Text = "0";
-        }
-
-        public void AssignModifiers ()
-        {
-            StrModifier = RaceStr / 2 - 5;
-            DexModifier = RaceDex / 2 - 5;
-            ConModifier = RaceCon / 2 - 5;
-            IntModifier = RaceInt / 2 - 5;
-            WisModifier = RaceWis / 2 - 5;
-            ChaModifier = RaceCha / 2 - 5;
-
-
-            StrMod.Text = StrModifier.ToString();
-            DexMod.Text = DexModifier.ToString();
-            ConMod.Text = ConModifier.ToString();
-            IntMod.Text = IntModifier.ToString();
-            WisMod.Text = WisModifier.ToString();
-            ChaMod.Text = ChaModifier.ToString();
-        }
-
-        public void UpdateCharSheet()
-        {
-            //update stats to char sheet
-            CharacterStrength.Content = RaceStr;
-            CharacterDexterity.Content = RaceDex;
-            CharacterConstitution.Content = RaceCon;
-            CharacterIntelligence.Content = RaceInt;
-            CharacterWisdom.Content = RaceWis;
-            CharacterCharisma.Content = RaceCha;
-            // update char sheet modifiers
-            CharStrMod.Content = StrMod.Text;
-            CharDexMod.Content = DexMod.Text;
-            CharConMod.Content = ConMod.Text;
-            CharIntMod.Content = IntMod.Text;
-            CharWisMod.Content = WisMod.Text;
-            CharChaMod.Content = ChaMod.Text;
-        }
-
-        public void SaveToFile()
-        {
-            string path = @"char.txt";
-            string filetext = CharacterName.Content.ToString() + "," + CharacterRace.Content.ToString()  + "," + CharacterClass.Content.ToString()
-                + "," + CharacterStrength.Content.ToString() + "," + CharacterDexterity.Content.ToString() + "," + CharacterConstitution.Content.ToString() + "," + CharacterIntelligence.Content.ToString()
-                 + "," + CharacterWisdom.Content.ToString() + "," + CharacterCharisma.Content.ToString();
-            File.WriteAllText(path, filetext);
-            string showtext = "Character has been saved!";
-            MessageBox.Show(showtext);
-        }
+        }*/
     }
 }

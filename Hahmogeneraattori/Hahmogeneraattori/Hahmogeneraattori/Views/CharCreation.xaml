@@ -118,7 +118,7 @@
                             <!--Here is all skills. checkboxes are disabled so users can't change them themselves. ListBoxItems are there to make text selectable. And Rank textBoxes are named for number changes-->
                             <TextBlock Name="Acrobatics">
                                 <CheckBox Name="AcrobaticsCheck" IsEnabled="False"/>
-                                <ListBoxItem Name="AcrobaticsBox" Selected="AcrobaticsBox_Selected">
+                                <ListBoxItem Name="AcrobaticsBox">
                                     Acrobatics (Dex)
                                 </ListBoxItem> 
                                 <Button Content="-" Name="AcrobaticsMinus"></Button>
@@ -128,7 +128,7 @@
 
                             <TextBlock Name="Appraise">
                                 <CheckBox Name="AppraiseCheck" IsEnabled="False"/>
-                                <ListBoxItem Name="AppraiseBox" Selected="AppraiseBox_Selected"> 
+                                <ListBoxItem Name="AppraiseBox"> 
                                     Appraise (Int)
                                 </ListBoxItem>
                                 <Button Content="-" Name="AppraiseMinus"></Button>
@@ -138,7 +138,7 @@
 
                             <TextBlock Name="Bluff">
                                 <CheckBox Name="BluffCheck" IsEnabled="False"/>
-                                <ListBoxItem Name="BluffBox" Selected="BluffBox_Selected"> 
+                                <ListBoxItem Name="BluffBox"> 
                                     Bluff (Cha)
                                 </ListBoxItem>
                                 <Button Content="-" Name="BluffMinus"></Button>
@@ -148,7 +148,7 @@
 
                             <TextBlock Name="Climb">
                                 <CheckBox Name="ClimbCheck" IsEnabled="False"/>
-                                <ListBoxItem Name="ClimbBox" Selected="ClimbBox_Selected">
+                                <ListBoxItem Name="ClimbBox">
                                     Climb (Str)
                                 </ListBoxItem>
                                 <Button Content="-" Name="ClimbMinus"></Button>
@@ -158,7 +158,7 @@
 
                             <TextBlock Name="Diplomacy">
                                 <CheckBox Name="DiplomacyCheck" IsEnabled="False"/>
-                                <ListBoxItem Name="DiplomacyBox" Selected="DiplomacyBox_Selected">
+                                <ListBoxItem Name="DiplomacyBox">
                                     Diplomacy (Cha)
                                 </ListBoxItem>
                                 <Button Content="-" Name="DiplomacyMinus"></Button>
@@ -168,7 +168,7 @@
 
                             <TextBlock Name="DisableDevice">
                                 <CheckBox Name="DisableDeviceCheck" IsEnabled="False"/>
-                                <ListBoxItem Name="DisableDeviceBox" Selected="DisableDeviceBox_Selected">
+                                <ListBoxItem Name="DisableDeviceBox">
                                     Disable Device* (Dex)
                                 </ListBoxItem>
                                 <Button Content="-" Name="DisableDeviceMinus"></Button>
@@ -178,7 +178,7 @@
 
                             <TextBlock Name="Disguise">
                                 <CheckBox Name="DisguiseCheck" IsEnabled="False"/>
-                                <ListBoxItem Name="DisguiseBox" Selected="DisguiseBox_Selected">
+                                <ListBoxItem Name="DisguiseBox">
                                     Disguise (Cha)
                                 </ListBoxItem>
                                 <Button Content="-" Name="DisguiseMinus"></Button>
@@ -188,7 +188,7 @@
 
                             <TextBlock Name="EscapeArtist">
                                 <CheckBox Name="EscapeArtistCheck" IsEnabled="False"/>
-                                <ListBoxItem Name="EscapeArtistBox" Selected="EscapeArtistBox_Selected">
+                                <ListBoxItem Name="EscapeArtistBox">
                                     Escape Artist (Dex)
                                 </ListBoxItem>
                                 <Button Content="-" Name="EscapeArtistMinus"></Button>
@@ -198,7 +198,7 @@
 
                             <TextBlock Name="Fly">
                                 <CheckBox Name="FlyCheck" IsEnabled="False"/>
-                                <ListBoxItem Name="FlyBox" Selected="FlyBox_Selected">
+                                <ListBoxItem Name="FlyBox">
                                     Fly (Dex)
                                 </ListBoxItem>
                                 <Button Content="-" Name="FlyMinus"></Button>
@@ -208,7 +208,7 @@
 
                             <TextBlock Name="HandleAnimal">
                                 <CheckBox Name="HandleAnimalCheck" IsEnabled="False"/>
-                                <ListBoxItem Name="HandleAnimalBox" Selected="HandleAnimalBox_Selected">
+                                <ListBoxItem Name="HandleAnimalBox">
                                     Handle Animal* (Cha)
                                 </ListBoxItem>
                                 <Button Content="-" Name="HandleAnimalMinus"></Button>
@@ -218,7 +218,7 @@
 
                             <TextBlock Name="Heal">
                                 <CheckBox Name="HealCheck" IsEnabled="False"/>
-                                <ListBoxItem Name="HealBox" Selected="HealBox_Selected">
+                                <ListBoxItem Name="HealBox">
                                     Heal (Wis)
                                 </ListBoxItem>
                                 <Button Content="-" Name="HealMinus"></Button>
@@ -228,7 +228,7 @@
 
                             <TextBlock Name="Intimidate">
                                 <CheckBox Name="IntimidateCheck" IsEnabled="False"/>
-                                <ListBoxItem Name="IntimidateBox" Selected="IntimidateBox_Selected">
+                                <ListBoxItem Name="IntimidateBox">
                                     Intimidate (Cha)
                                 </ListBoxItem>
                                 <Button Content="-" Name="IntimidateMinus"></Button>
@@ -238,7 +238,7 @@
 
                             <TextBlock Name="KnowArcana">
                                 <CheckBox Name="KnowArcanaCheck" IsEnabled="False"/>
-                                <ListBoxItem Name="KnowArcanaBox" Selected="KnowArcanaBox_Selected">
+                                <ListBoxItem Name="KnowArcanaBox">
                                     Knowledge* (Arcana) (Int)
                                 </ListBoxItem>
                                 <Button Content="-" Name="KnowArcanaMinus"></Button>
@@ -248,7 +248,7 @@
 
                             <TextBlock Name="KnowDungeoneering">
                                 <CheckBox Name="KnowDungeoneeringCheck" IsEnabled="False"/>
-                                <ListBoxItem Name="KnowDungeoneeringBox" Selected="KnowDungeoneeringBox_Selected">
+                                <ListBoxItem Name="KnowDungeoneeringBox">
                                     Knowledge* (Dungeoneering) (Int)
                                 </ListBoxItem>
                                 <Button Content="-" Name="KnowDungeoneeringMinus"></Button>
@@ -258,7 +258,7 @@
 
                             <TextBlock Name="KnowEngineering">
                                 <CheckBox Name="KnowEngineeringCheck" IsEnabled="False"/>
-                                <ListBoxItem Name="KnowEngineeringBox" Selected="KnowEngineeringBox_Selected">
+                                <ListBoxItem Name="KnowEngineeringBox">
                                     Knowledge* (Engineering) (Int)
                                 </ListBoxItem>
                                 <Button Content="-" Name="KnowEngineeringMinus"></Button>
@@ -268,7 +268,7 @@
 
                             <TextBlock Name="KnowGeography">
                                 <CheckBox Name="KnowGeographyCheck" IsEnabled="False"/>
-                                <ListBoxItem Name="KnowGeographyBox" Selected="KnowGeographyBox_Selected">
+                                <ListBoxItem Name="KnowGeographyBox">
                                     Knowledge* (Geography) (Int)
                                 </ListBoxItem>
                                 <Button Content="-" Name="KnowGeographyMinus"></Button>
@@ -278,7 +278,7 @@
 
                             <TextBlock Name="KnowHistory">
                                 <CheckBox Name="KnowHistoryCheck" IsEnabled="False"/>
-                                <ListBoxItem Name="KnowHistoryBox" Selected="KnowHistoryBox_Selected">
+                                <ListBoxItem Name="KnowHistoryBox">
                                     Knowledge* (History) (Int)
                                 </ListBoxItem>
                                 <Button Content="-" Name="KnowHistoryMinus"></Button>
@@ -288,7 +288,7 @@
 
                             <TextBlock Name="KnowLocal">
                                 <CheckBox Name="KnowLocalCheck" IsEnabled="False"/>
-                                <ListBoxItem Name="KnowLocalBox" Selected="KnowLocalBox_Selected">
+                                <ListBoxItem Name="KnowLocalBox">
                                     Knowledge* (Local) (Int)
                                 </ListBoxItem>
                                 <Button Content="-" Name="KnowLocalMinus"></Button>
@@ -298,7 +298,7 @@
 
                             <TextBlock Name="KnowNature">
                                 <CheckBox Name="KnowNatureCheck" IsEnabled="False"/>
-                                <ListBoxItem Name="KnowNatureBox" Selected="KnowNatureBox_Selected">
+                                <ListBoxItem Name="KnowNatureBox">
                                     Knowledge* (Nature) (Int)
                                 </ListBoxItem>
                                 <Button Content="-" Name="KnowNatureMinus"></Button>
@@ -308,7 +308,7 @@
 
                             <TextBlock Name="KnowNobility">
                                 <CheckBox Name="KnowNobilityCheck" IsEnabled="False"/>
-                                <ListBoxItem Name="KnowNobilityBox" Selected="KnowNobilityBox_Selected">
+                                <ListBoxItem Name="KnowNobilityBox">
                                     Knowledge* (Nobility) (Int)
                                 </ListBoxItem>
                                 <Button Content="-" Name="KnowNobilityMinus"></Button>
@@ -318,7 +318,7 @@
 
                             <TextBlock Name="KnowPlanes">
                                 <CheckBox Name="KnowPlanesCheck" IsEnabled="False"/>
-                                <ListBoxItem Name="KnowPlanesBox" Selected="KnowPlanesBox_Selected">
+                                <ListBoxItem Name="KnowPlanesBox">
                                     Knowledge* (Planes) (Int)
                                 </ListBoxItem>
                                 <Button Content="-" Name="KnowPlanesMinus"></Button>
@@ -328,7 +328,7 @@
 
                             <TextBlock Name="KnowReligion">
                                 <CheckBox Name="KnowReligionCheck" IsEnabled="False"/>
-                                <ListBoxItem Name="KnowReligionBox" Selected="KnowReligionBox_Selected">
+                                <ListBoxItem Name="KnowReligionBox">
                                     Knowledge* (Religion) (Int)
                                 </ListBoxItem>
                                 <Button Content="-" Name="KnowReligionMinus"></Button>
@@ -338,7 +338,7 @@
 
                             <TextBlock Name="Linguistics">
                                 <CheckBox Name="LinguisticsCheck" IsEnabled="False"/>
-                                <ListBoxItem Name="LinguisticsBox" Selected="LinguisticsBox_Selected">
+                                <ListBoxItem Name="LinguisticsBox">
                                     Linguistics* (Int)
                                 </ListBoxItem>
                                 <Button Content="-" Name="LinguisticsMinus"></Button>
@@ -348,7 +348,7 @@
 
                             <TextBlock Name="Perception">
                                 <CheckBox Name="PerceptionCheck" IsEnabled="False"/>
-                                <ListBoxItem Name="PerceptionBox" Selected="PerceptionBox_Selected">
+                                <ListBoxItem Name="PerceptionBox">
                                     Perception (Wis)
                                 </ListBoxItem>
                                 <Button Content="-" Name="PerceptionMinus"></Button>
@@ -358,7 +358,7 @@
 
                             <TextBlock Name="Ride">
                                 <CheckBox Name="RideCheck" IsEnabled="False"/>
-                                <ListBoxItem Name="RideBox" Selected="RideBox_Selected">
+                                <ListBoxItem Name="RideBox">
                                     Ride (Dex)
                                 </ListBoxItem>
                                 <Button Content="-" Name="RideMinus"></Button>
@@ -368,7 +368,7 @@
 
                             <TextBlock Name="SenseMotive">
                                 <CheckBox Name="SenseMotiveCheck" IsEnabled="False"/>
-                                <ListBoxItem Name="SenseMotiveBox" Selected="SenseMotiveBox_Selected">
+                                <ListBoxItem Name="SenseMotiveBox">
                                     Sense Motive (Wis)
                                 </ListBoxItem>
                                 <Button Content="-" Name="SenseMotiveMinus"></Button>
@@ -378,7 +378,7 @@
 
                             <TextBlock Name="SleightOfHand">
                                 <CheckBox Name="SleightOfHandCheck" IsEnabled="False"/>
-                                <ListBoxItem Name="SleightOfHandBox" Selected="SleightOfHandBox_Selected">
+                                <ListBoxItem Name="SleightOfHandBox">
                                     Sleight of Hand* (Dex)
                                 </ListBoxItem>
                                 <Button Content="-" Name="SleightOfHandMinus"></Button>
@@ -388,7 +388,7 @@
 
                             <TextBlock Name="Spellcraft">
                                 <CheckBox Name="SpellcraftCheck" IsEnabled="False"/>
-                                <ListBoxItem Name="SpellcraftBox" Selected="SpellcraftBox_Selected">
+                                <ListBoxItem Name="SpellcraftBox">
                                     Spellcraft* (Int)
                                 </ListBoxItem>
                                 <Button Content="-" Name="SpellcraftMinus"></Button>
@@ -398,7 +398,7 @@
 
                             <TextBlock Name="Stealth">
                                 <CheckBox Name="StealthCheck" IsEnabled="False"/>
-                                <ListBoxItem Name="StealthBox" Selected="StealthBox_Selected">
+                                <ListBoxItem Name="StealthBox">
                                     Stealth (Dex)
                                 </ListBoxItem>
                                 <Button Content="-" Name="StealthMinus"></Button>
@@ -408,7 +408,7 @@
 
                             <TextBlock Name="Survival">
                                 <CheckBox Name="SurvivalCheck" IsEnabled="False"/>
-                                <ListBoxItem Name="SurvivalBox" Selected="SurvivalBox_Selected">
+                                <ListBoxItem Name="SurvivalBox">
                                     Survival (Wis)
                                 </ListBoxItem>
                                 <Button Content="-" Name="SurvivalMinus"></Button>
@@ -418,7 +418,7 @@
 
                             <TextBlock Name="Swim">
                                 <CheckBox Name="SwimCheck" IsEnabled="False"/>
-                                <ListBoxItem Name="SwimBox" Selected="SwimBox_Selected">
+                                <ListBoxItem Name="SwimBox">
                                     Swim (Str)
                                 </ListBoxItem>
                                 <Button Content="-" Name="SwimMinus"></Button>
@@ -428,7 +428,7 @@
 
                             <TextBlock Name="UseMagicDevise">
                                 <CheckBox Name="UseMagicDeviseCheck" IsEnabled="False"/>
-                                <ListBoxItem Name="UseMagicDeviseBox" Selected="UseMagicDeviseBox_Selected">
+                                <ListBoxItem Name="UseMagicDeviseBox">
                                     Use Magic Devise* (Cha)
                                 </ListBoxItem>
                                 <Button Content="-" Name="UseMagicDeviseMinus"></Button>
