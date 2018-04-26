@@ -125,3 +125,5 @@ C:\K9105\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogenera
 C:\K9105\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\Hahmogeneraattori.pdb
 C:\K9105\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\Views\CharCreation2.g.cs
 C:\K9105\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\Views\CharCreation2.baml
+C:\Users\L4072\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\Views\CharCreation2.g.cs
+C:\Users\L4072\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\Views\CharCreation2.baml

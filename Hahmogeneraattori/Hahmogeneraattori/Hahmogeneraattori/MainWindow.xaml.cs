@@ -42,7 +42,7 @@ namespace Hahmogeneraattori
             catch (FileNotFoundException)
             {
 
-                throw;
+                MessageBox.Show("Character file not found");
             }
 
 
