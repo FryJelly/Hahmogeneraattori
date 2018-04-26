@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Hahmogeneraattori;
+using System.IO;
 
 namespace Hahmogeneraattori.Views
 {
@@ -1124,6 +1125,11 @@ namespace Hahmogeneraattori.Views
             UpdateCharSheet();
         }
 
+        private void SaveToFileButton_Click(object sender, RoutedEventArgs e)
+        {
+            SaveToFile();
+        }
+
         private void Elf_Selected(object sender, RoutedEventArgs e)
         {
             stats = stats2;
@@ -1334,6 +1340,17 @@ namespace Hahmogeneraattori.Views
             CharIntMod.Content = IntMod.Text;
             CharWisMod.Content = WisMod.Text;
             CharChaMod.Content = ChaMod.Text;
+        }
+
+        public void SaveToFile()
+        {
+            string path = @"char.txt";
+            string filetext = CharacterName.Content.ToString() + "," + CharacterRace.Content.ToString()  + "," + CharacterClass.Content.ToString()
+                + "," + CharacterStrength.Content.ToString() + "," + CharacterDexterity.Content.ToString() + "," + CharacterConstitution.Content.ToString() + "," + CharacterIntelligence.Content.ToString()
+                 + "," + CharacterWisdom.Content.ToString() + "," + CharacterCharisma.Content.ToString();
+            File.WriteAllText(path, filetext);
+            string showtext = "Character has been saved!";
+            MessageBox.Show(showtext);
         }
     }
 }

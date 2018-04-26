@@ -510,7 +510,8 @@
                                 <ListBoxItem Name="CharChaMod" Content=""></ListBoxItem>
                             </ListBox>
                         </StackPanel>
-                        <Button Name="SaveCharacterButton" Height="25" Content="Save character"></Button>
+                        <Button Name="SaveToDatabaseButton" Height="25" Content="Save character"></Button>
+                        <Button Name="SaveToFileButton" Content="Save to File" Height="25" Click="SaveToFileButton_Click"></Button>
                         <Button Name="CloseApplicationButton" Height="25" Content="Close Application" Click="CloseApplicationButton_Click"></Button>
                     </StackPanel>
                     <Grid x:Name="InputBox" Visibility="Collapsed">

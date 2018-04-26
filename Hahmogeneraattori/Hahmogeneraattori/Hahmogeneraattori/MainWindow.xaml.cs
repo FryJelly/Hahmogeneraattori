@@ -46,5 +46,10 @@ namespace Hahmogeneraattori
                 MessageBox.Show(ex.Message);
             } */
         }
+
+        private void SaveToFile_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

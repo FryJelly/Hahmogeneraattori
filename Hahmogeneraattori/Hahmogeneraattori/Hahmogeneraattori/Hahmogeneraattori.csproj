@@ -71,6 +71,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DBCharacters.cs" />
+    <Compile Include="SaveToFile.cs" />
     <Compile Include="Stats.cs" />
     <Compile Include="ViewModels\CharCreationViewModel.cs" />
     <Compile Include="Views\CharCreation.xaml.cs">
