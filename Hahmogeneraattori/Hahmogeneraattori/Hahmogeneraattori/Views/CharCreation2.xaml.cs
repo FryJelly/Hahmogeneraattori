@@ -45,6 +45,56 @@ namespace Hahmogeneraattori.Views
                 WisScore.Text = chardatalist[7].ToString();
                 ChaScore.Text = chardatalist[8].ToString();
 
+                int strength, dexterity, constitution, intelligence, wisdom, charisma;
+                int.TryParse(StrScore.Text, out strength);
+                int.TryParse(DexScore.Text, out dexterity);
+                int.TryParse(ConScore.Text, out constitution);
+                int.TryParse(IntScore.Text, out intelligence);
+                int.TryParse(WisScore.Text, out wisdom);
+                int.TryParse(ChaScore.Text, out charisma);
+                stats.Str = strength;
+                stats.Dex = dexterity;
+                stats.Con = constitution;
+                stats.Int = intelligence;
+                stats.Wis = wisdom;
+                stats.Cha = charisma;
+
+                StrScore.Text = stats.Str.ToString();
+                DexScore.Text = stats.Dex.ToString();
+                ConScore.Text = stats.Con.ToString();
+                IntScore.Text = stats.Int.ToString();
+                WisScore.Text = stats.Wis.ToString();
+                ChaScore.Text = stats.Cha.ToString();
+
+                StrModifier = stats.Str / 2 - 5;
+                DexModifier = stats.Dex / 2 - 5;
+                ConModifier = stats.Con / 2 - 5;
+                IntModifier = stats.Int / 2 - 5;
+                WisModifier = stats.Wis / 2 - 5;
+                ChaModifier = stats.Cha / 2 - 5;
+
+                StrMod.Text = StrModifier.ToString();
+                DexMod.Text = DexModifier.ToString();
+                ConMod.Text = ConModifier.ToString();
+                IntMod.Text = IntModifier.ToString();
+                WisMod.Text = WisModifier.ToString();
+                ChaMod.Text = ChaModifier.ToString();
+
+                //update stats to char sheet
+                CharacterStrength.Content = stats.Str;
+                CharacterDexterity.Content = stats.Dex;
+                CharacterConstitution.Content = stats.Con;
+                CharacterIntelligence.Content = stats.Int;
+                CharacterWisdom.Content = stats.Wis;
+                CharacterCharisma.Content = stats.Cha;
+                // update char sheet modifiers
+                CharStrMod.Content = StrMod.Text;
+                CharDexMod.Content = DexMod.Text;
+                CharConMod.Content = ConMod.Text;
+                CharIntMod.Content = IntMod.Text;
+                CharWisMod.Content = WisMod.Text;
+                CharChaMod.Content = ChaMod.Text;
+
 
             }
             catch (FileNotFoundException)
