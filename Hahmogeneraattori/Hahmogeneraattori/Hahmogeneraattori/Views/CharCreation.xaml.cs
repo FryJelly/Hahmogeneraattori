@@ -26,6 +26,7 @@ namespace Hahmogeneraattori.Views
         int RaceStr, RaceDex, RaceCon, RaceInt, RaceWis, RaceCha;
         int StrModifier = 0, DexModifier = 0, ConModifier = 0, IntModifier = 0, WisModifier = 0, ChaModifier = 0;
         int SkillRank = 0;
+        bool taken;
 
         //Adding stat bonuses to human, half-elf or half-orc
         private void Strength_Selected(object sender, RoutedEventArgs e)
@@ -60,38 +61,7 @@ namespace Hahmogeneraattori.Views
         // Classes
         private void Barbarian_Selected(object sender, RoutedEventArgs e)
         {
-            AcrobaticsCheck.IsChecked = false;
-            AppraiseCheck.IsChecked = false;
-            BluffCheck.IsChecked = false;
-            ClimbCheck.IsChecked = false;
-            DiplomacyCheck.IsChecked = false;
-            DisableDeviceCheck.IsChecked = false;
-            DisguiseCheck.IsChecked = false;
-            EscapeArtistCheck.IsChecked = false;
-            FlyCheck.IsChecked = false;
-            HandleAnimalCheck.IsChecked = false;
-            HealCheck.IsChecked = false;
-            IntimidateCheck.IsChecked = false;
-            KnowArcanaCheck.IsChecked = false;
-            KnowDungeoneeringCheck.IsChecked = false;
-            KnowEngineeringCheck.IsChecked = false;
-            KnowGeographyCheck.IsChecked = false;
-            KnowHistoryCheck.IsChecked = false;
-            KnowLocalCheck.IsChecked = false;
-            KnowNatureCheck.IsChecked = false;
-            KnowNobilityCheck.IsChecked = false;
-            KnowPlanesCheck.IsChecked = false;
-            KnowReligionCheck.IsChecked = false;
-            LinguisticsCheck.IsChecked = false;
-            PerceptionCheck.IsChecked = false;
-            RideCheck.IsChecked = false;
-            SenseMotiveCheck.IsChecked = false;
-            SleightOfHandCheck.IsChecked = false;
-            SpellcraftCheck.IsChecked = false;
-            StealthCheck.IsChecked = false;
-            SurvivalCheck.IsChecked = false;
-            SwimCheck.IsChecked = false;
-            UseMagicDeviseCheck.IsChecked = false;
+            ClearSkills();
 
             AcrobaticsCheck.IsChecked = true;
             ClimbCheck.IsChecked = true;
@@ -103,44 +73,31 @@ namespace Hahmogeneraattori.Views
             SurvivalCheck.IsChecked = true;
             SwimCheck.IsChecked = true;
 
+            SkillRank = StrModifier + 3;
+            ClimbRank.Text = SkillRank.ToString();
+            SwimRank.Text = SkillRank.ToString();
+
+            SkillRank = DexModifier + 3;
+            AcrobaticsRank.Text = SkillRank.ToString();
+            RideRank.Text = SkillRank.ToString();
+
+            SkillRank = IntModifier + 3;
+            KnowNatureRank.Text = SkillRank.ToString();
+
+            SkillRank = WisModifier + 3;
+            SurvivalRank.Text = SkillRank.ToString();
+
+            SkillRank = ChaModifier + 3;
+            HandleAnimalRank.Text = SkillRank.ToString();
+            IntimidateRank.Text = SkillRank.ToString();
+
             // Update character sheet class
             CharacterClass.Content = Barbarian.Name;
         }
 
         private void Bard_Selected(object sender, RoutedEventArgs e)
         {
-            AcrobaticsCheck.IsChecked = false;
-            AppraiseCheck.IsChecked = false;
-            BluffCheck.IsChecked = false;
-            ClimbCheck.IsChecked = false;
-            DiplomacyCheck.IsChecked = false;
-            DisableDeviceCheck.IsChecked = false;
-            DisguiseCheck.IsChecked = false;
-            EscapeArtistCheck.IsChecked = false;
-            FlyCheck.IsChecked = false;
-            HandleAnimalCheck.IsChecked = false;
-            HealCheck.IsChecked = false;
-            IntimidateCheck.IsChecked = false;
-            KnowArcanaCheck.IsChecked = false;
-            KnowDungeoneeringCheck.IsChecked = false;
-            KnowEngineeringCheck.IsChecked = false;
-            KnowGeographyCheck.IsChecked = false;
-            KnowHistoryCheck.IsChecked = false;
-            KnowLocalCheck.IsChecked = false;
-            KnowNatureCheck.IsChecked = false;
-            KnowNobilityCheck.IsChecked = false;
-            KnowPlanesCheck.IsChecked = false;
-            KnowReligionCheck.IsChecked = false;
-            LinguisticsCheck.IsChecked = false;
-            PerceptionCheck.IsChecked = false;
-            RideCheck.IsChecked = false;
-            SenseMotiveCheck.IsChecked = false;
-            SleightOfHandCheck.IsChecked = false;
-            SpellcraftCheck.IsChecked = false;
-            StealthCheck.IsChecked = false;
-            SurvivalCheck.IsChecked = false;
-            SwimCheck.IsChecked = false;
-            UseMagicDeviseCheck.IsChecked = false;
+            ClearSkills();
 
             AcrobaticsCheck.IsChecked = true;
             AppraiseCheck.IsChecked = true;
@@ -167,44 +124,48 @@ namespace Hahmogeneraattori.Views
             SpellcraftCheck.IsChecked = true;
             StealthCheck.IsChecked = true;
             UseMagicDeviseCheck.IsChecked = true;
+
+            SkillRank = StrModifier + 3;
+            ClimbRank.Text = SkillRank.ToString();
+
+            SkillRank = DexModifier + 3;
+            AcrobaticsRank.Text = SkillRank.ToString();
+            SleightOfHandRank.Text = SkillRank.ToString();
+            StealthRank.Text = SkillRank.ToString();
+
+            SkillRank = IntModifier + 3;
+            AppraiseRank.Text = SkillRank.ToString();
+            KnowArcanaRank.Text = SkillRank.ToString();
+            KnowDungeoneeringRank.Text = SkillRank.ToString();
+            KnowEngineeringRank.Text = SkillRank.ToString();
+            KnowGeographyRank.Text = SkillRank.ToString();
+            KnowHistoryRank.Text = SkillRank.ToString();
+            KnowLocalRank.Text = SkillRank.ToString();
+            KnowNatureRank.Text = SkillRank.ToString();
+            KnowNobilityRank.Text = SkillRank.ToString();
+            KnowPlanesRank.Text = SkillRank.ToString();
+            KnowReligionRank.Text = SkillRank.ToString();
+            LinguisticsRank.Text = SkillRank.ToString();
+            SpellcraftRank.Text = SkillRank.ToString();
+
+            SkillRank = WisModifier + 3;
+            PerceptionRank.Text = SkillRank.ToString();
+            SenseMotiveRank.Text = SkillRank.ToString();
+
+            SkillRank = ChaModifier + 3;
+            BluffRank.Text = SkillRank.ToString();
+            DiplomacyRank.Text = SkillRank.ToString();
+            DisguiseRank.Text = SkillRank.ToString();
+            IntimidateRank.Text = SkillRank.ToString();
+            UseMagicDeviseRank.Text = SkillRank.ToString();
+
             // Update character sheet class
             CharacterClass.Content = Bard.Name;
         }
 
         private void Cleric_Selected(object sender, RoutedEventArgs e)
         {
-            AcrobaticsCheck.IsChecked = false;
-            AppraiseCheck.IsChecked = false;
-            BluffCheck.IsChecked = false;
-            ClimbCheck.IsChecked = false;
-            DiplomacyCheck.IsChecked = false;
-            DisableDeviceCheck.IsChecked = false;
-            DisguiseCheck.IsChecked = false;
-            EscapeArtistCheck.IsChecked = false;
-            FlyCheck.IsChecked = false;
-            HandleAnimalCheck.IsChecked = false;
-            HealCheck.IsChecked = false;
-            IntimidateCheck.IsChecked = false;
-            KnowArcanaCheck.IsChecked = false;
-            KnowDungeoneeringCheck.IsChecked = false;
-            KnowEngineeringCheck.IsChecked = false;
-            KnowGeographyCheck.IsChecked = false;
-            KnowHistoryCheck.IsChecked = false;
-            KnowLocalCheck.IsChecked = false;
-            KnowNatureCheck.IsChecked = false;
-            KnowNobilityCheck.IsChecked = false;
-            KnowPlanesCheck.IsChecked = false;
-            KnowReligionCheck.IsChecked = false;
-            LinguisticsCheck.IsChecked = false;
-            PerceptionCheck.IsChecked = false;
-            RideCheck.IsChecked = false;
-            SenseMotiveCheck.IsChecked = false;
-            SleightOfHandCheck.IsChecked = false;
-            SpellcraftCheck.IsChecked = false;
-            StealthCheck.IsChecked = false;
-            SurvivalCheck.IsChecked = false;
-            SwimCheck.IsChecked = false;
-            UseMagicDeviseCheck.IsChecked = false;
+            ClearSkills();
 
             AppraiseCheck.IsChecked = true;
             DiplomacyCheck.IsChecked = true;
@@ -218,44 +179,31 @@ namespace Hahmogeneraattori.Views
             SenseMotiveCheck.IsChecked = true;
             SpellcraftCheck.IsChecked = true;
 
+            SkillRank = IntModifier + 3;
+            AppraiseRank.Text = SkillRank.ToString();
+            KnowArcanaRank.Text = SkillRank.ToString();
+            KnowHistoryRank.Text = SkillRank.ToString();
+            KnowNobilityRank.Text = SkillRank.ToString();
+            KnowPlanesRank.Text = SkillRank.ToString();
+            KnowReligionRank.Text = SkillRank.ToString();
+            LinguisticsRank.Text = SkillRank.ToString();
+            SpellcraftRank.Text = SkillRank.ToString();
+            
+            SkillRank = WisModifier + 3;
+            HealRank.Text = SkillRank.ToString();
+            SenseMotiveRank.Text = SkillRank.ToString();
+
+            SkillRank = ChaModifier + 3;
+            DiplomacyRank.Text = SkillRank.ToString();
+            
+
             // Update character sheet class
             CharacterClass.Content = Cleric.Name;
         }
 
         private void Druid_Selected(object sender, RoutedEventArgs e)
         {
-            AcrobaticsCheck.IsChecked = false;
-            AppraiseCheck.IsChecked = false;
-            BluffCheck.IsChecked = false;
-            ClimbCheck.IsChecked = false;
-            DiplomacyCheck.IsChecked = false;
-            DisableDeviceCheck.IsChecked = false;
-            DisguiseCheck.IsChecked = false;
-            EscapeArtistCheck.IsChecked = false;
-            FlyCheck.IsChecked = false;
-            HandleAnimalCheck.IsChecked = false;
-            HealCheck.IsChecked = false;
-            IntimidateCheck.IsChecked = false;
-            KnowArcanaCheck.IsChecked = false;
-            KnowDungeoneeringCheck.IsChecked = false;
-            KnowEngineeringCheck.IsChecked = false;
-            KnowGeographyCheck.IsChecked = false;
-            KnowHistoryCheck.IsChecked = false;
-            KnowLocalCheck.IsChecked = false;
-            KnowNatureCheck.IsChecked = false;
-            KnowNobilityCheck.IsChecked = false;
-            KnowPlanesCheck.IsChecked = false;
-            KnowReligionCheck.IsChecked = false;
-            LinguisticsCheck.IsChecked = false;
-            PerceptionCheck.IsChecked = false;
-            RideCheck.IsChecked = false;
-            SenseMotiveCheck.IsChecked = false;
-            SleightOfHandCheck.IsChecked = false;
-            SpellcraftCheck.IsChecked = false;
-            StealthCheck.IsChecked = false;
-            SurvivalCheck.IsChecked = false;
-            SwimCheck.IsChecked = false;
-            UseMagicDeviseCheck.IsChecked = false;
+            ClearSkills();
 
             ClimbCheck.IsChecked = true;
             FlyCheck.IsChecked = true;
@@ -269,44 +217,34 @@ namespace Hahmogeneraattori.Views
             SurvivalCheck.IsChecked = true;
             SwimCheck.IsChecked = true;
 
+            SkillRank = StrModifier + 3;
+            ClimbRank.Text = SkillRank.ToString();
+            SwimRank.Text = SkillRank.ToString();
+
+            SkillRank = DexModifier + 3;
+            FlyRank.Text = SkillRank.ToString();
+            RideRank.Text = SkillRank.ToString();
+
+            SkillRank = IntModifier + 3;
+            KnowGeographyRank.Text = SkillRank.ToString();
+            KnowNatureRank.Text = SkillRank.ToString();
+            SpellcraftRank.Text = SkillRank.ToString();
+
+            SkillRank = WisModifier + 3;
+            HealRank.Text = SkillRank.ToString();
+            PerceptionRank.Text = SkillRank.ToString();
+            SurvivalRank.Text = SkillRank.ToString();
+
+            SkillRank = ChaModifier + 3;
+            HandleAnimalRank.Text = SkillRank.ToString();
+
             // Update character sheet class
             CharacterClass.Content = Druid.Name;
         }
 
         private void Fighter_Selected(object sender, RoutedEventArgs e)
         {
-            AcrobaticsCheck.IsChecked = false;
-            AppraiseCheck.IsChecked = false;
-            BluffCheck.IsChecked = false;
-            ClimbCheck.IsChecked = false;
-            DiplomacyCheck.IsChecked = false;
-            DisableDeviceCheck.IsChecked = false;
-            DisguiseCheck.IsChecked = false;
-            EscapeArtistCheck.IsChecked = false;
-            FlyCheck.IsChecked = false;
-            HandleAnimalCheck.IsChecked = false;
-            HealCheck.IsChecked = false;
-            IntimidateCheck.IsChecked = false;
-            KnowArcanaCheck.IsChecked = false;
-            KnowDungeoneeringCheck.IsChecked = false;
-            KnowEngineeringCheck.IsChecked = false;
-            KnowGeographyCheck.IsChecked = false;
-            KnowHistoryCheck.IsChecked = false;
-            KnowLocalCheck.IsChecked = false;
-            KnowNatureCheck.IsChecked = false;
-            KnowNobilityCheck.IsChecked = false;
-            KnowPlanesCheck.IsChecked = false;
-            KnowReligionCheck.IsChecked = false;
-            LinguisticsCheck.IsChecked = false;
-            PerceptionCheck.IsChecked = false;
-            RideCheck.IsChecked = false;
-            SenseMotiveCheck.IsChecked = false;
-            SleightOfHandCheck.IsChecked = false;
-            SpellcraftCheck.IsChecked = false;
-            StealthCheck.IsChecked = false;
-            SurvivalCheck.IsChecked = false;
-            SwimCheck.IsChecked = false;
-            UseMagicDeviseCheck.IsChecked = false;
+            ClearSkills();
 
             ClimbCheck.IsChecked = true;
             HandleAnimalCheck.IsChecked = true;
@@ -316,44 +254,32 @@ namespace Hahmogeneraattori.Views
             RideCheck.IsChecked = true;
             SurvivalCheck.IsChecked = true;
             SwimCheck.IsChecked = true;
+
+            SkillRank = StrModifier + 3;
+            ClimbRank.Text = SkillRank.ToString();
+            SwimRank.Text = SkillRank.ToString();
+
+            SkillRank = DexModifier + 3;
+            RideRank.Text = SkillRank.ToString();
+            
+            SkillRank = IntModifier + 3;
+            KnowDungeoneeringRank.Text = SkillRank.ToString();
+            KnowEngineeringRank.Text = SkillRank.ToString();
+
+            SkillRank = WisModifier + 3;
+            SurvivalRank.Text = SkillRank.ToString();
+            
+            SkillRank = ChaModifier + 3;
+            HandleAnimalRank.Text = SkillRank.ToString();
+            IntimidateRank.Text = SkillRank.ToString();
+
             // Update character sheet class
             CharacterClass.Content = Fighter.Name;
         }
 
         private void Monk_Selected(object sender, RoutedEventArgs e)
         {
-            AcrobaticsCheck.IsChecked = false;
-            AppraiseCheck.IsChecked = false;
-            BluffCheck.IsChecked = false;
-            ClimbCheck.IsChecked = false;
-            DiplomacyCheck.IsChecked = false;
-            DisableDeviceCheck.IsChecked = false;
-            DisguiseCheck.IsChecked = false;
-            EscapeArtistCheck.IsChecked = false;
-            FlyCheck.IsChecked = false;
-            HandleAnimalCheck.IsChecked = false;
-            HealCheck.IsChecked = false;
-            IntimidateCheck.IsChecked = false;
-            KnowArcanaCheck.IsChecked = false;
-            KnowDungeoneeringCheck.IsChecked = false;
-            KnowEngineeringCheck.IsChecked = false;
-            KnowGeographyCheck.IsChecked = false;
-            KnowHistoryCheck.IsChecked = false;
-            KnowLocalCheck.IsChecked = false;
-            KnowNatureCheck.IsChecked = false;
-            KnowNobilityCheck.IsChecked = false;
-            KnowPlanesCheck.IsChecked = false;
-            KnowReligionCheck.IsChecked = false;
-            LinguisticsCheck.IsChecked = false;
-            PerceptionCheck.IsChecked = false;
-            RideCheck.IsChecked = false;
-            SenseMotiveCheck.IsChecked = false;
-            SleightOfHandCheck.IsChecked = false;
-            SpellcraftCheck.IsChecked = false;
-            StealthCheck.IsChecked = false;
-            SurvivalCheck.IsChecked = false;
-            SwimCheck.IsChecked = false;
-            UseMagicDeviseCheck.IsChecked = false;
+            ClearSkills();
 
             AcrobaticsCheck.IsChecked = true;
             ClimbCheck.IsChecked = true;
@@ -367,44 +293,34 @@ namespace Hahmogeneraattori.Views
             StealthCheck.IsChecked = true;
             SwimCheck.IsChecked = true;
 
+            SkillRank = StrModifier + 3;
+            ClimbRank.Text = SkillRank.ToString();
+            SwimRank.Text = SkillRank.ToString();
+
+            SkillRank = DexModifier + 3;
+            AcrobaticsRank.Text = SkillRank.ToString();
+            EscapeArtistRank.Text = SkillRank.ToString();
+            RideRank.Text = SkillRank.ToString();
+            StealthRank.Text = SkillRank.ToString();
+
+            SkillRank = IntModifier + 3;
+            KnowHistoryRank.Text = SkillRank.ToString();
+            KnowReligionRank.Text = SkillRank.ToString();
+
+            SkillRank = WisModifier + 3;
+            PerceptionRank.Text = SkillRank.ToString();
+            SenseMotiveRank.Text = SkillRank.ToString();
+
+            SkillRank = ChaModifier + 3;
+            IntimidateRank.Text = SkillRank.ToString();
+
             // Update character sheet class
             CharacterClass.Content = Monk.Name;
         }
 
         private void Paladin_Selected(object sender, RoutedEventArgs e)
         {
-            AcrobaticsCheck.IsChecked = false;
-            AppraiseCheck.IsChecked = false;
-            BluffCheck.IsChecked = false;
-            ClimbCheck.IsChecked = false;
-            DiplomacyCheck.IsChecked = false;
-            DisableDeviceCheck.IsChecked = false;
-            DisguiseCheck.IsChecked = false;
-            EscapeArtistCheck.IsChecked = false;
-            FlyCheck.IsChecked = false;
-            HandleAnimalCheck.IsChecked = false;
-            HealCheck.IsChecked = false;
-            IntimidateCheck.IsChecked = false;
-            KnowArcanaCheck.IsChecked = false;
-            KnowDungeoneeringCheck.IsChecked = false;
-            KnowEngineeringCheck.IsChecked = false;
-            KnowGeographyCheck.IsChecked = false;
-            KnowHistoryCheck.IsChecked = false;
-            KnowLocalCheck.IsChecked = false;
-            KnowNatureCheck.IsChecked = false;
-            KnowNobilityCheck.IsChecked = false;
-            KnowPlanesCheck.IsChecked = false;
-            KnowReligionCheck.IsChecked = false;
-            LinguisticsCheck.IsChecked = false;
-            PerceptionCheck.IsChecked = false;
-            RideCheck.IsChecked = false;
-            SenseMotiveCheck.IsChecked = false;
-            SleightOfHandCheck.IsChecked = false;
-            SpellcraftCheck.IsChecked = false;
-            StealthCheck.IsChecked = false;
-            SurvivalCheck.IsChecked = false;
-            SwimCheck.IsChecked = false;
-            UseMagicDeviseCheck.IsChecked = false;
+            ClearSkills();
 
             DiplomacyCheck.IsChecked = true;
             HandleAnimalCheck.IsChecked = true;
@@ -415,44 +331,29 @@ namespace Hahmogeneraattori.Views
             SenseMotiveCheck.IsChecked = true;
             SpellcraftCheck.IsChecked = true;
 
+            SkillRank = DexModifier + 3;
+            RideRank.Text = SkillRank.ToString();
+            
+            SkillRank = IntModifier + 3;
+            KnowNobilityRank.Text = SkillRank.ToString();
+            KnowReligionRank.Text = SkillRank.ToString();
+            SpellcraftRank.Text = SkillRank.ToString();
+
+            SkillRank = WisModifier + 3;
+            HealRank.Text = SkillRank.ToString();
+            SenseMotiveRank.Text = SkillRank.ToString();
+
+            SkillRank = ChaModifier + 3;
+            DiplomacyRank.Text = SkillRank.ToString();
+            HandleAnimalRank.Text = SkillRank.ToString();
+
             // Update character sheet class
             CharacterClass.Content = Paladin.Name;
         }
 
         private void Ranger_Selected(object sender, RoutedEventArgs e)
         {
-            AcrobaticsCheck.IsChecked = false;
-            AppraiseCheck.IsChecked = false;
-            BluffCheck.IsChecked = false;
-            ClimbCheck.IsChecked = false;
-            DiplomacyCheck.IsChecked = false;
-            DisableDeviceCheck.IsChecked = false;
-            DisguiseCheck.IsChecked = false;
-            EscapeArtistCheck.IsChecked = false;
-            FlyCheck.IsChecked = false;
-            HandleAnimalCheck.IsChecked = false;
-            HealCheck.IsChecked = false;
-            IntimidateCheck.IsChecked = false;
-            KnowArcanaCheck.IsChecked = false;
-            KnowDungeoneeringCheck.IsChecked = false;
-            KnowEngineeringCheck.IsChecked = false;
-            KnowGeographyCheck.IsChecked = false;
-            KnowHistoryCheck.IsChecked = false;
-            KnowLocalCheck.IsChecked = false;
-            KnowNatureCheck.IsChecked = false;
-            KnowNobilityCheck.IsChecked = false;
-            KnowPlanesCheck.IsChecked = false;
-            KnowReligionCheck.IsChecked = false;
-            LinguisticsCheck.IsChecked = false;
-            PerceptionCheck.IsChecked = false;
-            RideCheck.IsChecked = false;
-            SenseMotiveCheck.IsChecked = false;
-            SleightOfHandCheck.IsChecked = false;
-            SpellcraftCheck.IsChecked = false;
-            StealthCheck.IsChecked = false;
-            SurvivalCheck.IsChecked = false;
-            SwimCheck.IsChecked = false;
-            UseMagicDeviseCheck.IsChecked = false;
+            ClearSkills();
 
             ClimbCheck.IsChecked = true;
             HandleAnimalCheck.IsChecked = true;
@@ -467,44 +368,38 @@ namespace Hahmogeneraattori.Views
             StealthCheck.IsChecked = true;
             SurvivalCheck.IsChecked = true;
             SwimCheck.IsChecked = true;
+
+            SkillRank = StrModifier + 3;
+            ClimbRank.Text = SkillRank.ToString();
+            SwimRank.Text = SkillRank.ToString();
+
+            SkillRank = DexModifier + 3;
+            RideRank.Text = SkillRank.ToString();
+            StealthRank.Text = SkillRank.ToString();
+
+            SkillRank = IntModifier + 3;
+            KnowDungeoneeringRank.Text = SkillRank.ToString();
+            KnowGeographyRank.Text = SkillRank.ToString();
+            KnowNatureRank.Text = SkillRank.ToString();
+            SpellcraftRank.Text = SkillRank.ToString();
+
+            SkillRank = WisModifier + 3;
+            HealRank.Text = SkillRank.ToString();
+            PerceptionRank.Text = SkillRank.ToString();
+            SurvivalRank.Text = SkillRank.ToString();
+
+            SkillRank = ChaModifier + 3;
+            HandleAnimalRank.Text = SkillRank.ToString();
+            IntimidateRank.Text = SkillRank.ToString();
+
+
             // Update character sheet class
             CharacterClass.Content = Rogue.Name;
 
         }
         private void Rogue_Selected(object sender, RoutedEventArgs e)
         {
-            AcrobaticsCheck.IsChecked = false;
-            AppraiseCheck.IsChecked = false;
-            BluffCheck.IsChecked = false;
-            ClimbCheck.IsChecked = false;
-            DiplomacyCheck.IsChecked = false;
-            DisableDeviceCheck.IsChecked = false;
-            DisguiseCheck.IsChecked = false;
-            EscapeArtistCheck.IsChecked = false;
-            FlyCheck.IsChecked = false;
-            HandleAnimalCheck.IsChecked = false;
-            HealCheck.IsChecked = false;
-            IntimidateCheck.IsChecked = false;
-            KnowArcanaCheck.IsChecked = false;
-            KnowDungeoneeringCheck.IsChecked = false;
-            KnowEngineeringCheck.IsChecked = false;
-            KnowGeographyCheck.IsChecked = false;
-            KnowHistoryCheck.IsChecked = false;
-            KnowLocalCheck.IsChecked = false;
-            KnowNatureCheck.IsChecked = false;
-            KnowNobilityCheck.IsChecked = false;
-            KnowPlanesCheck.IsChecked = false;
-            KnowReligionCheck.IsChecked = false;
-            LinguisticsCheck.IsChecked = false;
-            PerceptionCheck.IsChecked = false;
-            RideCheck.IsChecked = false;
-            SenseMotiveCheck.IsChecked = false;
-            SleightOfHandCheck.IsChecked = false;
-            SpellcraftCheck.IsChecked = false;
-            StealthCheck.IsChecked = false;
-            SurvivalCheck.IsChecked = false;
-            SwimCheck.IsChecked = false;
-            UseMagicDeviseCheck.IsChecked = false;
+            ClearSkills();
 
             AcrobaticsCheck.IsChecked = true;
             AppraiseCheck.IsChecked = true;
@@ -524,44 +419,39 @@ namespace Hahmogeneraattori.Views
             StealthCheck.IsChecked = true;
             SwimCheck.IsChecked = true;
             UseMagicDeviseCheck.IsChecked = true;
+
+            SkillRank = StrModifier + 3;
+            ClimbRank.Text = SkillRank.ToString();
+            SwimRank.Text = SkillRank.ToString();
+
+            SkillRank = DexModifier + 3;
+            AcrobaticsRank.Text = SkillRank.ToString();
+            EscapeArtistRank.Text = SkillRank.ToString();
+            StealthRank.Text = SkillRank.ToString();
+
+            SkillRank = IntModifier + 3;
+            AppraiseRank.Text = SkillRank.ToString();
+            LinguisticsRank.Text = SkillRank.ToString();
+            KnowDungeoneeringRank.Text = SkillRank.ToString();
+            KnowLocalRank.Text = SkillRank.ToString();
+
+            SkillRank = WisModifier + 3;
+            PerceptionRank.Text = SkillRank.ToString();
+            SenseMotiveRank.Text = SkillRank.ToString();
+
+            SkillRank = ChaModifier + 3;
+            BluffRank.Text = SkillRank.ToString();
+            DiplomacyRank.Text = SkillRank.ToString();
+            IntimidateRank.Text = SkillRank.ToString();
+            UseMagicDeviseRank.Text = SkillRank.ToString();
+
             // Update character sheet class
             CharacterClass.Content = Rogue.Name;
         }
 
         private void Sorcerer_Selected(object sender, RoutedEventArgs e)
         {
-            AcrobaticsCheck.IsChecked = false;
-            AppraiseCheck.IsChecked = false;
-            BluffCheck.IsChecked = false;
-            ClimbCheck.IsChecked = false;
-            DiplomacyCheck.IsChecked = false;
-            DisableDeviceCheck.IsChecked = false;
-            DisguiseCheck.IsChecked = false;
-            EscapeArtistCheck.IsChecked = false;
-            FlyCheck.IsChecked = false;
-            HandleAnimalCheck.IsChecked = false;
-            HealCheck.IsChecked = false;
-            IntimidateCheck.IsChecked = false;
-            KnowArcanaCheck.IsChecked = false;
-            KnowDungeoneeringCheck.IsChecked = false;
-            KnowEngineeringCheck.IsChecked = false;
-            KnowGeographyCheck.IsChecked = false;
-            KnowHistoryCheck.IsChecked = false;
-            KnowLocalCheck.IsChecked = false;
-            KnowNatureCheck.IsChecked = false;
-            KnowNobilityCheck.IsChecked = false;
-            KnowPlanesCheck.IsChecked = false;
-            KnowReligionCheck.IsChecked = false;
-            LinguisticsCheck.IsChecked = false;
-            PerceptionCheck.IsChecked = false;
-            RideCheck.IsChecked = false;
-            SenseMotiveCheck.IsChecked = false;
-            SleightOfHandCheck.IsChecked = false;
-            SpellcraftCheck.IsChecked = false;
-            StealthCheck.IsChecked = false;
-            SurvivalCheck.IsChecked = false;
-            SwimCheck.IsChecked = false;
-            UseMagicDeviseCheck.IsChecked = false;
+            ClearSkills();
 
             AppraiseCheck.IsChecked = true;
             BluffCheck.IsChecked = true;
@@ -570,44 +460,27 @@ namespace Hahmogeneraattori.Views
             KnowArcanaCheck.IsChecked = true;
             SpellcraftCheck.IsChecked = true;
             UseMagicDeviseCheck.IsChecked = true;
+
+            SkillRank = IntModifier + 3;
+            AppraiseRank.Text = SkillRank.ToString();
+            KnowArcanaRank.Text = SkillRank.ToString();
+            SpellcraftRank.Text = SkillRank.ToString();
+
+            SkillRank = ChaModifier + 3;
+            BluffRank.Text = SkillRank.ToString();
+            UseMagicDeviseRank.Text = SkillRank.ToString();
+            IntimidateRank.Text = SkillRank.ToString();
+
+            SkillRank = DexModifier + 3;
+            FlyRank.Text = SkillRank.ToString();
+
             // Update character sheet class
             CharacterClass.Content = Sorcerer.Name;
         }
 
         private void Wizard_Selected(object sender, RoutedEventArgs e)
         {
-            AcrobaticsCheck.IsChecked = false;
-            AppraiseCheck.IsChecked = false;
-            BluffCheck.IsChecked = false;
-            ClimbCheck.IsChecked = false;
-            DiplomacyCheck.IsChecked = false;
-            DisableDeviceCheck.IsChecked = false;
-            DisguiseCheck.IsChecked = false;
-            EscapeArtistCheck.IsChecked = false;
-            FlyCheck.IsChecked = false;
-            HandleAnimalCheck.IsChecked = false;
-            HealCheck.IsChecked = false;
-            IntimidateCheck.IsChecked = false;
-            KnowArcanaCheck.IsChecked = false;
-            KnowDungeoneeringCheck.IsChecked = false;
-            KnowEngineeringCheck.IsChecked = false;
-            KnowGeographyCheck.IsChecked = false;
-            KnowHistoryCheck.IsChecked = false;
-            KnowLocalCheck.IsChecked = false;
-            KnowNatureCheck.IsChecked = false;
-            KnowNobilityCheck.IsChecked = false;
-            KnowPlanesCheck.IsChecked = false;
-            KnowReligionCheck.IsChecked = false;
-            LinguisticsCheck.IsChecked = false;
-            PerceptionCheck.IsChecked = false;
-            RideCheck.IsChecked = false;
-            SenseMotiveCheck.IsChecked = false;
-            SleightOfHandCheck.IsChecked = false;
-            SpellcraftCheck.IsChecked = false;
-            StealthCheck.IsChecked = false;
-            SurvivalCheck.IsChecked = false;
-            SwimCheck.IsChecked = false;
-            UseMagicDeviseCheck.IsChecked = false;
+            ClearSkills();
 
             AppraiseCheck.IsChecked = true;
             FlyCheck.IsChecked = true;
@@ -623,6 +496,25 @@ namespace Hahmogeneraattori.Views
             KnowReligionCheck.IsChecked = true;
             LinguisticsCheck.IsChecked = true;
             SpellcraftCheck.IsChecked = true;
+
+            SkillRank = IntModifier + 3;
+            AppraiseRank.Text = SkillRank.ToString();
+            KnowArcanaRank.Text = SkillRank.ToString();
+            KnowDungeoneeringRank.Text = SkillRank.ToString();
+            KnowEngineeringRank.Text = SkillRank.ToString();
+            KnowGeographyRank.Text = SkillRank.ToString();
+            KnowHistoryRank.Text = SkillRank.ToString();
+            KnowLocalRank.Text = SkillRank.ToString();
+            KnowNatureRank.Text = SkillRank.ToString();
+            KnowNobilityRank.Text = SkillRank.ToString();
+            KnowPlanesRank.Text = SkillRank.ToString();
+            KnowReligionRank.Text = SkillRank.ToString();
+            LinguisticsRank.Text = SkillRank.ToString();
+            SpellcraftRank.Text = SkillRank.ToString();
+
+            SkillRank = DexModifier + 3;
+            FlyRank.Text = SkillRank.ToString();
+
             // Update character sheet class
             CharacterClass.Content = Wizard.Name;
         }
@@ -1224,37 +1116,12 @@ namespace Hahmogeneraattori.Views
             WisScore.Text = RaceWis.ToString();
             ChaScore.Text = RaceCha.ToString();
 
-            StrModifier = RaceStr / 2 - 5;
-            DexModifier = RaceDex / 2 - 5;
-            ConModifier = RaceCon / 2 - 5;
-            IntModifier = RaceInt / 2 - 5;
-            WisModifier = RaceWis / 2 - 5;
-            ChaModifier = RaceCha / 2 - 5;
-
-            StrMod.Text = StrModifier.ToString();
-            DexMod.Text = DexModifier.ToString();
-            ConMod.Text = ConModifier.ToString();
-            IntMod.Text = IntModifier.ToString();
-            WisMod.Text = WisModifier.ToString();
-            ChaMod.Text = ChaModifier.ToString();
+            AssignModifiers();
 
             // Update character sheet race
             CharacterRace.Content = Dwarf.Name;
 
-            //update stats to char sheet
-            CharacterStrength.Content = RaceStr;
-            CharacterDexterity.Content = RaceDex;
-            CharacterConstitution.Content = RaceCon;
-            CharacterIntelligence.Content = RaceInt;
-            CharacterWisdom.Content = RaceWis;
-            CharacterCharisma.Content = RaceCha;
-            // update char sheet modifiers
-            CharStrMod.Content = StrMod.Text;
-            CharDexMod.Content = DexMod.Text;
-            CharConMod.Content = ConMod.Text;
-            CharIntMod.Content = IntMod.Text;
-            CharWisMod.Content = WisMod.Text;
-            CharChaMod.Content = ChaMod.Text;
+            UpdateCharSheet();
         }
 
         private void Elf_Selected(object sender, RoutedEventArgs e)
@@ -1275,36 +1142,12 @@ namespace Hahmogeneraattori.Views
             WisScore.Text = RaceWis.ToString();
             ChaScore.Text = RaceCha.ToString();
 
-            StrModifier = RaceStr / 2 - 5;
-            DexModifier = RaceDex / 2 - 5;
-            ConModifier = RaceCon / 2 - 5;
-            IntModifier = RaceInt / 2 - 5;
-            WisModifier = RaceWis / 2 - 5;
-            ChaModifier = RaceCha / 2 - 5;
-
-            StrMod.Text = StrModifier.ToString();
-            DexMod.Text = DexModifier.ToString();
-            ConMod.Text = ConModifier.ToString();
-            IntMod.Text = IntModifier.ToString();
-            WisMod.Text = WisModifier.ToString();
-            ChaMod.Text = ChaModifier.ToString();
+            AssignModifiers();
 
             // Update character sheet race
             CharacterRace.Content = Elf.Name;
-            //update stats to char sheet
-            CharacterStrength.Content = RaceStr;
-            CharacterDexterity.Content = RaceDex;
-            CharacterConstitution.Content = RaceCon;
-            CharacterIntelligence.Content = RaceInt;
-            CharacterWisdom.Content = RaceWis;
-            CharacterCharisma.Content = RaceCha;
-            // update char sheet modifiers
-            CharStrMod.Content = StrMod.Text;
-            CharDexMod.Content = DexMod.Text;
-            CharConMod.Content = ConMod.Text;
-            CharIntMod.Content = IntMod.Text;
-            CharWisMod.Content = WisMod.Text;
-            CharChaMod.Content = ChaMod.Text;
+
+            UpdateCharSheet();
         }
 
         private void Gnome_Selected(object sender, RoutedEventArgs e)
@@ -1325,36 +1168,12 @@ namespace Hahmogeneraattori.Views
             WisScore.Text = RaceWis.ToString();
             ChaScore.Text = RaceCha.ToString();
 
-            StrModifier = RaceStr / 2 - 5;
-            DexModifier = RaceDex / 2 - 5;
-            ConModifier = RaceCon / 2 - 5;
-            IntModifier = RaceInt / 2 - 5;
-            WisModifier = RaceWis / 2 - 5;
-            ChaModifier = RaceCha / 2 - 5;
-
-            StrMod.Text = StrModifier.ToString();
-            DexMod.Text = DexModifier.ToString();
-            ConMod.Text = ConModifier.ToString();
-            IntMod.Text = IntModifier.ToString();
-            WisMod.Text = WisModifier.ToString();
-            ChaMod.Text = ChaModifier.ToString();
+            AssignModifiers();
 
             // Update character sheet race
             CharacterRace.Content = Gnome.Name;
-            //update stats to char sheet
-            CharacterStrength.Content = RaceStr;
-            CharacterDexterity.Content = RaceDex;
-            CharacterConstitution.Content = RaceCon;
-            CharacterIntelligence.Content = RaceInt;
-            CharacterWisdom.Content = RaceWis;
-            CharacterCharisma.Content = RaceCha;
-            // update char sheet modifiers
-            CharStrMod.Content = StrMod.Text;
-            CharDexMod.Content = DexMod.Text;
-            CharConMod.Content = ConMod.Text;
-            CharIntMod.Content = IntMod.Text;
-            CharWisMod.Content = WisMod.Text;
-            CharChaMod.Content = ChaMod.Text;
+
+            UpdateCharSheet();
         }
 
         private void HalfElf_Selected(object sender, RoutedEventArgs e)
@@ -1363,20 +1182,8 @@ namespace Hahmogeneraattori.Views
 
             // Update character sheet race
             CharacterRace.Content = HalfElf.Name;
-            //update stats to char sheet
-            CharacterStrength.Content = RaceStr;
-            CharacterDexterity.Content = RaceDex;
-            CharacterConstitution.Content = RaceCon;
-            CharacterIntelligence.Content = RaceInt;
-            CharacterWisdom.Content = RaceWis;
-            CharacterCharisma.Content = RaceCha;
-            // update char sheet modifiers
-            CharStrMod.Content = StrMod.Text;
-            CharDexMod.Content = DexMod.Text;
-            CharConMod.Content = ConMod.Text;
-            CharIntMod.Content = IntMod.Text;
-            CharWisMod.Content = WisMod.Text;
-            CharChaMod.Content = ChaMod.Text;
+
+            UpdateCharSheet();
         }
 
         private void HalfOrc_Selected(object sender, RoutedEventArgs e)
@@ -1385,20 +1192,8 @@ namespace Hahmogeneraattori.Views
 
             // Update character sheet race
             CharacterRace.Content = HalfOrc.Name;
-            //update stats to char sheet
-            CharacterStrength.Content = RaceStr;
-            CharacterDexterity.Content = RaceDex;
-            CharacterConstitution.Content = RaceCon;
-            CharacterIntelligence.Content = RaceInt;
-            CharacterWisdom.Content = RaceWis;
-            CharacterCharisma.Content = RaceCha;
-            // update char sheet modifiers
-            CharStrMod.Content = StrMod.Text;
-            CharDexMod.Content = DexMod.Text;
-            CharConMod.Content = ConMod.Text;
-            CharIntMod.Content = IntMod.Text;
-            CharWisMod.Content = WisMod.Text;
-            CharChaMod.Content = ChaMod.Text;
+
+            UpdateCharSheet();
         }
 
         private void Halfling_Selected(object sender, RoutedEventArgs e)
@@ -1419,37 +1214,12 @@ namespace Hahmogeneraattori.Views
             WisScore.Text = RaceWis.ToString();
             ChaScore.Text = RaceCha.ToString();
 
-            StrModifier = RaceStr / 2 - 5;
-            DexModifier = RaceDex / 2 - 5;
-            ConModifier = RaceCon / 2 - 5;
-            IntModifier = RaceInt / 2 - 5;
-            WisModifier = RaceWis / 2 - 5;
-            ChaModifier = RaceCha / 2 - 5;
-            
-
-            StrMod.Text = StrModifier.ToString();
-            DexMod.Text = DexModifier.ToString();
-            ConMod.Text = ConModifier.ToString();
-            IntMod.Text = IntModifier.ToString();
-            WisMod.Text = WisModifier.ToString();
-            ChaMod.Text = ChaModifier.ToString();
+            AssignModifiers();
 
             // Update character sheet race
             CharacterRace.Content = Halfling.Name;
-            //update stats to char sheet
-            CharacterStrength.Content = RaceStr;
-            CharacterDexterity.Content = RaceDex;
-            CharacterConstitution.Content = RaceCon;
-            CharacterIntelligence.Content = RaceInt;
-            CharacterWisdom.Content = RaceWis;
-            CharacterCharisma.Content = RaceCha;
-            // update char sheet modifiers
-            CharStrMod.Content = StrMod.Text;
-            CharDexMod.Content = DexMod.Text;
-            CharConMod.Content = ConMod.Text;
-            CharIntMod.Content = IntMod.Text;
-            CharWisMod.Content = WisMod.Text;
-            CharChaMod.Content = ChaMod.Text;
+
+            UpdateCharSheet();
         }
 
         private void Human_Selected(object sender, RoutedEventArgs e)
@@ -1458,6 +1228,98 @@ namespace Hahmogeneraattori.Views
 
             // Update character sheet race
             CharacterRace.Content = Human.Name;
+
+            UpdateCharSheet();
+        }
+        public void ClearSkills ()
+        {
+            AcrobaticsCheck.IsChecked = false;
+            AppraiseCheck.IsChecked = false;
+            BluffCheck.IsChecked = false;
+            ClimbCheck.IsChecked = false;
+            DiplomacyCheck.IsChecked = false;
+            DisableDeviceCheck.IsChecked = false;
+            DisguiseCheck.IsChecked = false;
+            EscapeArtistCheck.IsChecked = false;
+            FlyCheck.IsChecked = false;
+            HandleAnimalCheck.IsChecked = false;
+            HealCheck.IsChecked = false;
+            IntimidateCheck.IsChecked = false;
+            KnowArcanaCheck.IsChecked = false;
+            KnowDungeoneeringCheck.IsChecked = false;
+            KnowEngineeringCheck.IsChecked = false;
+            KnowGeographyCheck.IsChecked = false;
+            KnowHistoryCheck.IsChecked = false;
+            KnowLocalCheck.IsChecked = false;
+            KnowNatureCheck.IsChecked = false;
+            KnowNobilityCheck.IsChecked = false;
+            KnowPlanesCheck.IsChecked = false;
+            KnowReligionCheck.IsChecked = false;
+            LinguisticsCheck.IsChecked = false;
+            PerceptionCheck.IsChecked = false;
+            RideCheck.IsChecked = false;
+            SenseMotiveCheck.IsChecked = false;
+            SleightOfHandCheck.IsChecked = false;
+            SpellcraftCheck.IsChecked = false;
+            StealthCheck.IsChecked = false;
+            SurvivalCheck.IsChecked = false;
+            SwimCheck.IsChecked = false;
+            UseMagicDeviseCheck.IsChecked = false;
+
+            AcrobaticsRank.Text = "0";
+            AppraiseRank.Text = "0";
+            BluffRank.Text = "0";
+            ClimbRank.Text = "0";
+            DiplomacyRank.Text = "0";
+            DisableDeviceRank.Text = "0";
+            DisguiseRank.Text = "0";
+            EscapeArtistRank.Text = "0";
+            FlyRank.Text = "0";
+            HandleAnimalRank.Text = "0";
+            HealRank.Text = "0";
+            IntimidateRank.Text = "0";
+            KnowArcanaRank.Text = "0";
+            KnowDungeoneeringRank.Text = "0";
+            KnowEngineeringRank.Text = "0";
+            KnowGeographyRank.Text = "0";
+            KnowHistoryRank.Text = "0";
+            KnowLocalRank.Text = "0";
+            KnowNatureRank.Text = "0";
+            KnowNobilityRank.Text = "0";
+            KnowPlanesRank.Text = "0";
+            KnowReligionRank.Text = "0";
+            LinguisticsRank.Text = "0";
+            PerceptionRank.Text = "0";
+            RideRank.Text = "0";
+            SenseMotiveRank.Text = "0";
+            SleightOfHandRank.Text = "0";
+            SpellcraftRank.Text = "0";
+            StealthRank.Text = "0";
+            SurvivalRank.Text = "0";
+            SwimRank.Text = "0";
+            UseMagicDeviseRank.Text = "0";
+        }
+
+        public void AssignModifiers ()
+        {
+            StrModifier = RaceStr / 2 - 5;
+            DexModifier = RaceDex / 2 - 5;
+            ConModifier = RaceCon / 2 - 5;
+            IntModifier = RaceInt / 2 - 5;
+            WisModifier = RaceWis / 2 - 5;
+            ChaModifier = RaceCha / 2 - 5;
+
+
+            StrMod.Text = StrModifier.ToString();
+            DexMod.Text = DexModifier.ToString();
+            ConMod.Text = ConModifier.ToString();
+            IntMod.Text = IntModifier.ToString();
+            WisMod.Text = WisModifier.ToString();
+            ChaMod.Text = ChaModifier.ToString();
+        }
+
+        public void UpdateCharSheet()
+        {
             //update stats to char sheet
             CharacterStrength.Content = RaceStr;
             CharacterDexterity.Content = RaceDex;

@@ -22,7 +22,7 @@
 
                                 <ListBox FontSize="24">
                                     <ListBox.Background>
-                                        <SolidColorBrush></SolidColorBrush>
+                                        <SolidColorBrush/>
                                     </ListBox.Background>
                                     <ListBoxItem Content="Ability Name"/>
                                     <ListBoxItem Name="Strength" Selected="Strength_Selected">Strength</ListBoxItem>
@@ -35,9 +35,9 @@
                                 </ListBox>
                             </StackPanel>
                             <StackPanel x:Name="AbilityScore" Orientation="Horizontal">
-                                <ListBox FontSize="24" x:Name="ScoreList">
+                                <ListBox FontSize="24" x:Name="ScoreList" HorizontalContentAlignment="Center" >
                                     <ListBox.Background>
-                                        <SolidColorBrush></SolidColorBrush>
+                                        <SolidColorBrush/>
                                     </ListBox.Background>
                                     <ListBoxItem Content="Score"/>
                                     <TextBlock x:Name="StrScore"/>
@@ -50,9 +50,9 @@
                                 </ListBox>
                             </StackPanel>
                             <StackPanel x:Name="AbilityMod" Orientation="Horizontal">
-                                <ListBox FontSize="24" x:Name="ModList">
+                                <ListBox FontSize="24" x:Name="ModList" HorizontalContentAlignment="Center">
                                     <ListBox.Background>
-                                        <SolidColorBrush></SolidColorBrush>
+                                        <SolidColorBrush/>
                                     </ListBox.Background>
                                     <ListBoxItem Content="Modifier"/>
                                     <TextBlock x:Name="StrMod"/>
@@ -121,7 +121,9 @@
                                 <ListBoxItem Name="AcrobaticsBox" Selected="AcrobaticsBox_Selected">
                                     Acrobatics (Dex)
                                 </ListBoxItem> 
-                                <TextBox Name="AcrobaticsRank" IsEnabled="False" Text="0"/>
+                                <Button Content="-" Name="AcrobaticsMinus"></Button>
+                                <TextBox Name="AcrobaticsRank" IsEnabled="False"/>
+                                <Button Content="+" Name="AcrobaticsPlus"></Button>
                             </TextBlock>
 
                             <TextBlock Name="Appraise">
@@ -129,7 +131,9 @@
                                 <ListBoxItem Name="AppraiseBox" Selected="AppraiseBox_Selected"> 
                                     Appraise (Int)
                                 </ListBoxItem>
+                                <Button Content="-" Name="AppraiseMinus"></Button>
                                 <TextBox Name="AppraiseRank" IsEnabled="False"/>
+                                <Button Content="+" Name="AppraisePlus"></Button>
                             </TextBlock>
 
                             <TextBlock Name="Bluff">
@@ -137,7 +141,9 @@
                                 <ListBoxItem Name="BluffBox" Selected="BluffBox_Selected"> 
                                     Bluff (Cha)
                                 </ListBoxItem>
+                                <Button Content="-" Name="BluffMinus"></Button>
                                 <TextBox Name="BluffRank" IsEnabled="False"/>
+                                <Button Content="+" Name="BluffPlus"></Button>
                             </TextBlock>
 
                             <TextBlock Name="Climb">
@@ -145,7 +151,9 @@
                                 <ListBoxItem Name="ClimbBox" Selected="ClimbBox_Selected">
                                     Climb (Str)
                                 </ListBoxItem>
+                                <Button Content="-" Name="ClimbMinus"></Button>
                                 <TextBox Name="ClimbRank" IsEnabled="False"/>
+                                <Button Content="+" Name="ClimbPlus"></Button>
                             </TextBlock>
 
                             <TextBlock Name="Diplomacy">
@@ -153,7 +161,9 @@
                                 <ListBoxItem Name="DiplomacyBox" Selected="DiplomacyBox_Selected">
                                     Diplomacy (Cha)
                                 </ListBoxItem>
+                                <Button Content="-" Name="DiplomacyMinus"></Button>
                                 <TextBox Name="DiplomacyRank" IsEnabled="False"/>
+                                <Button Content="+" Name="DiplomacyPlus"></Button>
                             </TextBlock>
 
                             <TextBlock Name="DisableDevice">
@@ -161,7 +171,9 @@
                                 <ListBoxItem Name="DisableDeviceBox" Selected="DisableDeviceBox_Selected">
                                     Disable Device* (Dex)
                                 </ListBoxItem>
+                                <Button Content="-" Name="DisableDeviceMinus"></Button>
                                 <TextBox Name="DisableDeviceRank" IsEnabled="False"/>
+                                <Button Content="+" Name="DisableDevicePlus"></Button>
                             </TextBlock>
 
                             <TextBlock Name="Disguise">
@@ -169,7 +181,9 @@
                                 <ListBoxItem Name="DisguiseBox" Selected="DisguiseBox_Selected">
                                     Disguise (Cha)
                                 </ListBoxItem>
+                                <Button Content="-" Name="DisguiseMinus"></Button>
                                 <TextBox Name="DisguiseRank" IsEnabled="False"/>
+                                <Button Content="+" Name="DisguisePlus"></Button>
                             </TextBlock>
 
                             <TextBlock Name="EscapeArtist">
@@ -177,7 +191,9 @@
                                 <ListBoxItem Name="EscapeArtistBox" Selected="EscapeArtistBox_Selected">
                                     Escape Artist (Dex)
                                 </ListBoxItem>
+                                <Button Content="-" Name="EscapeArtistMinus"></Button>
                                 <TextBox Name="EscapeArtistRank" IsEnabled="False"/>
+                                <Button Content="+" Name="EscapeArtistPlus"></Button>
                             </TextBlock>
 
                             <TextBlock Name="Fly">
@@ -185,7 +201,9 @@
                                 <ListBoxItem Name="FlyBox" Selected="FlyBox_Selected">
                                     Fly (Dex)
                                 </ListBoxItem>
+                                <Button Content="-" Name="FlyMinus"></Button>
                                 <TextBox Name="FlyRank" IsEnabled="False"/>
+                                <Button Content="+" Name="FlyPlus"></Button>
                             </TextBlock>
 
                             <TextBlock Name="HandleAnimal">
@@ -193,7 +211,9 @@
                                 <ListBoxItem Name="HandleAnimalBox" Selected="HandleAnimalBox_Selected">
                                     Handle Animal* (Cha)
                                 </ListBoxItem>
+                                <Button Content="-" Name="HandleAnimalMinus"></Button>
                                 <TextBox Name="HandleAnimalRank" IsEnabled="False"/>
+                                <Button Content="+" Name="HandleAnimalPlus"></Button>
                             </TextBlock>
 
                             <TextBlock Name="Heal">
@@ -201,7 +221,9 @@
                                 <ListBoxItem Name="HealBox" Selected="HealBox_Selected">
                                     Heal (Wis)
                                 </ListBoxItem>
+                                <Button Content="-" Name="HealMinus"></Button>
                                 <TextBox Name="HealRank" IsEnabled="False"/>
+                                <Button Content="+" Name="HealPlus"></Button>
                             </TextBlock>
 
                             <TextBlock Name="Intimidate">
@@ -209,7 +231,9 @@
                                 <ListBoxItem Name="IntimidateBox" Selected="IntimidateBox_Selected">
                                     Intimidate (Cha)
                                 </ListBoxItem>
+                                <Button Content="-" Name="IntimidateMinus"></Button>
                                 <TextBox Name="IntimidateRank" IsEnabled="False"/>
+                                <Button Content="+" Name="IntimidatePlus"></Button>
                             </TextBlock>
 
                             <TextBlock Name="KnowArcana">
@@ -217,7 +241,9 @@
                                 <ListBoxItem Name="KnowArcanaBox" Selected="KnowArcanaBox_Selected">
                                     Knowledge* (Arcana) (Int)
                                 </ListBoxItem>
+                                <Button Content="-" Name="KnowArcanaMinus"></Button>
                                 <TextBox Name="KnowArcanaRank" IsEnabled="False"/>
+                                <Button Content="+" Name="KnowArcanaPlus"></Button>
                             </TextBlock>
 
                             <TextBlock Name="KnowDungeoneering">
@@ -225,7 +251,9 @@
                                 <ListBoxItem Name="KnowDungeoneeringBox" Selected="KnowDungeoneeringBox_Selected">
                                     Knowledge* (Dungeoneering) (Int)
                                 </ListBoxItem>
+                                <Button Content="-" Name="KnowDungeoneeringMinus"></Button>
                                 <TextBox Name="KnowDungeoneeringRank" IsEnabled="False"/>
+                                <Button Content="+" Name="KnowDungeoneeringPlus"></Button>
                             </TextBlock>
 
                             <TextBlock Name="KnowEngineering">
@@ -233,7 +261,9 @@
                                 <ListBoxItem Name="KnowEngineeringBox" Selected="KnowEngineeringBox_Selected">
                                     Knowledge* (Engineering) (Int)
                                 </ListBoxItem>
+                                <Button Content="-" Name="KnowEngineeringMinus"></Button>
                                 <TextBox Name="KnowEngineeringRank" IsEnabled="False"/>
+                                <Button Content="+" Name="KnowEngineeringPlus"></Button>
                             </TextBlock>
 
                             <TextBlock Name="KnowGeography">
@@ -241,7 +271,9 @@
                                 <ListBoxItem Name="KnowGeographyBox" Selected="KnowGeographyBox_Selected">
                                     Knowledge* (Geography) (Int)
                                 </ListBoxItem>
+                                <Button Content="-" Name="KnowGeographyMinus"></Button>
                                 <TextBox Name="KnowGeographyRank" IsEnabled="False"/>
+                                <Button Content="+" Name="KnowGeographyPlus"></Button>
                             </TextBlock>
 
                             <TextBlock Name="KnowHistory">
@@ -249,7 +281,9 @@
                                 <ListBoxItem Name="KnowHistoryBox" Selected="KnowHistoryBox_Selected">
                                     Knowledge* (History) (Int)
                                 </ListBoxItem>
+                                <Button Content="-" Name="KnowHistoryMinus"></Button>
                                 <TextBox Name="KnowHistoryRank" IsEnabled="False"/>
+                                <Button Content="+" Name="KnowHistoryPlus"></Button>
                             </TextBlock>
 
                             <TextBlock Name="KnowLocal">
@@ -257,7 +291,9 @@
                                 <ListBoxItem Name="KnowLocalBox" Selected="KnowLocalBox_Selected">
                                     Knowledge* (Local) (Int)
                                 </ListBoxItem>
+                                <Button Content="-" Name="KnowLocalMinus"></Button>
                                 <TextBox Name="KnowLocalRank" IsEnabled="False"/>
+                                <Button Content="+" Name="KnowLocalPlus"></Button>
                             </TextBlock>
 
                             <TextBlock Name="KnowNature">
@@ -265,7 +301,9 @@
                                 <ListBoxItem Name="KnowNatureBox" Selected="KnowNatureBox_Selected">
                                     Knowledge* (Nature) (Int)
                                 </ListBoxItem>
+                                <Button Content="-" Name="KnowNatureMinus"></Button>
                                 <TextBox Name="KnowNatureRank" IsEnabled="False"/>
+                                <Button Content="+" Name="KnowNaturePlus"></Button>
                             </TextBlock>
 
                             <TextBlock Name="KnowNobility">
@@ -273,7 +311,9 @@
                                 <ListBoxItem Name="KnowNobilityBox" Selected="KnowNobilityBox_Selected">
                                     Knowledge* (Nobility) (Int)
                                 </ListBoxItem>
+                                <Button Content="-" Name="KnowNobilityMinus"></Button>
                                 <TextBox Name="KnowNobilityRank" IsEnabled="False"/>
+                                <Button Content="+" Name="KnowNobilityPlus"></Button>
                             </TextBlock>
 
                             <TextBlock Name="KnowPlanes">
@@ -281,7 +321,9 @@
                                 <ListBoxItem Name="KnowPlanesBox" Selected="KnowPlanesBox_Selected">
                                     Knowledge* (Planes) (Int)
                                 </ListBoxItem>
+                                <Button Content="-" Name="KnowPlanesMinus"></Button>
                                 <TextBox Name="KnowPlanesRank" IsEnabled="False"/>
+                                <Button Content="+" Name="KnowPlanesPlus"></Button>
                             </TextBlock>
 
                             <TextBlock Name="KnowReligion">
@@ -289,7 +331,9 @@
                                 <ListBoxItem Name="KnowReligionBox" Selected="KnowReligionBox_Selected">
                                     Knowledge* (Religion) (Int)
                                 </ListBoxItem>
+                                <Button Content="-" Name="KnowReligionMinus"></Button>
                                 <TextBox Name="KnowReligionRank" IsEnabled="False"/>
+                                <Button Content="+" Name="KnowReligionPlus"></Button>
                             </TextBlock>
 
                             <TextBlock Name="Linguistics">
@@ -297,7 +341,9 @@
                                 <ListBoxItem Name="LinguisticsBox" Selected="LinguisticsBox_Selected">
                                     Linguistics* (Int)
                                 </ListBoxItem>
+                                <Button Content="-" Name="LinguisticsMinus"></Button>
                                 <TextBox Name="LinguisticsRank" IsEnabled="False"/>
+                                <Button Content="+" Name="LinguisticsPlus"></Button>
                             </TextBlock>
 
                             <TextBlock Name="Perception">
@@ -305,7 +351,9 @@
                                 <ListBoxItem Name="PerceptionBox" Selected="PerceptionBox_Selected">
                                     Perception (Wis)
                                 </ListBoxItem>
+                                <Button Content="-" Name="PerceptionMinus"></Button>
                                 <TextBox Name="PerceptionRank" IsEnabled="False"/>
+                                <Button Content="+" Name="PerceptionPlus"></Button>
                             </TextBlock>
 
                             <TextBlock Name="Ride">
@@ -313,7 +361,9 @@
                                 <ListBoxItem Name="RideBox" Selected="RideBox_Selected">
                                     Ride (Dex)
                                 </ListBoxItem>
+                                <Button Content="-" Name="RideMinus"></Button>
                                 <TextBox Name="RideRank" IsEnabled="False"/>
+                                <Button Content="+" Name="RidePlus"></Button>
                             </TextBlock>
 
                             <TextBlock Name="SenseMotive">
@@ -321,7 +371,9 @@
                                 <ListBoxItem Name="SenseMotiveBox" Selected="SenseMotiveBox_Selected">
                                     Sense Motive (Wis)
                                 </ListBoxItem>
+                                <Button Content="-" Name="SenseMotiveMinus"></Button>
                                 <TextBox Name="SenseMotiveRank" IsEnabled="False"/>
+                                <Button Content="+" Name="SenseMotivePlus"></Button>
                             </TextBlock>
 
                             <TextBlock Name="SleightOfHand">
@@ -329,7 +381,9 @@
                                 <ListBoxItem Name="SleightOfHandBox" Selected="SleightOfHandBox_Selected">
                                     Sleight of Hand* (Dex)
                                 </ListBoxItem>
+                                <Button Content="-" Name="SleightOfHandMinus"></Button>
                                 <TextBox Name="SleightOfHandRank" IsEnabled="False"/>
+                                <Button Content="+" Name="SleightOfHandPlus"></Button>
                             </TextBlock>
 
                             <TextBlock Name="Spellcraft">
@@ -337,7 +391,9 @@
                                 <ListBoxItem Name="SpellcraftBox" Selected="SpellcraftBox_Selected">
                                     Spellcraft* (Int)
                                 </ListBoxItem>
+                                <Button Content="-" Name="SpellcraftMinus"></Button>
                                 <TextBox Name="SpellcraftRank" IsEnabled="False"/>
+                                <Button Content="+" Name="SpellcraftPlus"></Button>
                             </TextBlock>
 
                             <TextBlock Name="Stealth">
@@ -345,7 +401,9 @@
                                 <ListBoxItem Name="StealthBox" Selected="StealthBox_Selected">
                                     Stealth (Dex)
                                 </ListBoxItem>
+                                <Button Content="-" Name="StealthMinus"></Button>
                                 <TextBox Name="StealthRank" IsEnabled="False"/>
+                                <Button Content="+" Name="StealthPlus"></Button>
                             </TextBlock>
 
                             <TextBlock Name="Survival">
@@ -353,7 +411,9 @@
                                 <ListBoxItem Name="SurvivalBox" Selected="SurvivalBox_Selected">
                                     Survival (Wis)
                                 </ListBoxItem>
+                                <Button Content="-" Name="SurvivalMinus"></Button>
                                 <TextBox Name="SurvivalRank" IsEnabled="False"/>
+                                <Button Content="+" Name="SurvivalPlus"></Button>
                             </TextBlock>
 
                             <TextBlock Name="Swim">
@@ -361,7 +421,9 @@
                                 <ListBoxItem Name="SwimBox" Selected="SwimBox_Selected">
                                     Swim (Str)
                                 </ListBoxItem>
+                                <Button Content="-" Name="SwimMinus"></Button>
                                 <TextBox Name="SwimRank" IsEnabled="False"/>
+                                <Button Content="+" Name="SwimPlus"></Button>
                             </TextBlock>
 
                             <TextBlock Name="UseMagicDevise">
@@ -369,7 +431,9 @@
                                 <ListBoxItem Name="UseMagicDeviseBox" Selected="UseMagicDeviseBox_Selected">
                                     Use Magic Devise* (Cha)
                                 </ListBoxItem>
+                                <Button Content="-" Name="UseMagicDeviseMinus"></Button>
                                 <TextBox Name="UseMagicDeviseRank" IsEnabled="False"/>
+                                <Button Content="+" Name="UseMagicDevisePlus"></Button>
                             </TextBlock>
                         </ListBox>
                     </StackPanel>
@@ -385,7 +449,7 @@
                         <StackPanel Orientation="Horizontal" Height="122">
                             <ListBox Margin="0,4,0,0">
                                 <ListBox.Background>
-                                    <SolidColorBrush></SolidColorBrush>
+                                    <SolidColorBrush/>
                                 </ListBox.Background>
                                 <ListBoxItem Content="Character name: "/>
                                 <ListBoxItem Content="Race: "/>
@@ -393,7 +457,7 @@
                             </ListBox>
                             <ListBox Margin="0,4,0,0">
                                 <ListBox.Background>
-                                    <SolidColorBrush></SolidColorBrush>
+                                    <SolidColorBrush/>
                                 </ListBox.Background>
                                 <ListBoxItem Name="CharacterName" Content="Enter name here" Selected="CharacterName_Selected"/>
                                 <ListBoxItem Name="CharacterRace" Content=""/>
@@ -401,7 +465,7 @@
                             </ListBox>
                             <ListBox Width="335" Margin="0,4,0,0">
                                 <ListBox.Background>
-                                    <SolidColorBrush></SolidColorBrush>
+                                    <SolidColorBrush/>
                                 </ListBox.Background>
                                 <ListBoxItem Content="Character backstory"></ListBoxItem>
                                 <TextBox Height="69" Width="313" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"/>
@@ -411,7 +475,7 @@
                         <StackPanel Orientation="Horizontal">
                             <ListBox>
                                 <ListBox.Background>
-                                    <SolidColorBrush></SolidColorBrush>
+                                    <SolidColorBrush/>
                                 </ListBox.Background>
                                 <ListBoxItem Content="Stats"></ListBoxItem>
                                 <ListBoxItem Content="Strength: "></ListBoxItem>
@@ -423,7 +487,7 @@
                             </ListBox>
                             <ListBox>
                                 <ListBox.Background>
-                                    <SolidColorBrush></SolidColorBrush>
+                                    <SolidColorBrush/>
                                 </ListBox.Background>
                                 <ListBoxItem Content="Ranks"></ListBoxItem>
                                 <ListBoxItem Name="CharacterStrength" Content=""></ListBoxItem>
@@ -435,7 +499,7 @@
                             </ListBox>
                             <ListBox>
                                 <ListBox.Background>
-                                    <SolidColorBrush></SolidColorBrush>
+                                    <SolidColorBrush/>
                                 </ListBox.Background>
                                 <ListBoxItem Content="Modifiers"></ListBoxItem>
                                 <ListBoxItem Name="CharStrMod" Content=""></ListBoxItem>
