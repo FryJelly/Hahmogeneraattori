@@ -74,6 +74,7 @@
     <Compile Include="SaveToFile.cs" />
     <Compile Include="Stats.cs" />
     <Compile Include="ViewModels\CharCreationViewModel.cs" />
+    <Compile Include="ViewModels\CharCreationViewModel2.cs" />
     <Compile Include="Views\CharCreation.xaml.cs">
       <DependentUpon>CharCreation.xaml</DependentUpon>
     </Compile>

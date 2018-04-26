@@ -22,6 +22,7 @@ namespace Hahmogeneraattori.Views
     /// </summary>
     public partial class CharCreation : UserControl
     {
+        
         Stats stats = new Stats();
         Stats stats2 = new Stats();
         int RaceStr, RaceDex, RaceCon, RaceInt, RaceWis, RaceCha;

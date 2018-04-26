@@ -1,6 +1,7 @@
 ﻿using Hahmogeneraattori.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,26 @@ namespace Hahmogeneraattori
         {
             InitializeComponent();
             //
+            try
+            {
+                string chardata = File.ReadAllText(@"char.txt");
+                List<string> chardatalist = new List<string>();
+                char delimiter = ',';
+                string[] substrings = chardata.Split(delimiter);
+                foreach (var substring in substrings)
+                {
+                    chardatalist.Add(substring);
+                }
+                SaveToFile.Content = chardatalist[0];
+            }
+            catch (FileNotFoundException)
+            {
+
+                throw;
+            }
+
+
+
         }
 
         private void CreateNewCharacter_Clicked(object sender, RoutedEventArgs e)
@@ -47,9 +68,9 @@ namespace Hahmogeneraattori
             } */
         }
 
-        private void SaveToFile_Selected(object sender, RoutedEventArgs e)
+        private void SaveToFile_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-
+            DataContext = new CharCreationViewModel();
         }
     }
 }
