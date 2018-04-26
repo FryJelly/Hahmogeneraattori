@@ -34,7 +34,7 @@ namespace Hahmogeneraattori
         }
 
         // Database functionality test
-        private void ListBoxItem_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void SQLTestChar_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
            /* try
             {

@@ -18,7 +18,8 @@
             <ImageBrush ImageSource="views/parchmentbackground.jpg"></ImageBrush>
         </Grid.Background>
         <ListBox Name="CharacterList" HorizontalAlignment="Left" Height="170" Margin="10,89,0,0" VerticalAlignment="Top" Width="602">
-            <ListBoxItem Content="Testcharacter" MouseDoubleClick="ListBoxItem_MouseDoubleClick"></ListBoxItem>
+            <ListBoxItem Name="SQLTestChar" Content="SqlTestcharacter" MouseDoubleClick="SQLTestChar_MouseDoubleClick"></ListBoxItem>
+            <ListBoxItem Name="SaveToFile" Content="SaveToFile"></ListBoxItem>
         </ListBox>
         <Button Content="Create new character" HorizontalAlignment="Center" Margin="0,281,0,0" VerticalAlignment="Top" Width="202" Click="CreateNewCharacter_Clicked"/>
 
