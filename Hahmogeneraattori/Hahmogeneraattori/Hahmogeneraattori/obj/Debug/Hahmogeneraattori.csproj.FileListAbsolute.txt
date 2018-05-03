@@ -34,7 +34,6 @@ C:\Users\RyzenPC\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraatt
 C:\Users\Marko\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\bin\Debug\Hahmogeneraattori.exe.config
 C:\Users\Marko\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\bin\Debug\Hahmogeneraattori.exe
 C:\Users\Marko\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\bin\Debug\Hahmogeneraattori.pdb
-C:\Users\Marko\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\Hahmogeneraattori.csprojResolveAssemblyReference.cache
 C:\Users\Marko\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\MainWindow.g.cs
 C:\Users\Marko\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\Views\CharCreation.g.cs
 C:\Users\Marko\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\App.g.cs
@@ -150,3 +149,6 @@ D:\K9105\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogenera
 D:\K9105\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\Hahmogeneraattori.csproj.GenerateResource.Cache
 D:\K9105\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\Hahmogeneraattori.exe
 D:\K9105\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\Hahmogeneraattori.pdb
+C:\Users\Marko\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\Views\CharCreation2.g.cs
+C:\Users\Marko\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\Views\CharCreation2.baml
+C:\Users\Marko\Source\Repos\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\Hahmogeneraattori\obj\Debug\Hahmogeneraattori.csprojResolveAssemblyReference.cache

@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:Hahmogeneraattori.Views"
+             xmlns:vm="clr-namespace:Hahmogeneraattori.Views"
+             xmlns:local="clr-namespace:Hahmogeneraattori"
              mc:Ignorable="d" 
              d:DesignHeight="500" d:DesignWidth="614">
     <Grid>
@@ -35,7 +36,8 @@
                                 </ListBox>
                             </StackPanel>
                             <StackPanel x:Name="AbilityScore" Orientation="Horizontal">
-                                <ListBox FontSize="24" x:Name="ScoreList" HorizontalContentAlignment="Center" >
+                                
+                                <ListView FontSize="24" x:Name="ScoreList" HorizontalContentAlignment="Center">
                                     <ListBox.Background>
                                         <SolidColorBrush/>
                                     </ListBox.Background>
@@ -47,7 +49,7 @@
                                     <TextBlock x:Name="WisScore"/>
                                     <TextBlock x:Name="ChaScore"/>
 
-                                </ListBox>
+                                </ListView>
                             </StackPanel>
                             <StackPanel x:Name="AbilityMod" Orientation="Horizontal">
                                 <ListBox FontSize="24" x:Name="ModList" HorizontalContentAlignment="Center">
@@ -477,37 +479,37 @@
                                 <ListBox.Background>
                                     <SolidColorBrush/>
                                 </ListBox.Background>
-                                <ListBoxItem Content="Stats"></ListBoxItem>
-                                <ListBoxItem Content="Strength: "></ListBoxItem>
-                                <ListBoxItem Content="Dexterity: "></ListBoxItem>
-                                <ListBoxItem Content="Constitution: "></ListBoxItem>
-                                <ListBoxItem Content="Intelligence: "></ListBoxItem>
-                                <ListBoxItem Content="Wisdom: "></ListBoxItem>
-                                <ListBoxItem Content="Charisma: "></ListBoxItem>
+                                <ListBoxItem Content="Stats"/>
+                                <ListBoxItem Content="Strength: "/>
+                                <ListBoxItem Content="Dexterity: "/>
+                                <ListBoxItem Content="Constitution: "/>
+                                <ListBoxItem Content="Intelligence: "/>
+                                <ListBoxItem Content="Wisdom: "/>
+                                <ListBoxItem Content="Charisma: "/>
                             </ListBox>
                             <ListBox>
                                 <ListBox.Background>
                                     <SolidColorBrush/>
                                 </ListBox.Background>
-                                <ListBoxItem Content="Ranks"></ListBoxItem>
-                                <ListBoxItem Name="CharacterStrength" Content=""></ListBoxItem>
-                                <ListBoxItem Name="CharacterDexterity" Content=""></ListBoxItem>
-                                <ListBoxItem Name="CharacterConstitution" Content=""></ListBoxItem>
-                                <ListBoxItem Name="CharacterIntelligence" Content=""></ListBoxItem>
-                                <ListBoxItem Name="CharacterWisdom" Content=""></ListBoxItem>
-                                <ListBoxItem Name="CharacterCharisma" Content=""></ListBoxItem>
+                                <ListBoxItem Content="Ranks"/>
+                                <ListBoxItem Name="CharacterStrength" Content="{Binding ElementName=StrScore, Path=Text, Mode=OneWay}"/>
+                                <ListBoxItem Name="CharacterDexterity" Content="{Binding ElementName=DexScore, Path=Text, Mode=OneWay}"/>
+                                <ListBoxItem Name="CharacterConstitution" Content="{Binding ElementName=ConScore, Path=Text, Mode=OneWay}"/>
+                                <ListBoxItem Name="CharacterIntelligence" Content="{Binding ElementName=IntScore, Path=Text, Mode=OneWay}"/>
+                                <ListBoxItem Name="CharacterWisdom" Content="{Binding ElementName=WisScore, Path=Text, Mode=OneWay}"/>
+                                <ListBoxItem Name="CharacterCharisma" Content="{Binding ElementName=ChaScore, Path=Text, Mode=OneWay}"/>
                             </ListBox>
                             <ListBox>
                                 <ListBox.Background>
                                     <SolidColorBrush/>
                                 </ListBox.Background>
                                 <ListBoxItem Content="Modifiers"></ListBoxItem>
-                                <ListBoxItem Name="CharStrMod" Content=""></ListBoxItem>
-                                <ListBoxItem Name="CharDexMod" Content=""></ListBoxItem>
-                                <ListBoxItem Name="CharConMod" Content=""></ListBoxItem>
-                                <ListBoxItem Name="CharIntMod" Content=""></ListBoxItem>
-                                <ListBoxItem Name="CharWisMod" Content=""></ListBoxItem>
-                                <ListBoxItem Name="CharChaMod" Content=""></ListBoxItem>
+                                <ListBoxItem Name="CharStrMod" Content="{Binding ElementName=StrMod, Path=Text, Mode=OneWay}"/>
+                                <ListBoxItem Name="CharDexMod" Content="{Binding ElementName=DexMod, Path=Text, Mode=OneWay}"/>
+                                <ListBoxItem Name="CharConMod" Content="{Binding ElementName=ConMod, Path=Text, Mode=OneWay}"/>
+                                <ListBoxItem Name="CharIntMod" Content="{Binding ElementName=IntMod, Path=Text, Mode=OneWay}"/>
+                                <ListBoxItem Name="CharWisMod" Content="{Binding ElementName=WisMod, Path=Text, Mode=OneWay}"/>
+                                <ListBoxItem Name="CharChaMod" Content="{Binding ElementName=ChaMod, Path=Text, Mode=OneWay}"/>
                             </ListBox>
                         </StackPanel>
                         <Button Name="SaveToDatabaseButton" Height="25" Content="Save character"></Button>
